@@ -1,6 +1,6 @@
 backend:
   name: github
-  repo: Mattee37/gatsby-netlifycms
+  repo: wenhaoqiasd/gatsby-netlifycms
   commit_messages:
     create: "Create {{collection}} “{{slug}}”"
     update: "Update {{collection}} “{{slug}}”"
