@@ -23,7 +23,9 @@ collections:
       - { name: date, label: Date, widget: datetime }
       - { name: body, label: Body, widget: markdown }
       - { name: tags, label: Tags, widget: list }
-      - { name: color, label: Color, widget: color }
+#       - { name: color, label: Color, widget: color }
+      - { label: 'Color', name: 'color', widget: 'color' }
+
       
   - name: page
     label: Page
