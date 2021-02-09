@@ -23,7 +23,7 @@ collections:
       - { name: date, label: Date, widget: datetime }
       - { name: body, label: Body, widget: markdown }
       - { name: tags, label: Tags, widget: list }
-      - { name: color, label: Color(CSS), default: 'rgba(128,128,128,0.1)', required: false }
+      - { name: color, label: Color(CSS), required: false }
 
       
   - name: page
