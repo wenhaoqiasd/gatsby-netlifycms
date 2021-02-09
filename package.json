@@ -1,7 +1,7 @@
 {
-  "name": "gatsby-starter-default",
+  "name": "curiositywen2021",
   "private": true,
-  "description": "A simple starter to get up and developing quickly with Gatsby",
+  "description": "CuriosityWen‘s 2021 latest personal website",
   "version": "0.1.0",
   "author": "Wenhaoqi <wenhaoqi@@126.com>",
   "dependencies": {
