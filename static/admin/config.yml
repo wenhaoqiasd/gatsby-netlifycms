@@ -8,6 +8,7 @@ backend:
 
 media_folder: static/assets
 public_folder: /assets
+
 collections:
   - name: blog
     label: Blog
@@ -15,10 +16,22 @@ collections:
     create: true
     fields:
       - { name: path, label: Path }
-      - { name: class, label: Class, widget: select, options: ["draft", "stories", "other"]}
+      - { name: class, label: Class, widget: select, options: ["draft", "stories"]}
       - { name: slug, label: Slug }
       - { name: title, label: Title }
       - { name: cover, label: Cover, widget: image }
       - { name: date, label: Date, widget: datetime }
       - { name: body, label: Body, widget: markdown }
       - { name: tags, label: Tags, widget: list }
+      
+  - name: page
+    label: Page
+    folder: src/markdown/page
+    create: true
+    fields:
+      - { name: path, label: Path }
+      - { name: class, label: Class, widget: select, options: ["draft", "others"]}
+      - { name: slug, label: Slug }
+      - { name: title, label: Title }
+      - { name: date, label: Date, widget: datetime }
+      - { name: body, label: Body, widget: markdown }
