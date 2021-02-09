@@ -34,5 +34,5 @@ collections:
       - { name: class, label: Class, widget: select, options: ["draft", "others"]}
       - { name: slug, label: Slug }
       - { name: title, label: Title }
-      - { name: date, label: Date, widget: datetime }
+      - { name: date, label: Date, widget: datetime, required: false }
       - { name: body, label: Body, widget: markdown }
