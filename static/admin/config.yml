@@ -15,7 +15,10 @@ collections:
     create: true
     fields:
       - { name: path, label: Path }
+      - { name: class, label: Class, widget: select, default: ["draft", "stories", "other"]}
       - { name: slug, label: Slug }
       - { name: title, label: Title }
+      - { name: cover, label: Cover, widget: image }
       - { name: date, label: Date, widget: datetime }
       - { name: body, label: Body, widget: markdown }
+      - { name: tags, label: Tags, widget: list }
