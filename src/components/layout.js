@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React, { useState, useEffect, useCallback } from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql, Link } from "gatsby"
 
@@ -25,6 +25,23 @@ const Layout = ({ children }) => {
   `)
   // 样式切换
   const [open, setOpen] = useState(false)
+  // 滚动
+  const handleScroll = useCallback(() => {
+    var pageup = document.getElementById("content-main");
+    if (window.pageYOffset >= 80) {
+      pageup.classList.add("up-scroll");
+    } else {
+      pageup.classList.remove("up-scroll");
+    }
+  }, []);
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    }
+  }, [
+    handleScroll
+  ])
   return (
     <>
       <header className={`header${open === true ? " open-menu" : ""}`}>
@@ -66,10 +83,11 @@ const Layout = ({ children }) => {
         </div>
       </header>
       <div id="up"></div>
-      <main className={`content-main${open === true ? " open-menu" : ""}`}>
+      <main className={`content-main${open === true ? " open-menu" : ""}`} id="content-main">
         {children}
+        <PageUp />
       </main>
-      <PageUp />
+      
     </>
   )
 }

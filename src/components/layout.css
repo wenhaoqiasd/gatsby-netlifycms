@@ -230,7 +230,8 @@ div {
   }
 }
 
-/* pageup */
+/* PageUp */
+
 .page-up {
   position: fixed;
   right: 1.5rem;
@@ -238,27 +239,31 @@ div {
   width: 2rem;
   height: 2rem;
   z-index: 40;
-  transition: 0.3s ease;
+  transition: var(--ease-3);
   transform: rotateZ(-90deg) scale(0.5);
   pointer-events: none;
 }
-.up-scroll {
+
+.up-scroll .page-up {
   pointer-events: auto;
   transform: rotateZ(-90deg) scale(1);
 }
-.svgbg {
-  transition: 0.3s ease;
+
+.page-up svg :first-child {
+  transition: var(--ease-3);
   stroke-width: 8;
 }
-.up-scroll .svgbg {
+
+.up-scroll .page-up svg :first-child {
   stroke: var(--Text-3);
   stroke-width: 2;
 }
+
 @media screen and (max-width: 48rem) {
   .page-up {
     opacity: 0;
   }
-  .up-scroll {
+  .up-scroll .page-up {
     opacity: 1;
   }
 }
