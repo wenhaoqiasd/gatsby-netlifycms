@@ -18,12 +18,12 @@ collections:
       - { name: path, label: Path }
       - { name: class, label: Class, widget: select, options: ["draft", "stories"]}
       - { name: slug, label: Slug }
-      - { name: title, label: Title }
       - { name: cover, label: Cover, widget: image }
+      - { name: color, label: Color(CSS), required: false }
+      - { name: title, label: Title }
+      - { name: tags, label: Tags, widget: list }
       - { name: date, label: Date, widget: datetime }
       - { name: body, label: Body, widget: markdown }
-      - { name: tags, label: Tags, widget: list }
-      - { name: color, label: Color(CSS), required: false }
 
       
   - name: page

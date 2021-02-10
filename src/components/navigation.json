@@ -1,0 +1,30 @@
+{
+  "nav": [
+    {
+      "name": "Home",
+      "link": "/"
+    },
+    {
+      "name": "Stories",
+      "link": "/404/"
+    },
+    {
+      "name": "Works",
+      "link": "/404/"
+    }
+  ],
+  "personal": [
+    {
+      "value": "86 186-0487-2509",
+      "link": "tel:+86 186 0487 2509",
+      "title": "Phone & Wechat",
+      "key": "phone"
+    },
+    {
+      "value": "curiosity.wen@gmail.com",
+      "link": "mailto:curiosity.wen@gmail.com",
+      "title": "Mail",
+      "key": "mail"
+    }
+  ]
+}

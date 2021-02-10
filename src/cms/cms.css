@@ -1,0 +1,135 @@
+@font-face {
+  font-family: "Loop";
+  src: url("../fonts/AlibabaTeambitionLoop01-SemiBold.otf");
+  font-weight: 600;
+}
+@font-face {
+  font-family: "Loop";
+  src: url("../fonts/AlibabaTeambitionLoop01-Medium.otf");
+  font-weight: 500;
+}
+@font-face {
+  font-family: "Loop";
+  src: url("../fonts/AlibabaTeambitionLoop01-Regular.otf");
+  font-weight: 400;
+}
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  --BG-P: rgb(250, 248, 246);
+  --BG-OP: rgba(250, 248, 246, 0);
+  --BG-S: rgb(242, 240, 238);
+  --Text-1: rgb(26, 26, 26);
+  --Text-2: rgba(26, 26, 26, 0.6);
+  --Text-3: rgba(26, 26, 26, 0.2);
+  --Style: #5364ff;
+}
+@media (prefers-color-scheme: dark) {
+  html {
+    --BG-P: rgb(22, 20, 20);
+    --BG-OP: rgba(22, 20, 20, 0);
+    --BG-S: rgb(26, 24, 24);
+    --Text-1: rgb(255, 255, 255);
+    --Text-2: rgba(255, 255, 255, 0.6);
+    --Text-3: rgba(255, 255, 255, 0.2);
+  }
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-size-adjust: 100%;
+  font-family: "Loop", "PingFang", sans-serif;
+  background-color: var(--BG-P);
+  color: var(--Text-1);
+  font-size: 16px;
+  line-height: 1.5;
+  font-weight: 400;
+  word-wrap: break-word;
+}
+h1,
+h2,
+h3,
+h4 {
+  line-height: 1.5;
+  margin-top: 1rem;
+  -webkit-tap-highlight-color: transparent;
+}
+h1 {
+  font-size: 4rem;
+  font-weight: 600;
+}
+h2 {
+  font-size: 3rem;
+  font-weight: 600;
+}
+h3 {
+  font-size: 2rem;
+  font-weight: 600;
+}
+h4 {
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+p,
+a {
+  line-height: 1.5;
+  margin-top: 1rem;
+}
+p,
+a {
+  font-size: 1rem;
+  font-weight: 400;
+  text-decoration: none;
+}
+a {
+  cursor: pointer;
+  color: var(--Text-1);
+  transition: color 0.3s ease;
+  display: inline;
+}
+a,
+a:hover,
+a:active,
+a:visited,
+a:link,
+a:focus {
+  -webkit-tap-highlight-color: transparent;
+}
+a:hover {
+  color: var(--Text-2);
+}
+img,
+video {
+  width: 100%;
+  display: block;
+}
+.frame-content {
+  padding: 3rem;
+}
+@media screen and (max-width: 48rem) {
+  h1,
+  h2,
+  h3,
+  h4,
+  p,
+  a {
+    margin-top: 0.8rem;
+  }
+  h1 {
+    font-size: 3rem;
+  }
+  h2 {
+    font-size: 2rem;
+  }
+  h3 {
+    font-size: 1.5rem;
+  }
+  h4 {
+    font-size: 1.25rem;
+  }
+}

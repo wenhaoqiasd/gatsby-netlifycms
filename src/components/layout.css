@@ -1,50 +1,60 @@
+/* 导航 z-index:2000 */
+
 /* 字体调用 */
+
 @font-face {
   font-family: "Loop";
   src: url("../fonts/AlibabaTeambitionLoop01-Black.otf");
   font-weight: 800;
 }
+
 @font-face {
   font-family: "Loop";
   src: url("../fonts/AlibabaTeambitionLoop01-Bold.otf");
   font-weight: 700;
 }
+
 @font-face {
   font-family: "Loop";
   src: url("../fonts/AlibabaTeambitionLoop01-SemiBold.otf");
   font-weight: 600;
 }
+
 @font-face {
   font-family: "Loop";
   src: url("../fonts/AlibabaTeambitionLoop01-Medium.otf");
   font-weight: 500;
 }
+
 @font-face {
   font-family: "Loop";
   src: url("../fonts/AlibabaTeambitionLoop01-Regular.otf");
   font-weight: 400;
 }
+
 @font-face {
   font-family: "jet";
   src: url("../fonts/JetBrainsMono-Medium.ttf");
 }
+
 @font-face {
   font-family: "uuicon";
   src: url("../fonts/uuicon.ttf");
 }
+
 @font-face {
   font-family: "AK";
   src: url("../fonts/Akzidenz-Grotesk BQ Super.otf");
 }
 
 /* 全局属性 */
-*,
-*::after,
-*::before {
+
+*, *::after, *::before {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
+
 html {
   --BG-P: rgb(250, 248, 246);
   --BG-OP: rgba(250, 248, 246, 0);
@@ -56,16 +66,22 @@ html {
   --Glass-BG-P: #fff;
   --Glass-BG-S: var(--BG-P);
   --Style: #5364ff;
+  --ease-3: 0.3s ease-out;
+  --cubic-66: 0.66s cubic-bezier(0.66, 0, 0.01, 1);
+  --cubic-menu: 0.4s cubic-bezier(0.445, 0.05, 0.55, 0.95);
 }
+
 ::-webkit-scrollbar {
   display: none;
 }
+
 @supports (backdrop-filter: none) {
   html {
     --Glass-BG-P: rgba(255, 255, 255, 0.88);
     --Glass-BG-S: rgba(250, 248, 246, 0.75);
   }
 }
+
 @media (prefers-color-scheme: dark) {
   html {
     --BG-P: rgb(22, 20, 20);
@@ -84,9 +100,11 @@ html {
     }
   }
 }
+
 ::selection {
   background-color: var(--Style);
 }
+
 body {
   -webkit-font-smoothing: antialiased;
   -webkit-text-size-adjust: 100%;
@@ -98,6 +116,7 @@ body {
   font-weight: 400;
   animation: fadein 1s ease 1s backwards;
 }
+
 @keyframes fadein {
   0% {
     opacity: 0;
@@ -106,70 +125,67 @@ body {
     opacity: 1;
   }
 }
-h1,
-h2,
-h3,
-h4 {
+
+h1, h2, h3, h4 {
   line-height: 1.5;
   margin-top: 1rem;
   -webkit-tap-highlight-color: transparent;
 }
+
 h1 {
   font-size: 4rem;
   font-weight: 600;
 }
+
 h2 {
   font-size: 3rem;
   font-weight: 600;
 }
+
 h3 {
   font-size: 2rem;
   font-weight: 600;
 }
+
 h4 {
   font-size: 1.5rem;
   font-weight: 500;
 }
-p,
-a {
+
+p, a {
   line-height: 1.5;
   margin-top: 1rem;
 }
-p,
-a {
+
+p, a {
   font-size: 1rem;
   font-weight: 400;
   text-decoration: none;
 }
+
 a {
   cursor: pointer;
   color: var(--Text-1);
-  transition: color 0.3s ease;
+  transition: color var(--ease-3);
 }
-a,
-a:hover,
-a:active,
-a:visited,
-a:link,
-a:focus {
+
+a, a:hover, a:active, a:visited, a:link, a:focus {
   -webkit-tap-highlight-color: transparent;
 }
+
 a:hover {
   color: var(--Text-2);
 }
-img,
-video {
+
+img, video {
   width: 100%;
   display: block;
 }
+
 /* 基础类型移动版 */
+
 @media screen and (max-width: 48rem) {
-  h1,
-  h2,
-  h3,
-  h4,
-  p,
-  a {
+  h1, h2, h3, h4, p, a {
     margin-top: 0.8rem;
   }
   h1 {
@@ -185,25 +201,64 @@ video {
     font-size: 1.25rem;
   }
 }
+
 div {
   outline: 0 none;
   -webkit-tap-highlight-color: transparent;
 }
+
 /* 自定义通用 */
+
 .big-type {
   font-size: 6vw;
   line-height: 1;
   font-weight: 800;
 }
+
 .big-stroke {
   -webkit-text-stroke: 1px var(--Text-1);
   color: transparent;
 }
+
 .type-p {
   font-size: 0.875rem;
 }
+
 @media screen and (max-width: 48rem) {
   .big-type {
     font-size: 12vw;
+  }
+}
+
+/* pageup */
+.page-up {
+  position: fixed;
+  right: 1.5rem;
+  bottom: 1.5rem;
+  width: 2rem;
+  height: 2rem;
+  z-index: 40;
+  transition: 0.3s ease;
+  transform: rotateZ(-90deg) scale(0.5);
+  pointer-events: none;
+}
+.up-scroll {
+  pointer-events: auto;
+  transform: rotateZ(-90deg) scale(1);
+}
+.svgbg {
+  transition: 0.3s ease;
+  stroke-width: 8;
+}
+.up-scroll .svgbg {
+  stroke: var(--Text-3);
+  stroke-width: 2;
+}
+@media screen and (max-width: 48rem) {
+  .page-up {
+    opacity: 0;
+  }
+  .up-scroll {
+    opacity: 1;
   }
 }
