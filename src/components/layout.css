@@ -251,6 +251,7 @@ div {
 
 .page-up svg :first-child {
   transition: var(--ease-3);
+  stroke: var(--Text-1);
   stroke-width: 8;
 }
 
@@ -259,11 +260,12 @@ div {
   stroke-width: 2;
 }
 
+.page-up svg :nth-child(2) {
+  stroke: var(--Text-1);
+}
+
 @media screen and (max-width: 48rem) {
-  .page-up {
-    opacity: 0;
-  }
-  .up-scroll .page-up {
-    opacity: 1;
+  .page-up svg :first-child {
+    stroke: transparent;
   }
 }

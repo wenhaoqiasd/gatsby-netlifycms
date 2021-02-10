@@ -31,8 +31,8 @@ const PageUp = () => {
     <>
       <a href="#up" className="page-up">
         <svg width="32px" height="32px">
-          <circle r="12" cy="16" cx="16" strokeWidth="2" stroke="var(--Text-1)" strokeLinejoin="round" strokeLinecap="round" fill="none" />
-          <circle r="12" cy="16" cx="16" strokeWidth="2" stroke="var(--Text-1)" strokeLinejoin="round" strokeLinecap="round" fill="none" strokeDashoffset={progress} strokeDasharray="1000" />
+          <circle r="12" cy="16" cx="16" strokeWidth="2" strokeLinejoin="round" strokeLinecap="round" fill="none" />
+          <circle r="12" cy="16" cx="16" strokeWidth="2" strokeLinejoin="round" strokeLinecap="round" fill="none" strokeDashoffset={progress} strokeDasharray="1000" />
         </svg>
       </a>
     </>
