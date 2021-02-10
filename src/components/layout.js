@@ -3,9 +3,9 @@ import PropTypes from "prop-types"
 import { useStaticQuery, graphql, Link } from "gatsby"
 
 import SplitText from "../components/splittext"
-import navbar from "./navigation.json"
+import PageUp from "../components/page-up"
 
-import PageUp from "../components/page-up";
+import navbar from "./navigation.json"
 
 import "./layout.css"
 import "./header.css"
@@ -23,10 +23,8 @@ const Layout = ({ children }) => {
       }
     }
   `)
-
   // 样式切换
   const [open, setOpen] = useState(false)
-
   return (
     <>
       <header className={`header${open === true ? " open-menu" : ""}`}>
