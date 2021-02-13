@@ -1,10 +1,10 @@
 ---
-path: blog-four
+path: /stories/blog-four/
 class: stories
-slug: four
+slug: ngc-0001
 title: Desde admin en Netlify
 cover: /assets/darkmode.png
-date: 2020-09-30T05:25:15.433Z
+date: 2021-09-30T05:25:15.433Z
 tags:
   - "3333133"
   - kakaka

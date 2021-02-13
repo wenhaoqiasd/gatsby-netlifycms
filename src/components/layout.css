@@ -42,11 +42,6 @@
   src: url("../fonts/uuicon.ttf");
 }
 
-@font-face {
-  font-family: "AK";
-  src: url("../fonts/Akzidenz-Grotesk BQ Super.otf");
-}
-
 /* 全局属性 */
 
 *, *::after, *::before {

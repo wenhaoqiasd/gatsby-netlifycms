@@ -12,8 +12,8 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
         edges {
           node {
             frontmatter {
-              slug
               path
+              slug
             }
           }
         }

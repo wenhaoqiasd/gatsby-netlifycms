@@ -1,0 +1,229 @@
+/* tab区域 */
+
+.space-sticky {
+  position: sticky;
+  top: -3rem;
+  z-index: 20;
+  background-color: var(--Glass-BG-S);
+  backdrop-filter: var(--Glass);
+  padding: 4.5rem 5rem 0;
+  overflow: visible;
+}
+
+.space-sticky::before, .space-sticky::after {
+  position: absolute;
+  content: "";
+  height: 100%;
+  width: 5rem;
+  top: 0;
+  pointer-events: none;
+  z-index: 20;
+}
+
+.space-sticky::before {
+  background: linear-gradient(90deg, var(--BG-P) 0%, var(--BG-OP) 100%);
+  left: 0;
+}
+
+.space-sticky::after {
+  background: linear-gradient(90deg, var(--BG-OP) 0%, var(--BG-P) 100%);
+  right: 0;
+}
+
+.tgas-tab {
+  overflow-x: auto;
+  overflow-y: hidden;
+  white-space: nowrap;
+  display: flex;
+  user-select: none;
+  /* 吸附滚动关键 */
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  overscroll-behavior-x: smooth;
+  margin-inline-start: -5rem;
+  margin-inline-end: -5rem;
+  padding-inline-start: 5rem;
+  padding-inline-end: 5rem;
+}
+
+.tgas-tab::after {
+  content: "";
+  position: absolute;
+  width: calc(100% - 2 * 5rem);
+  height: 1px;
+  bottom: 0px;
+  background-color: var(--Text-1);
+  z-index: 20;
+}
+
+.tgas-tab::-webkit-scrollbar {
+  display: none;
+}
+
+.tab {
+  /* 子元素关键 */
+  scroll-snap-align: start;
+  margin-inline-start: -5rem;
+  margin-inline-end: -5rem;
+  padding-inline-start: 5rem;
+  padding-inline-end: 5rem;
+}
+
+.tab div {
+  margin: 1rem 2rem 1rem 0;
+  cursor: pointer;
+}
+
+.tab h1 {
+  margin: 0;
+  line-height: 1;
+  transition: var(--ease-3);
+  -webkit-tab-highlight-color: transparent;
+}
+
+.tgas-tab .active h1 {
+  color: var(--Text-1);
+}
+
+.tgas-tab :last-child.tab div {
+  margin-right: 0;
+}
+
+.page-search {
+  margin: 4rem 0 0;
+  position: relative;
+}
+
+.page-search span, .page-search input {
+  color: var(--Text-1);
+  font-size: 1.25rem;
+  line-height: 3rem;
+}
+
+.page-search span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-family: "uuicon";
+  text-align: center;
+  width: 2rem;
+  color: var(--Text-2);
+}
+
+.page-search input {
+  padding-left: 2.25rem;
+  background-color: transparent!important;
+  border: 0;
+  outline: none;
+}
+
+.page-search input::-webkit-input-placeholder {
+  color: var(--Text-2);
+}
+
+@media screen and (max-width: 48rem) {
+  .space-sticky {
+    padding: 4.5rem 1.75rem 0;
+  }
+  .space-sticky::before, .space-sticky::after {
+    width: 1.75rem;
+  }
+  .tgas-tab {
+    margin-inline-start: -1.75rem;
+    margin-inline-end: -1.75rem;
+    padding-inline-start: 1.75rem;
+    padding-inline-end: 1.75rem;
+  }
+  .tgas-tab::after {
+    width: calc(100% - 2 * 1.75rem);
+  }
+  .tab {
+    margin-inline-start: -1.75rem;
+    margin-inline-end: -1.75rem;
+    padding-inline-start: 1.75rem;
+    padding-inline-end: 1.75rem;
+  }
+  .tab div {
+    margin: 1rem 1rem 1rem 0;
+  }
+
+  .page-search input {
+    width: 100%;
+  }
+  .page-search input:focus {
+    box-shadow: inset 0 -1px 0 0 var(--Text-1);
+  }
+  
+}
+
+/* 网格容器 */
+
+.page-grid {
+  --min-size: 16.5rem;
+  display: grid;
+  grid-template-columns: repeat( auto-fill, minmax(var(--min-size), 1fr));
+  grid-gap: 2rem;
+  padding: 2rem 5rem 4rem;
+}
+
+.page-grid :first-child {
+  grid-column: span 2;
+}
+
+/* 网络卡片 */
+
+.card {
+  display: block;
+  margin: 0;
+}
+
+.card:hover {
+  color: var(--Text-1);
+}
+
+.card img {
+  box-shadow: 0 0 0 1px var(--BG-S);
+  transition: filter 0.3s ease;
+}
+
+.card:hover img {
+  filter: brightness(1.1);
+}
+
+.card .line {
+  margin-top: 1rem;
+  width: 100%;
+  height: 1px;
+  background-color: var(--Text-1);
+  position: relative;
+}
+
+.card .line::before {
+  position: absolute;
+  height: 0.25rem;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  content: "";
+  background-color: var(--Text-1);
+  transform: scaleX(0);
+  transform-origin: right center;
+  transition: transform 0.2s ease;
+}
+
+.card:hover .line::before {
+  transform: scaleX(1);
+  transform-origin: left center;
+}
+
+@media screen and (max-width: 48rem) {
+  .page-grid {
+    padding: 2rem 1.75rem;
+  }
+  .page-grid :first-child {
+    grid-column: span 1;
+  }
+  .card .line::before {
+    background-color: transparent;
+  }
+}

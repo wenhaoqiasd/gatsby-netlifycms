@@ -1,5 +1,5 @@
 ---
-path: about
+path: /about
 class: others
 slug: about
 title: About

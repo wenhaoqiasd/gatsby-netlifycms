@@ -246,26 +246,20 @@
   transition-delay: 0.18s;
 }
 
-[aria-label] [aria-hidden="true"]:nth-child(9) {
-  transition-delay: 0.2s;
-}
-
-[aria-label] [aria-hidden="true"]:nth-child(10) {
-  transition-delay: 0.22s;
-}
-
 /* 菜单选中效果 */
 
 header [aria-current="page"] h1 {
   color: var(--Text-1);
 }
 
-
 /* Wo伪字偶距 */
+
 [aria-label="Works"] span:first-child {
   margin-right: -6px;
 }
+
 /* 移动适配 */
+
 @media screen and (max-width: 48rem) {
   .header-bg {
     width: 100%;
@@ -277,8 +271,6 @@ header [aria-current="page"] h1 {
     margin-right: -4px;
   }
 }
-
-
 
 /* 禁止滚动
 .content-main.open-menu {
