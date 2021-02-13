@@ -1,5 +1,5 @@
 ---
-path: /stories/what_is_thoughts/
+path: /stories/thoughts_covers/
 class: stories
 slug: ngc-0001
 title: Thoughts Covers

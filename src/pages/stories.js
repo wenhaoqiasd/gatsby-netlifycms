@@ -89,7 +89,7 @@ const IndexPage = ({ data }) => {
           ? visibleWorks.map((edge) => {
             const { frontmatter } = edge.node;
             return (
-              <div key={frontmatter.path}>
+              <div key={frontmatter.slug}>
                 <Link to={frontmatter.path} className="card">
                   <img src={frontmatter.cover} alt={frontmatter.title} />
                   <h4>{frontmatter.title}</h4>
