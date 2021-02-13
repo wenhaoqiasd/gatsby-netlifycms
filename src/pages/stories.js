@@ -2,7 +2,6 @@ import React, { useState } from "react"
 import { Link, graphql } from "gatsby"
 import SEO from "../components/seo"
 import Layout from "../components/layout"
-// import Placeholder from "../components/placeholder"
 
 import "./stories.css"
 
@@ -99,7 +98,7 @@ const IndexPage = ({ data }) => {
               </div>
             );
           })
-          : <p>占位文字</p>
+          : <p>🔍 No search</p>
         }
       </section>
 
