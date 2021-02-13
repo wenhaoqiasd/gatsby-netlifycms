@@ -54,10 +54,7 @@ const IndexPage = ({ data }) => {
         aria-expanded={open === true ? "true" : "false"}
         className={`list-grid-btn${open === true ? " list" : ""}`}
         onClick={() => setOpen(!open)}>
-      </button>
-      <div className="page-search">
-        <span className="page-search-icon"></span>
-      </div> */}
+      </button> */}
 
       {/* tab 部分 */}
       <div className="space-sticky">
@@ -98,7 +95,12 @@ const IndexPage = ({ data }) => {
               </div>
             );
           })
-          : <p>🔍 No search</p>
+          : <p>
+              <span role="img" aria-label="Pensive emoji">
+                🔍
+              </span>
+              {" "}No search
+            </p>
         }
       </section>
 

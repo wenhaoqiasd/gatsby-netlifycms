@@ -2,7 +2,7 @@
 path: /stories/tb_loop/
 class: stories
 slug: ngc-0005
-title: Thoughts Covers
+title: Teambition Loop fonts
 cover: /assets/font.png
 date: 2020-07-23T07:10:29.707Z
 tags:
