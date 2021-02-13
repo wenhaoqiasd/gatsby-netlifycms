@@ -2,14 +2,15 @@
 path: /stories/dark_mode/
 class: stories
 slug: ngc-0006
-title: Dark Mode
 cover: /assets/darkmode.png
-date: 2020-07-31T05:25:15.433Z
-tags:
-  - "Design"
-  - "Studies"
-  - "Code"
 color: rgba(128,128,128,0.24)
+title: Dark Mode
+tags:
+  - Design
+  - Studies
+  - Code
+  - Test
+date: 2020-07-31T05:25:15.433Z
 ---
 
 ![](https://dl.airtable.com/.attachments/ed28d369c9638b44163ae42848d40c81/c32fcdfd/darkmode_1.png)
