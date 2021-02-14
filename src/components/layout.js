@@ -5,7 +5,7 @@ import { useStaticQuery, graphql, Link } from "gatsby"
 import SplitText from "../components/splittext"
 import PageUp from "../components/page-up"
 
-import navbar from "./navigation.json"
+import navbar from "./nav.json"
 
 import "./layout.css"
 import "./header.css"
@@ -64,8 +64,8 @@ const Layout = ({ children }) => {
         <div className="header-bg">
           {/* 链接 */}
           <span className="menu-link">
-            {navbar.nav.map(list => (
-              <Link key={list.name} to={list.link} className="nav-title">
+            {navbar.page.map(list => (
+              <Link key={list.key} to={list.link} className="nav-title">
                 <SplitText copy={list.name} />
                 <SplitText copy={list.name} />
               </Link>
@@ -73,9 +73,9 @@ const Layout = ({ children }) => {
           </span>
           {/* 尾部信息 */}
           <span className="menu-footer">
-            {navbar.personal.map(list => (
+            {navbar.person.map(list => (
               <a key={list.key} href={list.link} title={list.title}>
-                {list.value}
+                {list.name}
               </a>
             ))}
             <p>{data.site.buildTime}</p>
@@ -87,7 +87,6 @@ const Layout = ({ children }) => {
         {children}
         <PageUp />
       </main>
-      
     </>
   )
 }

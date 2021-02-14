@@ -97,7 +97,7 @@
 .page-search span, .page-search input {
   color: var(--Text-1);
   font-size: 1.25rem;
-  line-height: 3rem;
+  line-height: 1.5rem;
 }
 
 .page-search span {
@@ -108,9 +108,11 @@
   text-align: center;
   width: 2rem;
   color: var(--Text-2);
+  user-select: none;
 }
 
 .page-search input {
+  font-family: "Loop";
   padding-left: 2.25rem;
   background-color: transparent!important;
   border: 0;
@@ -146,11 +148,12 @@
   .tab div {
     margin: 1rem 1rem 1rem 0;
   }
-
   .page-search input {
     width: 100%;
   }
-  
+  .page-search span, .page-search input {
+    font-size: 1rem;
+  }
 }
 
 /* 网格容器 */
@@ -167,6 +170,15 @@
   grid-column: span 2;
 }
 
+@media screen and (max-width: 48rem) {
+  .page-grid {
+    padding: 2rem 1.75rem;
+  }
+  .page-grid :first-child {
+    grid-column: span 1;
+  }
+}
+
 /* 网络卡片 */
 
 .card {
@@ -180,7 +192,7 @@
 
 .card img {
   box-shadow: 0 0 0 1px var(--BG-S);
-  transition: filter 0.3s ease;
+  transition: filter var(--ease-3);
 }
 
 .card:hover img {
@@ -214,12 +226,6 @@
 }
 
 @media screen and (max-width: 48rem) {
-  .page-grid {
-    padding: 2rem 1.75rem;
-  }
-  .page-grid :first-child {
-    grid-column: span 1;
-  }
   .card .line::before {
     background-color: transparent;
   }

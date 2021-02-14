@@ -97,7 +97,7 @@ html {
 }
 
 ::selection {
-  background-color: var(--Style);
+  background-color: rgba(254, 208, 38,0.48);
 }
 
 body {

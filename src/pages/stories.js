@@ -1,7 +1,8 @@
 import React, { useState } from "react"
-import { Link, graphql } from "gatsby"
+import { graphql } from "gatsby"
 import SEO from "../components/seo"
 import Layout from "../components/layout"
+import Card from "../components/card"
 
 import "./stories.css"
 
@@ -10,12 +11,9 @@ const IndexPage = ({ data }) => {
 
   const pageName = "Stories"
   const allName = "All " + pageName
-
-  // 样式切换
-  // const [open, setOpen] = useState(false)
+  
   // 搜索
   const [query, setQuery] = useState('')
-
   const [currentTag, setCurrentTag] = useState(allName);
   const allTags = [allName];
   edges
@@ -27,10 +25,8 @@ const IndexPage = ({ data }) => {
         }
       }
     });
-
   // console.log(allTags, currentTag);
   // console.log('query', query)
-
   let visibleWorks =
     currentTag !== allName
       ? edges.filter((n) => n.node.frontmatter.tags.includes(currentTag))
@@ -39,7 +35,6 @@ const IndexPage = ({ data }) => {
   if (query) {
     visibleWorks = visibleWorks.filter((n) => n.node.frontmatter.title.indexOf(query) >= 0)
   }
-
   function handleQueryChange(e) {
     setQuery(e.target.value)
   }
@@ -47,14 +42,6 @@ const IndexPage = ({ data }) => {
   return (
     <Layout>
       <SEO title={pageName} />
-
-      {/* 工具条 */}
-
-      {/* <button
-        aria-expanded={open === true ? "true" : "false"}
-        className={`list-grid-btn${open === true ? " list" : ""}`}
-        onClick={() => setOpen(!open)}>
-      </button> */}
 
       {/* tab 部分 */}
       <div className="space-sticky">
@@ -78,28 +65,21 @@ const IndexPage = ({ data }) => {
       </div>
 
       {/* 内容卡片部分 */}
-
-      {/* <section className={`page-grid${open ? " page-list" : ""}`}> */}
       <section className="page-grid">
         {visibleWorks.length
           ? visibleWorks.map((edge) => {
             const { frontmatter } = edge.node;
             return (
-              <div key={frontmatter.slug}>
-                <Link to={frontmatter.path} className="card">
-                  <img src={frontmatter.cover} alt={frontmatter.title} />
-                  <h4>{frontmatter.title}</h4>
-                  <p className="action" style={{ color: "var(--Text-2)", marginTop: "0.25rem" }}>{frontmatter.date}</p>
-                  <div className="line"></div>
-                </Link>
-              </div>
+              <Card
+                key={frontmatter.slug}
+                Path={frontmatter.path}
+                Cover={frontmatter.cover}
+                Title={frontmatter.title}
+                Date={frontmatter.date} />
             );
           })
-          : <p>
-              <span role="img" aria-label="Pensive emoji">
-                🔍
-              </span>
-              {" "}No search
+          : <p style={{ color: "var(--Text-2)", fontSize: "1.25rem" }}>
+              No search
             </p>
         }
       </section>

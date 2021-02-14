@@ -1,0 +1,59 @@
+{
+  "page": [
+    {
+      "name": "Home",
+      "link": "/",
+      "title": "Home",
+      "key": "page-1"
+    },
+    {
+      "name": "Stories",
+      "link": "/stories/",
+      "title": "Stories",
+      "key": "page-2"
+    },
+    {
+      "name": "Works",
+      "link": "/404/",
+      "title": "Work",
+      "key": "page-3"
+    }
+  ],
+  "social": [
+    {
+      "icon": "",
+      "name": "Behance",
+      "link": "https://www.behance.net/haoqi123",
+      "title": "Behance",
+      "key": "social-1"
+    },
+    {
+      "icon": "",
+      "name": "Instagram",
+      "link": "https://www.instagram.com/wenhaoqi",
+      "title": "Instagram",
+      "key": "social-2"
+    },
+    {
+      "icon": "",
+      "name": "GitHub",
+      "link": "https://github.com/wenhaoqiasd",
+      "title": "GitHub",
+      "key": "social-3"
+    }
+  ],
+  "person": [
+    {
+      "name": "86 186-0487-2509",
+      "link": "tel:+86 186 0487 2509",
+      "title": "Phone & Wechat",
+      "key": "person-1"
+    },
+    {
+      "name": "curiosity.wen@gmail.com",
+      "link": "mailto:curiosity.wen@gmail.com",
+      "title": "Mail",
+      "key": "person-2"
+    }
+  ]
+}
