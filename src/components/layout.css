@@ -97,7 +97,8 @@ html {
 }
 
 ::selection {
-  background-color: rgba(254, 208, 38,0.48);
+  --selection: rgba(254, 208, 38,0.48);
+  background-color: var(--selection);
 }
 
 body {
@@ -109,7 +110,7 @@ body {
   font-size: 16px;
   line-height: 1.5;
   font-weight: 400;
-  animation: fadein 1s ease 1s backwards;
+  /* animation: fadein 1s ease 1s backwards; */
 }
 
 @keyframes fadein {
@@ -262,5 +263,34 @@ div {
 @media screen and (max-width: 48rem) {
   .page-up svg :first-child {
     stroke: transparent;
+  }
+}
+
+.zoom-in {
+  animation: zoomin 0.5s ease 1s backwards;
+  transform-origin: 50% 0%;
+}
+@keyframes zoomin {
+  0% {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+.zoom-out {
+  animation: zoomout 1s ease 1.2s backwards;
+  transform-origin: 50% 0%;
+}
+@keyframes zoomout {
+  0% {
+    opacity: 0;
+    transform: scale(1.1);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
   }
 }

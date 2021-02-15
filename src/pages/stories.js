@@ -11,7 +11,7 @@ const IndexPage = ({ data }) => {
 
   const pageName = "Stories"
   const allName = "All " + pageName
-  
+
   // 搜索
   const [query, setQuery] = useState('')
   const [currentTag, setCurrentTag] = useState(allName);
@@ -42,50 +42,49 @@ const IndexPage = ({ data }) => {
   return (
     <Layout>
       <SEO title={pageName} />
-
-      {/* tab 部分 */}
-      <div className="space-sticky">
-        <div className="page-search">
-          <span></span>
-          <input type="text" name="firstname" placeholder="Search" value={query} onChange={handleQueryChange} />
+      <div className="zoom-in">
+        {/* tab 部分 */}
+        <div className="space-sticky">
+          <div className="page-search">
+            <span></span>
+            <input type="text" name="firstname" placeholder="Search" value={query} onChange={handleQueryChange} />
+          </div>
+          <div className="tgas-tab">
+            {allTags.map((n) => (
+              <div key={n} className="tab">
+                <div className={n === currentTag ? "active" : ""}
+                  onClick={() => {
+                    setCurrentTag(n);
+                  }}
+                  role="button"
+                  onKeyPress={() => { }}
+                  tabIndex="0"><h1 className="big-stroke">{n}</h1></div>
+              </div>
+            ))}
+          </div>
         </div>
-        <div className="tgas-tab">
-          {allTags.map((n) => (
-            <div key={n} className="tab">
-              <div className={n === currentTag ? "active" : ""}
-                onClick={() => {
-                  setCurrentTag(n);
-                }}
-                role="button"
-                onKeyPress={() => { }}
-                tabIndex="0"><h1 className="big-stroke">{n}</h1></div>
-            </div>
-          ))}
-        </div>
-      </div>
 
-      {/* 内容卡片部分 */}
-      <section className="page-grid">
-        {visibleWorks.length
-          ? visibleWorks.map((edge) => {
-            const { frontmatter } = edge.node;
-            return (
-              <Card
-                key={frontmatter.slug}
-                Path={frontmatter.path}
-                Cover={frontmatter.cover}
-                Title={frontmatter.title}
-                Date={frontmatter.date} />
-            );
-          })
-          : <p style={{ color: "var(--Text-2)", fontSize: "1.25rem" }}>
+        {/* 内容卡片部分 */}
+        <section className="page-grid">
+          {visibleWorks.length
+            ? visibleWorks.map((edge) => {
+              const { frontmatter } = edge.node;
+              return (
+                <Card
+                  key={frontmatter.slug}
+                  Path={frontmatter.path}
+                  Cover={frontmatter.cover}
+                  Title={frontmatter.title}
+                  Date={frontmatter.date} />
+              )
+            })
+            : <p style={{ color: "var(--Text-2)", fontSize: "1.25rem" }}>
               No search
             </p>
-        }
-      </section>
-
-      {/* 需要页尾 ！！！ */}
-
+          }
+        </section>
+        {/* 需要页尾 ！！！ */}
+      </div>
     </Layout>
   )
 }

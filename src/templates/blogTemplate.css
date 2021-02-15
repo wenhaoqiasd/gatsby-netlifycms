@@ -1,0 +1,320 @@
+.page {
+  position: relative;
+  max-width: 50rem;
+  margin: 0 auto;
+  padding: 1.75rem;
+}
+.page-title {
+  margin-top: 100px !important;
+  font-size: 4rem !important;
+  line-height: 1 !important;
+}
+.page-date {
+  margin: 2rem 0 4rem;
+  color: var(--Text-2);
+}
+.page h1 {
+  font-size: 2.5rem;
+  margin-top: 2.5rem;
+}
+.page h2 {
+  font-size: 2em;
+  margin-top: 2rem;
+}
+.page h3 {
+  font-size: 1.5rem;
+  margin-top: 1.5rem;
+}
+.page h4 {
+  font-size: 1rem;
+  margin-top: 1rem;
+}
+.page p {
+  line-height: 1.8;
+}
+.page a {
+  text-decoration: underline;
+  text-decoration-color: var(--Text-2);
+}
+ul,
+ol,
+blockquote,
+pre,
+table {
+  line-height: 1.5;
+  margin-top: 1rem;
+}
+hr {
+  width: 100%;
+  height: 1px;
+  background-color: var(--Text-3);
+  border: none;
+  margin: 1.5rem 0;
+}
+blockquote {
+  box-shadow: inset 4px 0 0 0 var(--Text-3);
+}
+video {
+  box-shadow: 0 0 0 1px var(--Text-3);
+  background-color: var(--Text-2);
+  cursor: pointer;
+}
+ul,
+ol,
+blockquote {
+  padding-left: 1.5rem;
+}
+ul p,
+ul ul,
+ul ol,
+ol p,
+ol ol,
+ol ul {
+  margin: 0;
+}
+table {
+  box-shadow: inset 1px 1px 0 0 var(--Text-2);
+  padding: 1px 0 0 1px;
+  border-spacing: 0;
+  width: 100%;
+  table-layout: fixed;
+}
+table th {
+  background-color: var(--BG-S);
+  font-weight: 400;
+}
+table th,
+table td {
+  table-layout: fixed;
+  padding: 0.5rem;
+  max-width: 18rem;
+  word-wrap: break-word;
+  box-shadow: inset -1px -1px 0 0 var(--Text-2);
+}
+.page iframe {
+  border: 0!important;
+  box-shadow: 0 0 0 1px var(--Text-3);
+  margin-top: 1rem;
+  width: 100%;
+  display: block;
+}
+.font-view {
+  font-size: 6.5rem;
+  font-weight: 600;
+  font-family: "loop";
+  display: block;
+  width: 100%;
+  color: var(--Text-1);
+  background-color: var(--BG-P);
+  border: 0;
+  outline: none;
+  margin: 4rem 0;
+  overflow:hidden;
+  resize:none;
+}
+@media screen and (max-width: 48rem) {
+  .page-title {
+    font-size: 3rem !important;
+  }
+  .page h1 {
+    font-size: 2rem;
+    margin-top: 2rem;
+  }
+  .page h2 {
+    font-size: 1.5rem;
+    margin-top: 1.5rem;
+  }
+  .page h3 {
+    font-size: 1.25rem;
+    margin-top: 1.25rem;
+  }
+  .page h4 {
+    font-size: 1rem;
+    margin-top: 1rem;
+  }
+  ul,
+  ol,
+  pre,
+  blockquote,
+  table {
+    margin-top: 0.8rem;
+  }
+  .font-view {
+    display: none;
+  }
+}
+
+/* code */
+code[class*="language-"],
+pre[class*="language-"] {
+  font-family: "jet", Consolas, Monaco, "Andale Mono", "Ubuntu Mono", monospace;
+  font-size: 1rem;
+  line-height: 1.5;
+  word-spacing: normal;
+  word-break: normal;
+  word-wrap: normal;
+  line-height: 1.5;
+  /* tab间距 */
+  -moz-tab-size: 4;
+  -o-tab-size: 4;
+  tab-size: 4;
+  /* 连词 */
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
+  /* 滚动惯性去除 */
+  -webkit-overflow-scrolling: auto;
+}
+pre[class*="language-"] {
+  background-color: var(--BG-S);
+  overflow-x: scroll;
+  -webkit-overflow-scrolling: auto;
+}
+code[class*="language-"] {
+  padding: 1rem;
+  margin: 0;
+  display: inline-block;
+  white-space: pre;
+}
+:not(pre) > code[class*="language-"] {
+  white-space: pre-wrap;
+  color: slategray;
+  padding: 0.25rem;
+  margin-left: 0.25rem;
+  margin-right: 0.25rem;
+  background-color: var(--BG-S);
+}
+
+pre[class*="language-"]::-moz-selection,
+pre[class*="language-"] ::-moz-selection,
+code[class*="language-"]::-moz-selection,
+code[class*="language-"] ::-moz-selection {
+  text-shadow: none;
+  background: var(--selection);
+}
+
+pre[class*="language-"]::selection,
+pre[class*="language-"] ::selection,
+code[class*="language-"]::selection,
+code[class*="language-"] ::selection {
+  text-shadow: none;
+  background: var(--selection);
+}
+
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+  color: slategray;
+}
+
+.token.punctuation {
+  color: var(--Text-2);
+}
+
+.token.namespace {
+  opacity: 0.7;
+}
+
+.token.property,
+.token.tag,
+.token.boolean,
+.token.number,
+.token.constant,
+.token.symbol,
+.token.deleted {
+  color: #6e74e0;
+}
+
+.token.selector,
+.token.attr-name,
+.token.string,
+.token.char,
+.token.builtin,
+.token.inserted {
+  color: #15ad31;
+}
+
+.token.operator,
+.token.entity,
+.token.url,
+.language-css .token.string,
+.style .token.string {
+  color: rgba(250, 140, 21, 0.56);
+  background-color: rgba(128, 128, 128, 0.1);
+}
+
+.token.atrule,
+.token.attr-value,
+.token.keyword {
+  color: #1b9aee;
+}
+
+.token.function,
+.token.class-name {
+  color: #e62412;
+}
+
+.token.regex,
+.token.important,
+.token.variable {
+  color: #fa8c15;
+}
+
+.token.important,
+.token.bold {
+  font-weight: bold;
+}
+.token.italic {
+  font-style: italic;
+}
+
+.token.entity {
+  cursor: help;
+}
+@media (prefers-color-scheme: dark) {
+  .token.property,
+  .token.tag,
+  .token.boolean,
+  .token.number,
+  .token.constant,
+  .token.symbol,
+  .token.deleted {
+    color: #979cff;
+  }
+
+  .token.selector,
+  .token.attr-name,
+  .token.string,
+  .token.char,
+  .token.builtin,
+  .token.inserted {
+    color: #64d16d;
+  }
+
+  .token.operator,
+  .token.entity,
+  .token.url,
+  .language-css .token.string,
+  .style .token.string {
+    color: rgba(255, 169, 65, 0.56);
+  }
+
+  .token.atrule,
+  .token.attr-value,
+  .token.keyword {
+    color: #43b4ff;
+  }
+
+  .token.function,
+  .token.class-name {
+    color: #ff6a6a;
+  }
+
+  .token.regex,
+  .token.important,
+  .token.variable {
+    color: #ffa941;
+  }
+}

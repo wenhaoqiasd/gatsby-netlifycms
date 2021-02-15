@@ -1,20 +1,28 @@
-import React from "react";
-import { graphql } from "gatsby";
+import React from "react"
+import { graphql } from "gatsby"
+
+import Layout from "../components/layout"
+import SEO from "../components/seo"
+import Share from "../components/share"
+
+import "./blogTemplate.css"
 
 export default function Template({ data }) {
   const { markdownRemark } = data;
   const { frontmatter, html } = markdownRemark;
   return (
-    <div className="blog-post-container">
-      <div className="blog-post">
-        <h1>{frontmatter.title}</h1>
-        <p>{frontmatter.date}</p>
-        <div
-          className="blog-post-content"
-          dangerouslySetInnerHTML={{ __html: html }}
-        />
+    <Layout>
+      <SEO title={frontmatter.title} />
+      <div className="zoom-in">
+        <div className="page">
+          <h1 className="page-title">{frontmatter.title}</h1>
+          <p className="page-date">{frontmatter.date}</p>
+          <div className="blog-post-content"
+            dangerouslySetInnerHTML={{ __html: html }} />
+        </div>
+        <Share Path={frontmatter.path} Title={frontmatter.title}/>
       </div>
-    </div>
+    </Layout>
   );
 }
 
@@ -27,9 +35,7 @@ export const pageQuery = graphql`
         class
         slug
         title
-        cover
         date(formatString: "MMMM DD, YYYY")
-        color
       }
     }
   }
