@@ -253,9 +253,9 @@ header [aria-current="page"] h1 {
 
 /* Wo伪字偶距 */
 
-[aria-label="Works"] span:first-child {
+/* [aria-label="Works"] span:first-child {
   margin-right: -6px;
-}
+} */
 
 /* 移动适配 */
 
@@ -266,9 +266,9 @@ header [aria-current="page"] h1 {
     transform: translateX(100%);
     padding: 6rem 3rem 3rem;
   }
-  [aria-label="Works"] span:first-child {
+  /* [aria-label="Works"] span:first-child {
     margin-right: -4px;
-  }
+  } */
 }
 
 /* 禁止滚动
