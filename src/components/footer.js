@@ -24,26 +24,26 @@ const PageFooter = () => {
       </a>
       <div className="footer-nav">
         {navbar.page.map(list => (
-          <Link key={list.key} to={list.link}>
+          <Link key={list.key} to={list.link} className="action">
             {list.name}
           </Link>
         ))}
       </div>
       <div className="footer-nav">
         {navbar.social.map(list => (
-          <a key={list.key} href={list.link} target="_blank" rel="noopener noreferrer">
+          <a key={list.key} href={list.link} target="_blank" rel="noopener noreferrer" className="action">
             {list.name}
           </a>
         ))}
       </div>
       <div className="footer-nav">
         {navbar.person.map(list => (
-          <a key={list.key} href={list.link}>
+          <a key={list.key} href={list.link} className="action">
             {list.name}
           </a>
         ))}
       </div>
-      <p className="footer-text">
+      <p className="footer-text action">
         © {new Date().getFullYear()}{" "}
       </p>
     </div>

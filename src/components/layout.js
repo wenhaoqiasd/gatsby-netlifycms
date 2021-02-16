@@ -74,11 +74,11 @@ const Layout = ({ children }) => {
           {/* 尾部信息 */}
           <span className="menu-footer">
             {navbar.person.map(list => (
-              <a key={list.key} href={list.link} title={list.title}>
+              <a key={list.key} href={list.link} title={list.title} className="action">
                 {list.name}
               </a>
             ))}
-            <p>{data.site.buildTime}</p>
+            <p className="action">{data.site.buildTime}</p>
           </span>
         </div>
       </header>

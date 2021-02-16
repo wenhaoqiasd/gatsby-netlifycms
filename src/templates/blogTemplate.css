@@ -6,7 +6,7 @@
 }
 .page-title {
   margin-top: 100px !important;
-  font-size: 4rem !important;
+  font-size: 3.75rem !important;
   line-height: 1 !important;
 }
 .page-date {
@@ -114,7 +114,7 @@ table td {
 }
 @media screen and (max-width: 48rem) {
   .page-title {
-    font-size: 3rem !important;
+    font-size: 2.75rem !important;
   }
   .page h1 {
     font-size: 2rem;
