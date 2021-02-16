@@ -24,7 +24,6 @@ const Social = () => (
           text-align: center;
           display: inline-block;
           font-size: 1.5rem;
-          text-shadow: 0 0 1.5rem var(--BG-P);
           transition: var(--ease-3);
         }
         @media screen and (max-width: 48rem) {
@@ -44,13 +43,11 @@ const Social = () => (
             color: transparent;
             pointer-events: none; 
             transform: scale(0.5);
-            text-shadow: 0 0 0 transparent;
           }
           .up-scroll .social-icon a{
             color: inherit;
             pointer-events: auto; 
             transform: scale(1);
-            text-shadow: 0 0 1.5rem var(--BG-P);
           }
         }
       `}
