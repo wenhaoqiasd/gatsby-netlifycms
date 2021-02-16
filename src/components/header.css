@@ -28,7 +28,7 @@
   margin: 0;
   padding: 0 0.25rem;
   text-transform: lowercase;
-  font-size: 1.25rem;
+  font-size: 1.125rem;
   line-height: 2rem;
   font-weight: 600;
 }
@@ -251,12 +251,6 @@ header [aria-current="page"] h1 {
   color: var(--Text-1);
 }
 
-/* Wo伪字偶距 */
-
-/* [aria-label="Works"] span:first-child {
-  margin-right: -6px;
-} */
-
 /* 移动适配 */
 
 @media screen and (max-width: 48rem) {
@@ -266,13 +260,4 @@ header [aria-current="page"] h1 {
     transform: translateX(100%);
     padding: 6rem 3rem 3rem;
   }
-  /* [aria-label="Works"] span:first-child {
-    margin-right: -4px;
-  } */
 }
-
-/* 禁止滚动
-.content-main.open-menu {
-  height: 100vh;
-  overflow: hidden;
-} */
