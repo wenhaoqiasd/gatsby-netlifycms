@@ -3,7 +3,7 @@ path: /stories/tb_loop/
 class: stories
 slug: ngc-0005
 title: Teambition Loop fonts
-cover: /assets/font.png
+cover: /assets/font.jpg
 date: 2020-07-23T07:10:29.707Z
 tags:
   - "Design"

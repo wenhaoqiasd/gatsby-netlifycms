@@ -88,9 +88,10 @@ const IndexPage = ({ data }) => {
     </Layout>
   )
 }
+// {childImageSharp{fluid(maxWidth:200,quality: 100){...GatsbyImageSharpFluid}}}
 export const query = graphql`
-  query {
-    allMarkdownRemark(sort: { order: DESC, fields: [frontmatter___date] }, filter: {frontmatter: {class: {eq: "stories"}}}) {
+  query BlogPage {
+    allMarkdownRemark( sort: { order: DESC, fields: [frontmatter___date] }, filter: {frontmatter: {class: {eq: "stories"}}}) {
       edges {
         node {
           frontmatter {

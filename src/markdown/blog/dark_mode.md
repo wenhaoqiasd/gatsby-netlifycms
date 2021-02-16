@@ -2,9 +2,9 @@
 path: /stories/dark_mode/
 class: stories
 slug: ngc-0006
-cover: /assets/darkmode.png
-color: rgba(128,128,128,0.24)
 title: Dark Mode
+cover: /assets/darkmode.jpg
+color: rgba(128,128,128,0.24)
 tags:
   - Design
   - Studies

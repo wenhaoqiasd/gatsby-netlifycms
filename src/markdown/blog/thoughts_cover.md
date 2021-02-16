@@ -3,7 +3,7 @@ path: /stories/thoughts_covers/
 class: stories
 slug: ngc-0001
 title: Thoughts Covers
-cover: /assets/thoughts_covers.jpg
+cover: /assets/thoughtscovers.jpg
 date: 2020-02-02T07:10:29.707Z
 tags:
   - "Design"

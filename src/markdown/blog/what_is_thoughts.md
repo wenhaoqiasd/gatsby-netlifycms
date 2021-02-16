@@ -3,7 +3,7 @@ path: /stories/what_is_thoughts/
 class: stories
 slug: ngc-0002
 title: What is Thoughts?
-cover: /assets/thoughts_video.jpg
+cover: /assets/thoughtsvideo.jpg
 date: 2020-02-04T07:10:29.707Z
 tags:
   - "Design"

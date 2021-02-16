@@ -3,7 +3,7 @@ path: /stories/fridge/
 class: stories
 slug: ngc-0004
 title: Fridge - Design token tools
-cover: /assets/fridge.png
+cover: /assets/fridge.jpg
 date: 2020-07-22T07:10:29.707Z
 tags:
   - "Design"
