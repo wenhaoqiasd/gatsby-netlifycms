@@ -9,7 +9,6 @@ tags:
   - Design
   - Studies
   - Code
-  - Test
 date: 2020-07-31T05:25:15.433Z
 ---
 ![](https://dl.airtable.com/.attachments/ed28d369c9638b44163ae42848d40c81/c32fcdfd/darkmode_1.png)

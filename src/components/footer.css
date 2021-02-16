@@ -1,0 +1,50 @@
+.footer {
+  position: relative;
+  width: 100%;
+  padding: 2rem 1.75rem 6rem;
+  background-color: var(--BG-S);
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-gap: 1.5rem;
+}
+
+.footer a {
+  margin: 0 0 1rem 0;
+}
+
+.footer-logo {
+  position: static;
+  padding: 0;
+  grid-column-start: span 3;
+  display: block;
+}
+
+.footer-nav a {
+  width: 100%;
+  display: block;
+}
+
+.footer-text {
+  position: absolute;
+  left: 1.75rem;
+  bottom: 1.75rem;
+  line-height: 1.5rem;
+  display: block;
+  color: var(--Text-2);
+}
+
+.footer-text a {
+  color: var(--Text-2);
+}
+
+@media screen and (max-width: 48rem) {
+  .footer {
+    padding: 4rem 1.75rem 8rem;
+  }
+  .footer-logo {
+    grid-column-start: span 6;
+  }
+  .footer-nav {
+    grid-column-start: span 3;
+  }
+}

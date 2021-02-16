@@ -3,6 +3,27 @@
 /* 字体调用 */
 
 @font-face {
+  font-family: "Termina";
+  src: url("../fonts/Termina-Bold.otf");
+  font-weight: 700;
+}
+@font-face {
+  font-family: "Termina";
+  src: url("../fonts/Termina-Demi.otf");
+  font-weight: 600;
+}
+@font-face {
+  font-family: "Termina";
+  src: url("../fonts/Termina-Medium.otf");
+  font-weight: 500;
+}
+@font-face {
+  font-family: "Termina";
+  src: url("../fonts/Termina-Regular.otf");
+  font-weight: 400;
+}
+
+/* @font-face {
   font-family: "Loop";
   src: url("../fonts/AlibabaTeambitionLoop01-Black.otf");
   font-weight: 800;
@@ -12,14 +33,14 @@
   font-family: "Loop";
   src: url("../fonts/AlibabaTeambitionLoop01-Bold.otf");
   font-weight: 700;
-}
+} */
 
 @font-face {
   font-family: "Loop";
   src: url("../fonts/AlibabaTeambitionLoop01-SemiBold.otf");
   font-weight: 600;
 }
-
+/* 
 @font-face {
   font-family: "Loop";
   src: url("../fonts/AlibabaTeambitionLoop01-Medium.otf");
@@ -30,7 +51,7 @@
   font-family: "Loop";
   src: url("../fonts/AlibabaTeambitionLoop01-Regular.otf");
   font-weight: 400;
-}
+} */
 
 @font-face {
   font-family: "jet";
@@ -104,13 +125,13 @@ html {
 body {
   -webkit-font-smoothing: antialiased;
   -webkit-text-size-adjust: 100%;
-  font-family: "Loop", "PingFang", sans-serif;
+  font-family: "Termina", "PingFang", sans-serif;
   background-color: var(--BG-P);
   color: var(--Text-1);
   font-size: 16px;
   line-height: 1.5;
   font-weight: 400;
-  /* animation: fadein 1s ease 1s backwards; */
+  animation: fadein 1s ease 1s backwards;
 }
 
 @keyframes fadein {
@@ -130,7 +151,7 @@ h1, h2, h3, h4 {
 
 h1 {
   font-size: 4rem;
-  font-weight: 600;
+  font-weight: 700;
 }
 
 h2 {
@@ -206,6 +227,7 @@ div {
 /* 自定义通用 */
 
 .big-type {
+  font-family: "Termina";
   font-size: 6vw;
   line-height: 1;
   font-weight: 800;
@@ -226,45 +248,7 @@ div {
   }
 }
 
-/* PageUp */
-
-.page-up {
-  position: fixed;
-  right: 1.5rem;
-  bottom: 1.5rem;
-  width: 2rem;
-  height: 2rem;
-  z-index: 40;
-  transition: var(--ease-3);
-  transform: rotateZ(-90deg) scale(0.5);
-  pointer-events: none;
-}
-
-.up-scroll .page-up {
-  pointer-events: auto;
-  transform: rotateZ(-90deg) scale(1);
-}
-
-.page-up svg :first-child {
-  transition: var(--ease-3);
-  stroke: var(--Text-1);
-  stroke-width: 8;
-}
-
-.up-scroll .page-up svg :first-child {
-  stroke: var(--Text-3);
-  stroke-width: 2;
-}
-
-.page-up svg :nth-child(2) {
-  stroke: var(--Text-1);
-}
-
-@media screen and (max-width: 48rem) {
-  .page-up svg :first-child {
-    stroke: transparent;
-  }
-}
+/* ZOOMMMMM */
 
 .zoom-in {
   animation: zoomin 0.5s ease 1s backwards;

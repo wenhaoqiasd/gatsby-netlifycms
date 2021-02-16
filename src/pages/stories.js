@@ -3,6 +3,7 @@ import { graphql } from "gatsby"
 import SEO from "../components/seo"
 import Layout from "../components/layout"
 import Card from "../components/card"
+import Footer from "../components/footer"
 
 import "./stories.css"
 
@@ -83,7 +84,7 @@ const IndexPage = ({ data }) => {
             </p>
           }
         </section>
-        {/* 需要页尾 ！！！ */}
+        <Footer />
       </div>
     </Layout>
   )

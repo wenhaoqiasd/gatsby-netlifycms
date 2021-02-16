@@ -29,6 +29,43 @@ const PageUp = () => {
   ])
   return (
     <>
+      <style>
+        {`
+          /* PageUp */
+          .page-up {
+            position: fixed;
+            right: 1.5rem;
+            bottom: 1.5rem;
+            width: 2rem;
+            height: 2rem;
+            z-index: 40;
+            transition: var(--ease-3);
+            transform: rotateZ(-90deg) scale(0.5);
+            pointer-events: none;
+          }
+          .up-scroll .page-up {
+            pointer-events: auto;
+            transform: rotateZ(-90deg) scale(1);
+          }
+          .page-up svg :first-child {
+            transition: var(--ease-3);
+            stroke: var(--Text-1);
+            stroke-width: 8;
+          }
+          .up-scroll .page-up svg :first-child {
+            stroke: var(--Text-3);
+            stroke-width: 2;
+          }
+          .page-up svg :nth-child(2) {
+            stroke: var(--Text-1);
+          }
+          @media screen and (max-width: 48rem) {
+            .page-up svg :first-child {
+              stroke: transparent;
+            }
+          }
+        `}
+      </style>
       <a href="#up" className="page-up">
         <svg width="32px" height="32px">
           <circle r="12" cy="16" cx="16" strokeWidth="2" strokeLinejoin="round" strokeLinecap="round" fill="none" />

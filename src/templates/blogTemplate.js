@@ -4,6 +4,7 @@ import { graphql } from "gatsby"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Share from "../components/share"
+import Footer from "../components/footer"
 
 import "./blogTemplate.css"
 
@@ -21,6 +22,7 @@ export default function Template({ data }) {
             dangerouslySetInnerHTML={{ __html: html }} />
         </div>
         <Share Path={frontmatter.path} Title={frontmatter.title}/>
+        <Footer />
       </div>
     </Layout>
   );
