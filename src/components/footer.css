@@ -47,4 +47,7 @@
   .footer-nav {
     grid-column-start: span 3;
   }
+  .footer :nth-child(4) {
+    grid-column-start: span 6;
+  }
 }
