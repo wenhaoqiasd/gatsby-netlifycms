@@ -79,9 +79,9 @@ const IndexPage = ({ data }) => {
                   Date={frontmatter.date} />
               )
             })
-            : <p style={{ color: "var(--Text-2)", fontSize: "1.25rem" }}>
-              No search
-            </p>
+            : <h1 style={{ color: "var(--Text-3)" }}>
+              No Search
+            </h1>
           }
         </section>
         <Footer />

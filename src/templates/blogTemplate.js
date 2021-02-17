@@ -25,7 +25,6 @@ export default function Template({ data }) {
           <div className="blog-post-content"
             dangerouslySetInnerHTML={{ __html: html }} />
         </div>
-       
         <Footer />
       </div>
     </Layout>
