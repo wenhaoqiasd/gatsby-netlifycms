@@ -64,12 +64,17 @@ module.exports = {
         path: `${__dirname}/src/markdown`,
       },
     },
-    'gatsby-plugin-netlify-cms',
+    {
+      resolve: `gatsby-plugin-netlify-cms`,
+      options: {
+        modulePath: `${__dirname}/src/cms/cms.js`,
+      },
+    },
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Gatsby PWA and NetlifyCMS`,
-        short_name: `Gatsby PWA and NetlifyCMS`,
+        name: `Curiosity`,
+        short_name: `Curiosity`,
         start_url: `/`,
         display: `standalone`,
         icon: `src/images/dr.png`,

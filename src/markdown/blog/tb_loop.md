@@ -14,7 +14,7 @@ color: rgba(86,160,102,0.24)
 
 ---
 
-<textarea rows="2" name="fonts" class="font-view">teambition loop</textarea>
+<textarea rows="1" name="fonts" class="font-view">teambition loop</textarea>
 
 ## 简介
 
