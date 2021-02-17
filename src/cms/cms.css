@@ -47,10 +47,6 @@ body>div {
   margin: 0 auto;
 }
 
-body h1:first-child {
-  font-size: 3.5rem!important;
-}
-
 h1, h2, h3, h4 {
   line-height: 1.5;
   margin-top: 1rem;

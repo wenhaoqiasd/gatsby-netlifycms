@@ -15,13 +15,17 @@ export default function Template({ data }) {
     <Layout>
       <SEO title={frontmatter.title} />
       <div className="zoom-in">
-        <div className="page">
+        <div className="page-head" style={{ backgroundColor: frontmatter.color }}>
+          <img src={frontmatter.cover} alt={frontmatter.title} />
           <h1 className="page-title">{frontmatter.title}</h1>
           <p className="page-date">{frontmatter.date}</p>
+          <Share Path={frontmatter.path} Title={frontmatter.title} />
+        </div>
+        <div className="page">
           <div className="blog-post-content"
             dangerouslySetInnerHTML={{ __html: html }} />
         </div>
-        <Share Path={frontmatter.path} Title={frontmatter.title}/>
+       
         <Footer />
       </div>
     </Layout>
@@ -38,6 +42,8 @@ export const pageQuery = graphql`
         slug
         title
         date(formatString: "MMMM DD, YYYY")
+        cover
+        color
       }
     }
   }

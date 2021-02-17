@@ -7,7 +7,7 @@ cover: /assets/fridge.jpg
 date: 2020-07-22T07:10:29.707Z
 tags:
   - "Design"
-color: rgba(255,218,124,0.24))
+color: rgba(255,218,124,0.24)
 ---
 
 # 什么是 Fridge?

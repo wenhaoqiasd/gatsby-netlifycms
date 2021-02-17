@@ -8,13 +8,13 @@ const Share = ({ Title, Path }) => (
       .page-share {
         display: flex;
         justify-content: center;
-        padding: 4rem 0;
+        padding: 2rem 0 1rem;
       }
       .page-share a {
         font-family: "uuicon";
         display: inline-block;
         font-size: 1.5rem;
-        margin: 1rem;
+        margin: 0 1rem;
         text-decoration: none !important;
         color: var(--Text-2);
       }
