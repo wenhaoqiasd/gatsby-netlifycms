@@ -2,12 +2,12 @@
 path: /stories/thoughts_covers/
 class: stories
 slug: ngc-0001
-title: Thoughts Covers
+color: rgba(110,116,224,0.24)
 cover: /assets/thoughtscovers.jpg
-date: 2020-02-02T07:10:29.707Z
 tags:
   - "Design"
-color: rgba(110,116,224,0.24)
+title: Thoughts Covers
+date: 2020-02-02T07:10:29.707Z
 ---
 
 ![](https://dl.airtable.com/.attachments/fa8f07cd6e7d206bd77690575efb6ae0/95c06fd6/1.jpg)

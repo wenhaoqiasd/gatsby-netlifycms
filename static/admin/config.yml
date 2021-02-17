@@ -18,10 +18,10 @@ collections:
       - { name: path, label: Path }
       - { name: class, label: Class, widget: select, options: ["draft", "stories"]}
       - { name: slug, label: Slug }
-      - { name: cover, label: Cover, widget: image }
       - { name: color, label: Color(CSS), required: false }
-      - { name: title, label: Title }
+      - { name: cover, label: Cover, widget: image }
       - { name: tags, label: Tags, widget: list }
+      - { name: title, label: Title }
       - { name: date, label: Date, widget: datetime }
       - { name: body, label: Body, widget: markdown }
 

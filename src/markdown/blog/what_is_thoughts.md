@@ -2,12 +2,12 @@
 path: /stories/what_is_thoughts/
 class: stories
 slug: ngc-0002
-title: What is Thoughts?
+color: rgba(110,116,224,0.24)
 cover: /assets/thoughtsvideo.jpg
-date: 2020-02-04T07:10:29.707Z
 tags:
   - "Design"
-color: rgba(110,116,224,0.24)
+title: What is Thoughts?
+date: 2020-02-04T07:10:29.707Z
 ---
 
 <video preload="metadata" controls="controls" poster="https://dl.airtable.com/.attachments/dcafef08ae0dcdd7b98feaa1158a4e3b/f468e027/7.jpg"><source type="video/mp4" src="https://dn-clients.teambition.net/thoughts/thoughts_intro_2019.mp4"></video>

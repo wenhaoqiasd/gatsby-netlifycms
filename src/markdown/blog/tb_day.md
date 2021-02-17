@@ -2,12 +2,13 @@
 path: /stories/teambition_day2019/
 class: stories
 slug: ngc-0003
-title: Teambition Day 2019
+color: rgba(0,180,255,0.24)
 cover: /assets/teambitionday2019.jpg
-date: 2020-07-18T07:10:29.707Z
 tags:
   - "Design"
-color: rgba(0,180,255,0.24)
+
+title: Teambition Day 2019
+date: 2020-07-18T07:10:29.707Z
 ---
 
 ![](https://dl.airtable.com/.attachments/b67a6707ac035eaac11cbd992bfa0e35/702094f5/1.png)

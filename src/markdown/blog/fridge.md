@@ -2,12 +2,12 @@
 path: /stories/fridge/
 class: stories
 slug: ngc-0004
-title: Fridge - Design token tools
+color: rgba(255,218,124,0.24)
 cover: /assets/fridge.jpg
-date: 2020-07-22T07:10:29.707Z
 tags:
   - "Design"
-color: rgba(255,218,124,0.24)
+title: Fridge - Design token tools
+date: 2020-07-22T07:10:29.707Z
 ---
 
 # 什么是 Fridge?

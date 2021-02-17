@@ -2,12 +2,12 @@
 path: /stories/tb_loop/
 class: stories
 slug: ngc-0005
-title: Teambition Loop fonts
+color: rgba(86,160,102,0.24)
 cover: /assets/font.jpg
-date: 2020-07-23T07:10:29.707Z
 tags:
   - "Design"
-color: rgba(86,160,102,0.24)
+title: Teambition Loop fonts
+date: 2020-07-23T07:10:29.707Z
 ---
 
 ![](https://dl.airtable.com/.attachments/b41948d5b002be3cba32184db74b2dc9/57b5db79/5f156d6a88282e058185ac77.png)
