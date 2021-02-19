@@ -1,5 +1,6 @@
 import React, { useState } from "react"
 import { graphql } from "gatsby"
+// 组件
 import SEO from "../components/seo"
 import Layout from "../components/layout"
 import Card from "../components/card"

@@ -1,0 +1,78 @@
+/* 布局框 */
+
+.home-space {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.home-space h1, .home-space h2, .home-space h3, .home-space h4 {
+  margin: 0.5rem 0;
+}
+
+.home-space section {
+  position: relative;
+  min-height: 100vh;
+  padding: 5rem;
+}
+
+/* 卡片部分 */
+
+.home-space section.home-01 {
+  position: sticky;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 0;
+  padding: 0;
+  z-index: 30;
+  overflow: hidden;
+}
+
+.handle {
+  cursor: grab;
+  user-select: none;
+}
+
+.react-draggable-dragging {
+  cursor: grabbing;
+}
+
+.home-space section.home-02 {
+  z-index: 50;
+  overflow: hidden;
+  background-color: var(--BG-P);
+}
+
+.home-space section.home-04 {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+}
+
+@media screen and (max-width: 48rem) {
+  .home-space {
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-areas: "a" "b";
+  }
+  .home-space section.home-01 {
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 1rem 1.75rem 3rem;
+    grid-area: b;
+    min-height: calc(100vh - 100vw);
+    top: 24vh;
+  }
+  .handle {
+    transform: translate(0, 0) !important;
+    pointer-events: none;
+  }
+  .home-space section.home-02 {
+    grid-area: a;
+    min-height: 100vw;
+  }
+  .home-space section.home-04 {
+    z-index: 35;
+    background-color: var(--BG-P);
+  }
+}

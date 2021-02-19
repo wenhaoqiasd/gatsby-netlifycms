@@ -80,5 +80,22 @@ module.exports = {
         icon: `src/images/dr.png`,
       },
     },
+    {
+      resolve: `gatsby-source-airtable`,
+      options: {
+        apiKey: `keyfkotOQ2FFeGdxW`,
+        concurrency: 5,
+        tables: [
+          {
+            baseId: `appQ7dZb0ldgR7Ugz`,
+            tableName: `Sandwiches`
+          },
+          {
+            baseId: `appQ7dZb0ldgR7Ugz`,
+            tableName: `Resources`
+          }
+        ]
+      }
+    },
   ],
 };

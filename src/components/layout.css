@@ -1,4 +1,8 @@
 /* 导航 z-index:2000 */
+/* 社交组件 z-index:60 */
+/* 页面进度圈 z-index:40 */
+/* 首页吸附滚动卡片 z-index:30 */
+/* 文章页吸附tab z-index:20 */
 
 /* 字体调用 */
 
@@ -7,51 +11,30 @@
   src: url("../fonts/Termina-Bold.otf");
   font-weight: 700;
 }
+
 @font-face {
   font-family: "Termina";
   src: url("../fonts/Termina-Demi.otf");
   font-weight: 600;
 }
+
 @font-face {
   font-family: "Termina";
   src: url("../fonts/Termina-Medium.otf");
   font-weight: 500;
 }
+
 @font-face {
   font-family: "Termina";
   src: url("../fonts/Termina-Regular.otf");
   font-weight: 400;
 }
 
-/* @font-face {
-  font-family: "Loop";
-  src: url("../fonts/AlibabaTeambitionLoop01-Black.otf");
-  font-weight: 800;
-}
-
-@font-face {
-  font-family: "Loop";
-  src: url("../fonts/AlibabaTeambitionLoop01-Bold.otf");
-  font-weight: 700;
-} */
-
 @font-face {
   font-family: "Loop";
   src: url("../fonts/AlibabaTeambitionLoop01-SemiBold.otf");
   font-weight: 600;
 }
-/* 
-@font-face {
-  font-family: "Loop";
-  src: url("../fonts/AlibabaTeambitionLoop01-Medium.otf");
-  font-weight: 500;
-}
-
-@font-face {
-  font-family: "Loop";
-  src: url("../fonts/AlibabaTeambitionLoop01-Regular.otf");
-  font-weight: 400;
-} */
 
 @font-face {
   font-family: "jet";
@@ -78,6 +61,7 @@ html {
   --Text-1: rgb(26, 26, 26);
   --Text-2: rgba(26, 26, 26, 0.6);
   --Text-3: rgba(26, 26, 26, 0.2);
+  --Border: rgba(0,0,0,0.08);
   --Glass: saturate(200%) blur(1.25rem);
   --Glass-BG-P: #fff;
   --Glass-BG-S: var(--BG-P);
@@ -106,6 +90,7 @@ html {
     --Text-1: rgb(255, 255, 255);
     --Text-2: rgba(255, 255, 255, 0.6);
     --Text-3: rgba(255, 255, 255, 0.2);
+    --Border: rgba(255, 255, 255,0.08);
     --Glass-BG-P: rgb(32, 30, 30);
     --Glass-BG-S: var(--BG-P);
   }
@@ -118,7 +103,7 @@ html {
 }
 
 ::selection {
-  --selection: rgba(254, 208, 38,0.48);
+  --selection: rgba(254, 208, 38, 0.48);
   background-color: var(--selection);
 }
 
@@ -225,7 +210,7 @@ div {
 
 .big-type {
   font-family: "Termina";
-  font-size: 6vw;
+  font-size: 5vw;
   line-height: 1;
   font-weight: 800;
 }
@@ -245,12 +230,13 @@ div {
   }
 }
 
-/* ZOOMMMMM */
+/* 全局动画 */
 
 .zoom-in {
   animation: zoomin 0.5s ease 1s backwards;
   transform-origin: 50% 0%;
 }
+
 @keyframes zoomin {
   0% {
     opacity: 0;
@@ -261,10 +247,12 @@ div {
     transform: scale(1);
   }
 }
+
 .zoom-out {
   animation: zoomout 1s ease 1.2s backwards;
   transform-origin: 50% 0%;
 }
+
 @keyframes zoomout {
   0% {
     opacity: 0;

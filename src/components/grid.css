@@ -1,0 +1,25 @@
+.grid-box {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  z-index: -1;
+}
+
+.grid-box :nth-child(1), .grid-box :nth-child(2), .grid-box :nth-child(3), .grid-box :nth-child(4), .grid-box :nth-child(5), .grid-box :nth-child(6) {
+  box-shadow: inset 0px -1px 0px var(--Border);
+  height: 100vh;
+}
+
+.type-a.grid-box :nth-child(3), .type-a.grid-box :nth-child(5), .type-a.grid-box :nth-child(6) {
+  box-shadow: inset -1px -1px 0px var(--Border);
+}
+
+@media screen and (max-width: 48rem) {
+  .grid-box {
+    display: none;
+  }
+}
