@@ -39,7 +39,7 @@ const IndexPage = () => {
                 <br />
                 <span className="big-stroke">
                   DEVELOP
-                  <br />{"&"} CREATE
+                  <br />{"&"} CREATE.
                 </span>
               </h1>
             </Draggable>
