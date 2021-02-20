@@ -90,7 +90,7 @@ html {
     --Text-1: rgb(255, 255, 255);
     --Text-2: rgba(255, 255, 255, 0.6);
     --Text-3: rgba(255, 255, 255, 0.2);
-    --Border: rgba(255, 255, 255,0.08);
+    --Border: rgba(255, 255, 255,0.05);
     --Glass-BG-P: rgb(32, 30, 30);
     --Glass-BG-S: var(--BG-P);
   }
@@ -135,7 +135,7 @@ h1, h2, h3, h4 {
 }
 
 h1 {
-  font-size: 4rem;
+  font-size: 3.5rem;
   font-weight: 700;
 }
 

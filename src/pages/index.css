@@ -44,6 +44,25 @@
   background-color: var(--BG-P);
 }
 
+.home-space section.home-03 {
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 -1px 0px var(--Border);
+}
+
+.home-space section.home-03 [data-rellax-speed] {
+  position: absolute;
+  right: 0;
+  width: 50%;
+  opacity: 0.48;
+}
+
+.home-space section.home-03 .ring {
+  position: absolute;
+  bottom: 25vh;
+  left: 2vw;
+}
+
 .home-space section.home-04 {
   display: flex;
   flex-wrap: wrap;
@@ -54,6 +73,9 @@
   .home-space {
     grid-template-columns: repeat(1, 1fr);
     grid-template-areas: "a" "b";
+  }
+  .home-space section {
+    padding: 1.755rem;
   }
   .home-space section.home-01 {
     align-items: flex-start;
@@ -70,6 +92,9 @@
   .home-space section.home-02 {
     grid-area: a;
     min-height: 100vw;
+  }
+  .home-space section.home-03 .ring {
+    left: -2rem;
   }
   .home-space section.home-04 {
     z-index: 35;

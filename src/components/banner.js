@@ -1,16 +1,16 @@
-import React, { useState, useEffect } from "react";
-import cx from "classnames";
-import Tilt from "react-tilt";
-import { useStaticQuery, graphql } from "gatsby";
+import React, { useState, useEffect } from "react"
+import cx from "classnames"
+import Tilt from "react-tilt"
+import { useStaticQuery, graphql } from "gatsby"
 
-import "./banner.css";
+import "./banner.css"
 
 const pickExcept = (array, prev) => {
   const candidates = prev
     ? array.filter((item) => item.recordId !== prev.recordId)
-    : array;
-  return candidates[Math.floor(Math.random() * candidates.length)];
-};
+    : array
+  return candidates[Math.floor(Math.random() * candidates.length)]
+}
 
 function useBanners() {
   const { sandwiches } = useStaticQuery(graphql`
@@ -32,31 +32,31 @@ function useBanners() {
         }
       }
     }
-  `);
+  `)
 
-  return sandwiches.nodes || [];
+  return sandwiches.nodes || []
 }
 
 function usePickBanner(sandwiches) {
-  const [result, setResult] = useState(() => pickExcept(sandwiches));
+  const [result, setResult] = useState(() => pickExcept(sandwiches))
 
   useEffect(() => {
     const interval = setInterval(
       () => setResult((prev) => pickExcept(sandwiches, prev)),
       4000
-    );
-    return () => clearInterval(interval);
-  }, [sandwiches]);
+    )
+    return () => clearInterval(interval)
+  }, [sandwiches])
 
-  return result;
+  return result
 }
 
 const Banner = () => {
-  const [isClient, setIsClient] = useState(false);
-  const sandwiches = useBanners();
-  const currentSandwich = usePickBanner(sandwiches);
+  const [isClient, setIsClient] = useState(false)
+  const sandwiches = useBanners()
+  const currentSandwich = usePickBanner(sandwiches)
 
-  useEffect(() => setIsClient(true), []);
+  useEffect(() => setIsClient(true), [])
 
   return (
     <div>
@@ -94,7 +94,7 @@ const Banner = () => {
         </a>
       ))}
     </div>
-  );
-};
+  )
+}
 
-export default Banner;
+export default Banner

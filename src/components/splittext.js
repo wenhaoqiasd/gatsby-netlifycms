@@ -1,19 +1,17 @@
-import React from "react";
+import * as React from "react"
 
-class SplitText extends React.Component {
-  render() {
-    return (
-      <h1 aria-label={this.props.copy} role={this.props.role}>
-        {this.props.copy.split("").map(function(char, index) {
-          return (
-            <span aria-hidden="true" key={index}>
-              {char}
-            </span>
-          );
-        })}
-      </h1>
-    );
-  }
-}
+const SplitText = ({ copy }) => {
+  return (
+	<h1 aria-label={copy}>
+	  {copy.split("").map((item, index) => {
+		return (
+		  <span aria-hidden="true" key={index}>
+			{item}
+		  </span>
+		);
+	  })}
+	</h1>
+  );
+};
 
-export default SplitText;
+export default SplitText

@@ -1,16 +1,18 @@
 import React from "react"
 
 // 组件
+import Image from "../components/image"
 import SEO from "../components/seo"
 import Layout from "../components/layout"
 import Social from "../components/social"
-// import Image from "../components/image"
 import Grid from "../components/grid.js"
 import Banner from "../components/banner"
+import Loop from "../components/loop"
 
 // 插件
 import Draggable from "react-draggable"
 import { RandomReveal } from "react-random-reveal"
+import RellaxWrapper from "react-rellax-wrapper"
 
 import "./index.css"
 
@@ -43,7 +45,7 @@ const IndexPage = () => {
                 </span>
               </h1>
             </Draggable>
-            <Grid GridType="type-a" />
+            <Grid GridType="type-321" />
           </section>
 
           <section className="home-02">
@@ -52,7 +54,13 @@ const IndexPage = () => {
           </section>
 
           <section className="home-03">
-
+            <RellaxWrapper speed={-4} percentage={0.5}>
+              <Image />
+            </RellaxWrapper>
+            <div className="ring">
+              <Loop footerLink="none" />
+            </div>
+            <Grid />
           </section>
 
           <section className="home-04">
@@ -63,7 +71,7 @@ const IndexPage = () => {
               industry, engaged in digital product design. I also work in other
               fields such as Motion Graphic, Illustration_
             </h4>
-            <Grid GridType="type-a" />
+            <Grid GridType="mobile-type-t type-321" />
           </section>
         </div>
       </main>
