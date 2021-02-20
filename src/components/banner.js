@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from "react"
-import cx from "classnames"
-import Tilt from "react-tilt"
 import { useStaticQuery, graphql } from "gatsby"
+
+// 插件
+import cx from "classnames"
+import Tilt from 'react-parallax-tilt'
 
 import "./banner.css"
 
@@ -70,23 +72,23 @@ const Banner = () => {
           href={item.data.BannerLink}
           target="_blank"
           rel="noopener noreferrer"
-        >
-          <Tilt
-            className="Tilt"
-            options={{
-              max: 20,
-              reverse: true,
-              scale: 1,
-              reset: true,
-              perspective: 1200,
-            }}
           >
+            <Tilt
+              className="Tilt"
+              tiltReverse={true}
+              perspective={2500}
+              scale={1.06}
+              transitionSpeed={2000}
+              tiltMaxAngleX={15}
+              tiltMaxAngleY={15}
+            >
             <img
               src={item.data.Cover[0].url}
               alt={item.data.Description}
-              className="Tilt-inner"
+              className="Tilt-img"
             />
           </Tilt>
+
           <div className="banner-ring">
             <p>{item.data.Description}</p>
             <div className="banner-time-ring"></div>

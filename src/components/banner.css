@@ -45,15 +45,15 @@
   margin: 1rem 20%;
 }
 
-.Tilt-inner {
+.Tilt-img {
   display: block;
   transition: filter var(--ease-3);
   box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.08);
 }
 
-.Tilt:hover .Tilt-inner {
+.Tilt:hover .Tilt-img {
   filter: brightness(1.1);
-  transform: scale(1.06);
+  transform: scale(1);
   box-shadow: 0 1rem 2rem 0 rgba(0, 0, 0, 0.12);
 }
 
@@ -124,7 +124,7 @@
     margin: 1rem 22.5%;
     transform: translate3d(0px, 0px, 0px) !important;
   }
-  .Tilt:hover .Tilt-inner {
+  .Tilt:hover .Tilt-img {
     filter: brightness(1);
     transform: scale(1);
   }

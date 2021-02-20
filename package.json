@@ -6,7 +6,7 @@
   "author": "Wenhaoqi <wenhaoqi@@126.com>",
   "dependencies": {
     "classnames": "^2.2.6",
-    "gatsby": "^2.32.4",
+    "gatsby": "^2.30.0",
     "gatsby-image": "^2.11.0",
     "gatsby-plugin-manifest": "^2.12.0",
     "gatsby-plugin-netlify-cms": "^4.10.0",
@@ -25,9 +25,9 @@
     "react-dom": "^16.14.0",
     "react-draggable": "^4.4.3",
     "react-helmet": "^6.1.0",
+    "react-parallax-tilt": "^1.4.86",
     "react-random-reveal": "^1.0.1",
-    "react-rellax-wrapper": "^1.0.6",
-    "react-tilt": "^0.1.4"
+    "react-rellax-wrapper": "^1.0.6"
   },
   "devDependencies": {
     "prettier": "2.1.1"

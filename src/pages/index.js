@@ -58,7 +58,9 @@ const IndexPage = () => {
               <Image />
             </RellaxWrapper>
             <div className="ring">
-              <Loop footerLink="none" />
+              <RellaxWrapper speed={-6} percentage={0.4}>
+                <Loop footerLink="none" />
+              </RellaxWrapper>
             </div>
             <Grid />
           </section>
@@ -73,7 +75,9 @@ const IndexPage = () => {
             </h4>
             <Grid GridType="mobile-type-t type-321" />
           </section>
+
         </div>
+
       </main>
       <Social />
     </Layout>
@@ -81,10 +85,3 @@ const IndexPage = () => {
 }
 
 export default IndexPage
-
-// {/* <h1>Hi people</h1>
-// <p>Welcome to your new Gatsby site.</p>
-// <p>Now go build something great.</p>
-// <div style={{ marginBottom: `1.45rem` }}>
-//   <Image />
-// </div> */}
