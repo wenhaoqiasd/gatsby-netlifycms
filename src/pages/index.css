@@ -69,6 +69,14 @@
   align-content: center;
 }
 
+.home-space section.home-07 {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: center;
+  grid-column: span 2;
+}
+
 @media screen and (max-width: 48rem) {
   .home-space {
     grid-template-columns: repeat(1, 1fr);
@@ -99,6 +107,9 @@
   .home-space section.home-04 {
     z-index: 35;
     background-color: var(--BG-P);
+  }
+  .home-space section.home-07 {
+    z-index: 40;
   }
 }
 

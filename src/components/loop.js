@@ -97,7 +97,6 @@ const Loop = ({ footerLink }) => {
   )
 }
 
-
 Loop.propTypes = {
   ooterLink: PropTypes.string
 }

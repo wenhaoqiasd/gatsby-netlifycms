@@ -14,11 +14,16 @@ import Draggable from "react-draggable"
 import { RandomReveal } from "react-random-reveal"
 import RellaxWrapper from "react-rellax-wrapper"
 
+// 内容
+import navbar from "../components/nav.json"
+
 import "./index.css"
 
 const IndexPage = () => {
 
   const pageName = "Home"
+  const myTitle = navbar.myTitle
+  const myDescription = navbar.myDescription
 
   return (
     <Layout>
@@ -50,7 +55,6 @@ const IndexPage = () => {
 
           <section className="home-02">
             <Banner />
-            <Grid />
           </section>
 
           <section className="home-03">
@@ -62,20 +66,21 @@ const IndexPage = () => {
                 <Loop footerLink="none" />
               </RellaxWrapper>
             </div>
-            <Grid />
           </section>
 
           <section className="home-04">
-            <h2>Say hi!</h2>
-            <h4>
-              I'm Curiosity Wen, I'm a Product designer at Alibaba on
-              the A-Drive team. Used to work in ecommerce, recruitment
-              industry, engaged in digital product design. I also work in other
-              fields such as Motion Graphic, Illustration_
-            </h4>
+            <h2>{myTitle}</h2>
+            <h4>{myDescription}</h4>
             <Grid GridType="mobile-type-t type-321" />
           </section>
 
+        </div>
+
+        <div className="home-space">
+          <section className="home-07">
+            <Loop />
+            <Grid GridType="mobile-type-t type-1221" />
+          </section>
         </div>
 
       </main>
