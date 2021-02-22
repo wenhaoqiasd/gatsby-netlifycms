@@ -29,8 +29,8 @@ const IndexPage = () => {
     <Layout>
       <SEO title={pageName} />
       <main className="zoom-out">
+        
         <div className="home-space">
-
           <section className="home-01">
             <Draggable handle=".handle">
               <h1 className="big-type handle">
@@ -73,38 +73,16 @@ const IndexPage = () => {
             <h4>{myDescription}</h4>
             <Grid GridType="mobile-type-t type-321" />
           </section>
-
         </div>
 
         <div className="home-space">
           <section className="home-05">
-
-            <div className="column" style={{gridArea: "a"}}>
-              <h1>8</h1>
-              <p>Years</p>
-            </div>
-            <div className="column" style={{gridArea: "b"}}>
-              <h1>3</h1>
-              <p>Design system</p>
-            </div>
-            <div className="column" style={{gridArea: "c"}}>
-              <h1>20+</h1>
-              <p>Commercial projects</p>
-            </div>
-
-            <div className="column" style={{gridArea: "d"}}>
-              <h1>UI/UX</h1>
-              <p>User interface {"&"} experience</p>
-            </div>
-            <div className="column" style={{gridArea: "e"}}>
-              <h1>Motion</h1>
-              <p>Motion graphic {"&"} Animation</p>
-            </div>
-            <div className="column" style={{gridArea: "f"}}>
-              <h1>Brand</h1>
-              <p>Brand design and consulting</p>
-            </div>
-
+            {navbar.homePage.map(list => (
+              <div key={list.grid} className="column" style={{ gridArea: list.grid }}>
+                <h1>{list.name}</h1>
+                <p>{list.description}</p>
+              </div>
+            ))}
             <Grid GridType="mobile-type-t" />
           </section>
 

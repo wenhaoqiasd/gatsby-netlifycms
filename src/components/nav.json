@@ -14,9 +14,17 @@
     },
     {
       "name": "Works",
-      "link": "/404/",
+      "link": "https://thoughts.teambition.com/sharespace/5dcc2f9ff32abe001545f2c5/docs/5dcc2f94f32abe001545f2c1",
       "title": "Work",
       "key": "page-3"
+    }
+  ],
+  "admin": [
+    {
+      "name": "Admin",
+      "link": "/admin/",
+      "title": "Home",
+      "key": "admin-1"
     }
   ],
   "social": [
@@ -57,5 +65,37 @@
     }
   ],
   "myTitle": "Say hi!",
-  "myDescription": "I'm Curiosity Wen, I'm a Product designer at Alibaba on the A-Drive team. Used to work in ecommerce, recruitmentindustry, engaged in digital product design. I also work in other fields such as Motion Graphic, Illustration_"
+  "myDescription": "I'm Curiosity Wen, I'm a Product designer at Alibaba on the A-Drive team. Used to work in ecommerce, recruitmentindustry, engaged in digital product design. I also work in other fields such as Motion Graphic, Illustration_",
+  "homePage": [
+    {
+      "name": "8",
+      "description": "Years",
+      "grid": "a"
+    },
+    {
+      "name": "3",
+      "description": "Design system",
+      "grid": "b"
+    },
+    {
+      "name": "20+",
+      "description": "Commercial projects",
+      "grid": "c"
+    },
+    {
+      "name": "UI/UX",
+      "description": "User interface & experience",
+      "grid": "d"
+    },
+    {
+      "name": "Motion",
+      "description": "Motion graphic & Animation",
+      "grid": "e"
+    },
+    {
+      "name": "Brand",
+      "description": "Brand design and consulting",
+      "grid": "f"
+    }
+  ]
 }

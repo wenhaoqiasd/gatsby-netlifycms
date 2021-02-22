@@ -28,6 +28,11 @@ const PageFooter = () => {
             {list.name}
           </Link>
         ))}
+        {navbar.admin.map(list => (
+          <Link key={list.key} to={list.link} className="action">
+            {list.name}
+          </Link>
+        ))}
       </div>
       <div className="footer-nav">
         {navbar.social.map(list => (
