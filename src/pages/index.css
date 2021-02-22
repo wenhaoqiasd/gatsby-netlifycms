@@ -80,10 +80,12 @@
 
 .home-space section.home-05 .column {
   background-color: var(--BG-S);
+  padding: 0 0.25rem;
 }
 
 .home-space section.home-05 h1 {
   line-height: 1;
+  margin: 0;
   font-size: 4vw;
 }
 
