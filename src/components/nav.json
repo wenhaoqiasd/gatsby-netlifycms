@@ -19,14 +19,6 @@
       "key": "page-3"
     }
   ],
-  "admin": [
-    {
-      "name": "Admin",
-      "link": "/admin/",
-      "title": "Home",
-      "key": "admin-1"
-    }
-  ],
   "social": [
     {
       "icon": "",
