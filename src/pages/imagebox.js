@@ -77,9 +77,6 @@ const ImageBox = () => {
             Cover {
               url
             }
-            Video {
-              url
-            }
           }
           recordId
         }
