@@ -75,8 +75,6 @@ OLED 屏幕有这么好的显示效果与优势，为什么普及这么慢？其
 
 由于亮色模式下，控件通过阴影来区分前后层级。但在 Dark Mode 下，阴影看不到了，使用亮色阴影（高光）也无法突出层级关系，所以 Google material design 的“层”在 Dark Mode 下是通过依此提高亮度来实现的。如果使用了系统默认的层级，暗色模式将自动按照规则适配。Material design 的开放使得设计师使用这套规则并不轻松。
 
-<iframe height="440" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FkRxl6XtNpmBUl7jG8ZK4lV%2FiOS-13-UI-Kit-Built-for-Figma-Community%3Fnode-id%3D126%253A18121&chrome=DOCUMENTATION" allowfullscreen></iframe>
-
 苹果在对于层级处理上也使用了相同的思路，不过苹果对于“层”的使用很是收敛，大部分的功能尽可能的用“间距”或者“组”来呈现。在 iOS 中，层级适配被限制简化了，在 iOS 13 的抬起模态中，页面层级可以动态抬起（提亮）。
 
 简单理解下来就是，在过去亮色 UI 下，无论使用的是中性灰还是阴影来塑造的层级，在暗色模式下，可以使用提亮的方式进行塑造层级。
@@ -97,8 +95,6 @@ OLED 屏幕有这么好的显示效果与优势，为什么普及这么慢？其
 ### 设计
 
 在新设计一个项目或者修改一个老项目支持 Dark Mode 时，首先要将背景层级与文字层级逻辑建立起来，然后将两套配色匹配到层级逻辑中，形成一个对照关系表。无论设计使用还是开发使用，只需了解使用何种层级背景与层级文字。
-
-
 
 ### 开发 (Web)
 
