@@ -1834,6 +1834,11 @@
     "@types/node" "*"
     "@types/responselike" "*"
 
+"@types/clipboard@^2.0.1":
+  "integrity" "sha512-gJJX9Jjdt3bIAePQRRjYWG20dIhAgEqonguyHxXuqALxsoDsDLimihqrSg8fXgVTJ4KZCzkfglKtwsh/8dLfbA=="
+  "resolved" "https://registry.npmjs.org/@types/clipboard/-/clipboard-2.0.1.tgz"
+  "version" "2.0.1"
+
 "@types/common-tags@^1.8.0":
   "integrity" "sha512-htRqZr5qn8EzMelhX/Xmx142z218lLyGaeZ3YR8jlze4TATRU9huKKvuBmAJEW4LCC4pnY1N6JAm6p85fMHjhg=="
   "resolved" "https://registry.npmjs.org/@types/common-tags/-/common-tags-1.8.0.tgz"
@@ -12811,7 +12816,7 @@
     "kleur" "^3.0.3"
     "sisteransi" "^1.0.5"
 
-"prop-types@^15.0.0", "prop-types@^15.5.10", "prop-types@^15.5.4", "prop-types@^15.5.6", "prop-types@^15.5.7", "prop-types@^15.5.8", "prop-types@^15.6.0", "prop-types@^15.6.1", "prop-types@^15.6.2", "prop-types@^15.7.2":
+"prop-types@^15.0.0", "prop-types@^15.5.0", "prop-types@^15.5.10", "prop-types@^15.5.4", "prop-types@^15.5.6", "prop-types@^15.5.7", "prop-types@^15.5.8", "prop-types@^15.6.0", "prop-types@^15.6.1", "prop-types@^15.6.2", "prop-types@^15.7.2":
   "integrity" "sha512-8QQikdH7//R2vurIJSutZ1smHYTcLpRWEOlHnzcWHmBYrOGUysKwSsrC89BCiFj3CbrfJ/nXFdJepOVrY1GCHQ=="
   "resolved" "https://registry.npmjs.org/prop-types/-/prop-types-15.7.2.tgz"
   "version" "15.7.2"
@@ -13096,6 +13101,15 @@
     "react-display-name" "^0.2.4"
     "teeny-tap" "^0.2.0"
 
+"react-clipboard.js@^2.0.16":
+  "integrity" "sha512-COwmnbrRbl8y4f/SjtonnJTeBRD03YzsHBL5on8iL/uyjERsMkKC7djtfmns7iRAbzadn/84MdpaqaQ3ITP47g=="
+  "resolved" "https://registry.npmjs.org/react-clipboard.js/-/react-clipboard.js-2.0.16.tgz"
+  "version" "2.0.16"
+  dependencies:
+    "@types/clipboard" "^2.0.1"
+    "clipboard" "^2.0.0"
+    "prop-types" "^15.5.0"
+
 "react-codemirror2@^7.0.0":
   "integrity" "sha512-t7YFmz1AXdlImgHXA9Ja0T6AWuopilub24jRaQdPVbzUJVNKIYuy3uCFZYa7CE5S3UW6SrSa5nAqVQvtzRF9gw=="
   "resolved" "https://registry.npmjs.org/react-codemirror2/-/react-codemirror2-7.2.1.tgz"
@@ -13171,7 +13185,7 @@
     "invariant" "^2.1.0"
     "shallowequal" "^1.1.0"
 
-"react-dom@^15.0.0 || ^16.0.0", "react-dom@^16.14.0", "react-dom@^16.4.2 || ^17.0.0", "react-dom@^16.8.4":
+"react-dom@^15.0.0 || ^16.0.0", "react-dom@^16.14.0", "react-dom@^16.4.2 || ^17.0.0", "react-dom@^16.8.4", "react-dom@>=15.0.0":
   "integrity" "sha512-1gCeQXDLoIqMgqD3IO2Ah9bnf0w9kzhwN5q4FGnHZ67hBm9yePzB5JJAIQCc8x3pFnNlwFq4RidZggNAAkzWWw=="
   "resolved" "https://registry.npmjs.org/react-dom/-/react-dom-16.14.0.tgz"
   "version" "16.14.0"
@@ -13473,7 +13487,7 @@
     "@babel/runtime" "^7.0.0"
     "memoize-one" ">=3.1.1 <6"
 
-"react@^15.0.0 || ^16.0.0", "react@^16.14.0", "react@^16.4.2 || ^17.0.0", "react@^16.8.4":
+"react@^15.0.0 || ^16.0.0", "react@^16.14.0", "react@^16.4.2 || ^17.0.0", "react@^16.8.4", "react@>=15.5.0":
   "integrity" "sha512-0X2CImDkJGApiAlcf0ODKIneSwBPhqJawOa5wCtKbu7ZECrmS26NvtSILynQ66cgkT/RJ4LidJOc3bUESwmU8g=="
   "resolved" "https://registry.npmjs.org/react/-/react-16.14.0.tgz"
   "version" "16.14.0"
