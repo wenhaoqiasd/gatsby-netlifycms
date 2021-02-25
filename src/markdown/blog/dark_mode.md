@@ -70,7 +70,7 @@ OLED 屏幕有这么好的显示效果与优势，为什么普及这么慢？其
 
 ## 背景层级
 
-<video autoplay="autoplay" preload="metadata" loop="loop"><source type="video/mp4" src="https://dl.airtable.com/.attachments/d0d9333b3c2ab6b47f64731dd4717eaa/25ab8ff6/mio-staging_mio-design_1579302979877_assets_1MHUUJUUsP5V7UUaeeVrgzOuJ6r4FFlIG_darktheme-light-dark-elevation.mp4">
+<video autoplay="autoplay" preload="metadata" loop="loop"><source type="video/mp4" src="https://dl.airtable.com/.attachments/d807c1012e6db308b0593872fb885dea/383af40b/and.mp4">
 </video>
 
 由于亮色模式下，控件通过阴影来区分前后层级。但在 Dark Mode 下，阴影看不到了，使用亮色阴影（高光）也无法突出层级关系，所以 Google material design 的“层”在 Dark Mode 下是通过依此提高亮度来实现的。如果使用了系统默认的层级，暗色模式将自动按照规则适配。Material design 的开放使得设计师使用这套规则并不轻松。
@@ -151,7 +151,7 @@ html {
 }
 ```
 
-<video autoplay="autoplay" preload="metadata" loop="loop"><source type="video/mp4" src="https://dl.airtable.com/.attachments/b3a37600af1efc23ebb51b5b7780e309/ba96268c/22.mp4">
+<video autoplay="autoplay" preload="metadata" loop="loop"><source type="video/mp4" src="https://dl.airtable.com/.attachments/1e7aefc930f34cb6927118102f46d43e/d27b11cf/22.mp4">
 </video>
 
 在开发过程中，我只关注调用背景层级与文字层级，哪怕设计稿只有一份亮色或暗色模式的设计稿。
