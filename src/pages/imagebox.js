@@ -41,6 +41,9 @@ const docimageStyle = {
   width: "15rem",
   display: "block",
   flex: "0 0 auto",
+  overflow: "hidden",
+  whiteSpace: "nowrap",
+  textOverflow: "ellipsis",
 }
 
 const textStyle = {
