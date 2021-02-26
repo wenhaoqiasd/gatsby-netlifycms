@@ -16,10 +16,14 @@ export default function Template({ data }) {
       <SEO title={frontmatter.title} />
       <div className="zoom-in">
         <div className="page-head" style={{ backgroundColor: frontmatter.color }}>
-          <img src={frontmatter.cover} alt={frontmatter.title} />
-          <h1 className="page-title">{frontmatter.title}</h1>
-          <p className="page-date">{frontmatter.date}</p>
-          <Share Path={frontmatter.path} Title={frontmatter.title} />
+          {frontmatter.cover !== null ?
+            <>
+              <img src={frontmatter.cover} alt={frontmatter.title} />
+              <h1 className="page-title">{frontmatter.title}</h1>
+              <p className="page-date">{frontmatter.date}</p>
+              <Share Path={frontmatter.path} Title={frontmatter.title} />
+            </>
+            : null }
         </div>
         <div className="page">
           <div className="blog-post-content"

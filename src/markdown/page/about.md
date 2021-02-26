@@ -2,8 +2,11 @@
 path: /about
 class: others
 slug: about
-cover: /assets/me.png
 title: About
 date: 2021-02-09T09:07:45.216Z
 ---
-关于目前还是隐藏的页面。
+# About
+
+---
+
+### I'm Curiosity Wen, I'm a Product designer at Alibaba on the A-Drive team. Used to work in ecommerce, recruitmentindustry, engaged in digital product design. I also work in other fields such as Motion Graphic, Illustration_
