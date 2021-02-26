@@ -3,7 +3,7 @@ path: /stories/dark_mode/
 class: stories
 slug: ngc-0006
 color: rgba(128,128,128,0.24)
-cover: /assets/darkmode.jpg
+cover: /assets/darkmode.png
 tags:
   - Design
   - Studies
