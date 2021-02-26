@@ -34,6 +34,7 @@ collections:
       - { name: path, label: Path }
       - { name: class, label: Class, widget: select, options: ["draft", "others"]}
       - { name: slug, label: Slug }
+      - { name: cover, label: Cover, widget: image }
       - { name: title, label: Title }
       - { name: date, label: Date, widget: datetime, required: false }
       - { name: body, label: Body, widget: markdown }
