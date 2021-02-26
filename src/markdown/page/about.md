@@ -2,7 +2,8 @@
 path: /about
 class: others
 slug: about
+cover: /assets/me.png
 title: About
 date: 2021-02-09T09:07:45.216Z
 ---
-这个关于的功能使用起来很好。
+关于目前还是隐藏的页面。
