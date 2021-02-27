@@ -52,7 +52,7 @@
 }
 
 .Tilt:hover .Tilt-img {
-  filter: brightness(1.1);
+  filter: brightness(1.05);
   transform: scale(1);
   box-shadow: 0 1rem 2rem 0 rgba(0, 0, 0, 0.12);
 }
