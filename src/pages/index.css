@@ -70,18 +70,38 @@
 }
 
 .home-space section.home-05 {
-  padding: 1.5rem;
+  padding: 1rem;
   grid-column: span 2;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-areas: 'a b c' 'd e f';
-  gap: 1.5rem;
+  gap: 1rem;
 }
 
 .home-space section.home-05 .column {
+  position: relative;
   background-color: var(--BG-S);
-  padding: 0 0.25rem;
+  padding: 0.75rem;
 }
+
+.home-space section.home-05 .column::before {
+  position: absolute;
+  height: 100%;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  content: "";
+  background-color: var(--Border);
+  transform: scaleX(0);
+  transform-origin: right center;
+  transition: transform var(--ease-3);
+}
+
+.home-space section.home-05 .column:hover::before {
+  transform: scaleX(1);
+  transform-origin: left center;
+}
+
 
 .home-space section.home-05 h1 {
   line-height: 1;
@@ -137,6 +157,9 @@
     grid-template-columns: repeat(2, 1fr);
     z-index: 40;
     grid-template-areas: 'a d' 'b e' 'c f';
+  }
+  .home-space section.home-05 .column::before {
+    background-color: transparent;
   }
   .home-space section.home-05 h1 {
     font-size: 8vw;

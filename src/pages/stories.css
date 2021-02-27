@@ -218,7 +218,7 @@
   background-color: var(--Text-1);
   transform: scaleX(0);
   transform-origin: right center;
-  transition: transform 0.2s ease;
+  transition: transform var(--ease-3);
 }
 
 .card:hover .line::before {
