@@ -1,28 +1,28 @@
-import React, { useState, useEffect, useCallback } from "react";
+import React, { useState, useEffect, useCallback } from "react"
 
 const PageUp = () => {
   const [progress, setProgress] = useState(1000)
   const handleScroll = useCallback(() => {
     // 页面总高
     var totalH =
-      document.body.scrollHeight || document.documentElement.scrollHeight;
+      document.body.scrollHeight || document.documentElement.scrollHeight
     // 可视高
-    var clientH = window.innerHeight || document.documentElement.clientHeight;
+    var clientH = window.innerHeight || document.documentElement.clientHeight
     // 计算有效高
-    var validH = totalH - clientH;
+    var validH = totalH - clientH
     // 滚动条卷去高度
     var scrollH =
-      document.body.scrollTop || document.documentElement.scrollTop;
+      document.body.scrollTop || document.documentElement.scrollTop
     // 百分比
-    var result = (1000 - ((scrollH / validH) * 100 * 0.75)).toFixed(0);
+    var result = (1000 - ((scrollH / validH) * 100 * 0.75)).toFixed(0)
     setProgress(result)
     // console.log(result);
   }, []);
   useEffect(() => {
-    window.addEventListener("scroll", handleScroll);
+    window.addEventListener("scroll", handleScroll)
 
     return () => {
-      window.removeEventListener("scroll", handleScroll);
+      window.removeEventListener("scroll", handleScroll)
     }
   }, [
     handleScroll
@@ -73,6 +73,6 @@ const PageUp = () => {
         </svg>
       </a>
     </>
-  );
+  )
 }
-export default PageUp;
+export default PageUp

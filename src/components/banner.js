@@ -76,8 +76,8 @@ const Banner = () => {
             <Tilt
               className="Tilt"
               tiltReverse={true}
-              perspective={2500}
-              scale={1.06}
+              perspective={1500}
+              scale={1.08}
               transitionSpeed={2000}
               tiltMaxAngleX={15}
               tiltMaxAngleY={15}

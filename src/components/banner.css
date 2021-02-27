@@ -121,14 +121,14 @@
 
 @media screen and (max-width: 48rem) {
   .Tilt {
-    margin: 1rem 22.5%;
+    margin: 4.5rem 1.5rem 1.5rem;
     transform: translate3d(0px, 0px, 0px) !important;
   }
   .Tilt:hover .Tilt-img {
     filter: brightness(1);
     transform: scale(1);
   }
-  .home-02:hover .banner-ring p {
-    color: transparent;
+  .home-02 .banner-ring {
+    display: none;
   }
 }

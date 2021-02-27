@@ -123,7 +123,8 @@
   }
   .home-space section.home-02 {
     grid-area: a;
-    min-height: 100vw;
+    /* min-height: 100vw; */
+    min-height: calc(100vw + 3rem);
   }
   .home-space section.home-03 .ring {
     left: -2rem;
