@@ -42,7 +42,7 @@
 
 .Tilt {
   z-index: 2;
-  margin: 1rem 20%;
+  margin: 1rem 22%;
 }
 
 .Tilt-img {
@@ -121,7 +121,7 @@
 
 @media screen and (max-width: 48rem) {
   .Tilt {
-    margin: 4.5rem 1.5rem 1.5rem;
+    margin: 4.5rem 1.75rem 1.75rem;
     transform: translate3d(0px, 0px, 0px) !important;
   }
   .Tilt:hover .Tilt-img {

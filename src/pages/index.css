@@ -144,7 +144,7 @@
   .home-space section.home-02 {
     grid-area: a;
     /* min-height: 100vw; */
-    min-height: calc(100vw + 3rem);
+    min-height: calc(100vw + 2.75rem);
   }
   .home-space section.home-03 .ring {
     left: -2rem;

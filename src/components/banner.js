@@ -76,11 +76,11 @@ const Banner = () => {
             <Tilt
               className="Tilt"
               tiltReverse={true}
-              perspective={1500}
+              perspective={1800}
               scale={1.08}
               transitionSpeed={2000}
-              tiltMaxAngleX={15}
-              tiltMaxAngleY={15}
+              tiltMaxAngleX={10}
+              tiltMaxAngleY={10}
             >
             <img
               src={item.data.Cover[0].url}
