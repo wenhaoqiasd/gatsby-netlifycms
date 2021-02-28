@@ -18,14 +18,14 @@ const imageBoxStyle = {
   display: "flex",
   flexDirection: "row",
   alignItems: "flex-end",
-  padding: "2rem 1.5rem 0",
+  padding: "2rem 1.75rem 0",
   boxShadow: "0 1px 0 var(--Text-3)",
 }
 
 const coverStyle = {
   width: "20rem",
   maxWidth: "64vw",
-  marginRight: "1.5rem",
+  marginRight: "1.75rem",
   boxShadow: "0 0.5rem 1rem 0 rgba(0, 0, 0, 0.08)",
 }
 
@@ -47,7 +47,7 @@ const docimageStyle = {
 }
 
 const textStyle = {
-  padding: "0 1.5rem",
+  padding: "0 1.75rem",
   width: "100%",
   overflow: "hidden",
   whiteSpace: "nowrap",

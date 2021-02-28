@@ -16,7 +16,7 @@ export default function Template({ data }) {
       <SEO title={frontmatter.title} />
       <div className="zoom-in">
         <div className="page-head" style={{ backgroundColor: frontmatter.color }}>
-          {frontmatter.cover !== null ?
+          {frontmatter.class !== "others" ?
             <>
               <img src={frontmatter.cover} alt={frontmatter.title} />
               <h1 className="page-title">{frontmatter.title}</h1>

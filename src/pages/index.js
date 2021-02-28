@@ -17,6 +17,7 @@ import RellaxWrapper from "react-rellax-wrapper"
 // 内容
 import navbar from "../components/nav.json"
 
+// 样式
 import "./index.css"
 
 const IndexPage = () => {

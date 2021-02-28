@@ -28,6 +28,11 @@ function useBanners() {
             Color
             Cover {
               url
+              thumbnails {
+                large {
+                  url
+                }
+              }
             }
           }
           recordId
@@ -83,7 +88,8 @@ const Banner = () => {
               tiltMaxAngleY={10}
             >
             <img
-              src={item.data.Cover[0].url}
+              // src={item.data.Cover[0].url}
+              src={item.data.Cover[0].thumbnails.large.url}
               alt={item.data.Description}
               className="Tilt-img"
             />
