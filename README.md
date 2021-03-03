@@ -38,6 +38,6 @@ For more on Gatsby, visit [https://www.gatsbyjs.com](https://www.gatsbyjs.com)
 
 # 📃 License
 
-
+[BSD Zero Clause License](https://github.com/wenhaoqiasd/gatsby-netlifycms/blob/master/LICENSE)
 
 <!-- AUTO-GENERATED-CONTENT:END -->
