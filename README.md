@@ -36,6 +36,8 @@ For more on Gatsby, visit [https://www.gatsbyjs.com](https://www.gatsbyjs.com)
 [![Netlify](https://img.shields.io/badge/-Netlify-00C7B7?style=flat&logo=netlify&logoColor=white&logoWidth=10)](https://www.netlify.com)
 [![Vercel](https://img.shields.io/badge/-Vercel-black?style=flat&logo=vercel&logoColor=white&logoWidth=10)](https://vercel.com/)
 
+<img style="height: 48px" src="https://img.shields.io/badge/-Airtable-18BFFF?style=flat&logo=airtable&logoColor=white&logoWidth=10">
+
 # 📃 License
 
 [BSD Zero Clause License](https://github.com/wenhaoqiasd/gatsby-netlifycms/blob/master/LICENSE)
