@@ -4,9 +4,12 @@
     <img alt="Gatsby" src="https://www.gatsbyjs.com/Gatsby-Monogram.svg" width="60" />
   </a>
 </p>
-<h1 align="center">
-  Gatsby's default starter
-</h1>
+
+[![Gatsby](https://img.shields.io/badge/-Gatsby-663399?style=flat&logo=gatsby&logoColor=white&logoWidth=10)](https://www.gatsbyjs.com)
+[![Netlify CMS](https://img.shields.io/badge/-Netlify_CMS-green?style=flat&logo=netlify&logoColor=white&logoWidth=10)](https://www.netlifycms.org)
+[![Airtable](https://img.shields.io/badge/-Airtable-18BFFF?style=flat&logo=airtable&logoColor=white&logoWidth=10)](https://airtable.com/)
+
+---
 
 # 🚥 Introduce
 
