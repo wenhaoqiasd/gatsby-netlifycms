@@ -35,6 +35,7 @@ const copylinkStyle = {
   cursor: "pointer",
   margin: "0 -2rem 0 0",
   boxShadow: "0 0 0 1px var(--Border)",
+  background: "transparent",
 }
 
 const docimageStyle = {
@@ -69,7 +70,7 @@ const ImageBox = () => {
 
   const data = useStaticQuery(graphql`
     query ImageQuery {
-      resources: allAirtable(filter: {table: {eq: "Resources"}}) {
+      resources: allAirtable(sort: { order: DESC, fields: [data___Date] }, filter: {table: {eq: "Resources"}}) {
         nodes {
           data {
             Blog
@@ -80,6 +81,7 @@ const ImageBox = () => {
             Cover {
               url
             }
+            Date
           }
           recordId
         }
