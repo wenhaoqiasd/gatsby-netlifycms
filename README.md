@@ -2,6 +2,7 @@
 
 <br/>
 <br/>
+<br/>
 <img src="https://dl.airtable.com/.attachments/fb22ddc31786bb54a8a7e9612e78df38/e5136ccc/logo.svg" alt="Logo" style="width:100%;"/>
 
 [![Gatsby](https://img.shields.io/badge/-Gatsby-663399?style=flat&logo=gatsby&logoColor=white&logoWidth=10)](https://www.gatsbyjs.com)
