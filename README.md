@@ -33,8 +33,8 @@ For more on Gatsby, visit [https://www.gatsbyjs.com](https://www.gatsbyjs.com)
 
 # 💫 Deploy
 
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/gatsbyjs/gatsby-starter-default)
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/import/project?template=https://github.com/gatsbyjs/gatsby-starter-default)
+[![Netlify](https://img.shields.io/badge/-Netlify-00C7B7?style=flat&logo=netlify&logoColor=white&logoWidth=10)](https://www.netlify.com)
+[![Vercel](https://img.shields.io/badge/-Vercel-black?style=flat&logo=vercel&logoColor=white&logoWidth=10)](https://vercel.com/)
 
 # 📃 License
 
