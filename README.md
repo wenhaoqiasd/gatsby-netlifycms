@@ -8,7 +8,7 @@
 
 <div align="center">
   <a href="https://reactjs.org">
-    <img src="https://img.shields.io/badge/-React-61DAFB?style=flat&logo=react&logoColor=white&logoWidth=10" />
+    <img src="https://img.shields.io/badge/-React-42C8ED?style=flat&logo=react&logoColor=white&logoWidth=10" />
   </a>
   <a href="https://www.gatsbyjs.com">
     <img src="https://img.shields.io/badge/-Gatsby-663399?style=flat&logo=gatsby&logoColor=white&logoWidth=10" />
