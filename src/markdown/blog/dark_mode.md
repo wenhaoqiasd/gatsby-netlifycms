@@ -123,7 +123,7 @@ html {
   --Glass-BG-P: #fff;
   --Glass-BG-S: var(--BG-P);
   /* 强调色 */
-  --Style: #5364ff;
+  --Style: #17ffa6;
 }
 @supports (backdrop-filter: none) {
   html {

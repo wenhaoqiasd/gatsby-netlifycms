@@ -65,7 +65,7 @@ html {
   --Glass: saturate(200%) blur(1.25rem);
   --Glass-BG-P: #fff;
   --Glass-BG-S: var(--BG-P);
-  --Style: #5364ff;
+  --Style: #17ffa6;
   --ease-3: 0.3s ease-out;
   --cubic-66: 0.66s cubic-bezier(0.66, 0, 0.01, 1);
   --cubic-menu: 0.4s cubic-bezier(0.445, 0.05, 0.55, 0.95);
@@ -103,7 +103,7 @@ html {
 }
 
 ::selection {
-  --selection: rgba(254, 208, 38, 0.48);
+  --selection: rgb(23, 255, 166);
   background-color: var(--selection);
 }
 

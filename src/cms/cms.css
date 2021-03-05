@@ -11,7 +11,7 @@ html {
   --Text-1: rgb(26, 26, 26);
   --Text-2: rgba(26, 26, 26, 0.6);
   --Text-3: rgba(26, 26, 26, 0.2);
-  --Style: #5364ff;
+  --Style: #17ffa6;
 }
 
 @media (prefers-color-scheme: dark) {
