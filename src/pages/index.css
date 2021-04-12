@@ -97,6 +97,7 @@
   transform: scaleX(0);
   transform-origin: right center;
   transition: transform var(--ease-3);
+  pointer-events: none;
 }
 
 .home-space section.home-05 .column:hover::before {
