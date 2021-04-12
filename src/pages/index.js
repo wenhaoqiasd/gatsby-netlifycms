@@ -90,8 +90,8 @@ const IndexPage = () => {
             <div className="lottie-space">
               <RellaxWrapper speed={-4} percentage={0.4}>
                 <Player
-                  autoplay="ture"
-                  loop="ture"
+                  autoplay
+                  loop
                   src="../../base/loop.json"
                   style={{ height: '680px', width: '680px' }}
                 >
