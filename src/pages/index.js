@@ -13,6 +13,7 @@ import Loop from "../components/loop"
 import Draggable from "react-draggable"
 import { RandomReveal } from "react-random-reveal"
 import RellaxWrapper from "react-rellax-wrapper"
+import { Player } from '@lottiefiles/react-lottie-player'
 
 // 内容
 import navbar from "../components/nav.json"
@@ -30,7 +31,7 @@ const IndexPage = () => {
     <Layout>
       <SEO title={pageName} />
       <main className="zoom-out">
-        
+
         <div className="home-space">
           <section className="home-01">
             <Draggable handle=".handle">
@@ -85,6 +86,19 @@ const IndexPage = () => {
               </div>
             ))}
             <Grid GridType="mobile-type-t" />
+
+            <div className="lottie-space">
+              <RellaxWrapper speed={-4} percentage={0.4}>
+                <Player
+                  autoplay="ture"
+                  loop="ture"
+                  src="../../base/loop.json"
+                  style={{ height: '680px', width: '680px' }}
+                >
+                </Player>
+              </RellaxWrapper>
+            </div>
+
           </section>
 
           <section className="home-06">

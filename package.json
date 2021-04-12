@@ -5,6 +5,7 @@
   "version": "0.1.0",
   "author": "Wenhaoqi <wenhaoqi@@126.com>",
   "dependencies": {
+    "@lottiefiles/react-lottie-player": "^3.1.2",
     "classnames": "^2.2.6",
     "gatsby": "^2.30.0",
     "gatsby-image": "^2.11.0",
