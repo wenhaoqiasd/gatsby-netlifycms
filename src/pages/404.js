@@ -1,7 +1,7 @@
 import React from "react"
 
 import Layout from "../components/layout"
-import SEO from "../components/seo"
+import Seo from "../components/seo"
 
 import Grid from "../components/grid.js"
 
@@ -15,7 +15,7 @@ const NotFound = {
 
 const NotFoundPage = () => (
   <Layout>
-    <SEO title="404: Not found" />
+    <Seo title="404: Not found" />
     <main className="zoom-out">
       <div className="home-space">
         <section style={NotFound}>

@@ -2,7 +2,7 @@ import React from "react"
 import { graphql } from "gatsby"
 
 import Layout from "../components/layout"
-import SEO from "../components/seo"
+import Seo from "../components/seo"
 import Share from "../components/share"
 import Footer from "../components/footer"
 
@@ -13,7 +13,7 @@ export default function Template({ data }) {
   const { frontmatter, html } = markdownRemark;
   return (
     <Layout>
-      <SEO title={frontmatter.title} />
+      <Seo title={frontmatter.title} />
       <div className="zoom-in">
         <div className="page-head" style={{ backgroundColor: frontmatter.color }}>
           {frontmatter.class !== "others" ?

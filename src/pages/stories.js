@@ -1,7 +1,7 @@
 import React, { useState } from "react"
 import { graphql } from "gatsby"
 // 组件
-import SEO from "../components/seo"
+import Seo from "../components/seo"
 import Layout from "../components/layout"
 import Card from "../components/card"
 import Footer from "../components/footer"
@@ -43,7 +43,7 @@ const IndexPage = ({ data }) => {
 
   return (
     <Layout>
-      <SEO title={pageName} />
+      <Seo title={pageName} />
       <div className="zoom-in">
         {/* tab 部分 */}
         <div className="space-sticky">

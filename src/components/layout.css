@@ -94,6 +94,7 @@ html {
     --Border: rgba(255, 255, 255,0.05);
     --Glass-BG-P: rgb(32, 30, 30);
     --Glass-BG-S: var(--BG-P);
+    --Style: #00E08A;
   }
   @supports (backdrop-filter: none) {
     html {

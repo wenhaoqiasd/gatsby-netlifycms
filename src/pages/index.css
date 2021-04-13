@@ -98,6 +98,8 @@
   transform-origin: right center;
   transition: transform var(--ease-3);
   pointer-events: none;
+  backdrop-filter: var(--Glass);
+  z-index: -1;
 }
 
 .home-space section.home-05 .column:hover::before {
@@ -129,6 +131,10 @@
   justify-content: center;
   z-index: 0;
   overflow: hidden;
+}
+
+.home-space section.home-05 .lottie-space path {
+  fill: var(--Style);
 }
 
 .home-space section.home-06 {
@@ -178,13 +184,17 @@
     box-shadow: inset 0 1px 0 var(--Border);
   }
   .home-space section.home-05 .column {
-    padding: 0.75rem;
+    padding: 2rem 0.75rem;
   }
   .home-space section.home-05 .column::before {
     background-color: transparent;
+    backdrop-filter: none;
   }
   .home-space section.home-05 h1 {
     font-size: 8vw;
+  }
+  .home-space section.home-05 .lottie-space #lottie {
+    transform: translateY(26vh);
   }
   .home-space section.home-06 {
     z-index: 45;

@@ -2,7 +2,7 @@ import React from "react"
 
 // 组件
 import Image from "../components/image"
-import SEO from "../components/seo"
+import Seo from "../components/seo"
 import Layout from "../components/layout"
 import Social from "../components/social"
 import Grid from "../components/grid.js"
@@ -29,7 +29,7 @@ const IndexPage = () => {
 
   return (
     <Layout>
-      <SEO title={pageName} />
+      <Seo title={pageName} />
       <main className="zoom-out">
 
         <div className="home-space">
@@ -88,7 +88,7 @@ const IndexPage = () => {
             <Grid GridType="mobile-type-t" />
 
             <div className="lottie-space">
-              <RellaxWrapper speed={-4} percentage={0.4}>
+              <RellaxWrapper speed={-6} percentage={0.4}>
                 <Player
                   autoplay
                   loop

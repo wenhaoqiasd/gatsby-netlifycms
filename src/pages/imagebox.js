@@ -2,7 +2,7 @@ import React from "react"
 import { useStaticQuery, graphql, Link } from "gatsby"
 
 import Layout from "../components/layout"
-import SEO from "../components/seo"
+import Seo from "../components/seo"
 import Footer from "../components/footer"
 
 import Clipboard from 'react-clipboard.js'
@@ -90,7 +90,7 @@ const ImageBox = () => {
   `);
   return (
     <Layout>
-      <SEO title="ImageBox" />
+      <Seo title="ImageBox" />
       <main className="zoom-out" style={{ padding: "4.5rem 0 0" }}>
         {data.resources.nodes.map((item) => (
           <div key={item.recordId} style={boxStyles}>
