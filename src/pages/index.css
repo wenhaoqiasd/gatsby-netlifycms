@@ -193,9 +193,6 @@
   .home-space section.home-05 h1 {
     font-size: 8vw;
   }
-  .home-space section.home-05 .lottie-space #lottie {
-    transform: translateY(26vh);
-  }
   .home-space section.home-06 {
     z-index: 45;
   }

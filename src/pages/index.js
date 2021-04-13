@@ -88,7 +88,7 @@ const IndexPage = () => {
             <Grid GridType="mobile-type-t" />
 
             <div className="lottie-space">
-              <RellaxWrapper speed={-6} percentage={0.4}>
+              <RellaxWrapper speed={-6} percentage={0.1}>
                 <Player
                   autoplay
                   loop
