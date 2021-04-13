@@ -82,7 +82,7 @@
 .home-space section.home-05 .column {
   position: relative;
   /* background-color: var(--BG-S); */
-  padding: 3rem 2rem;
+  padding: 3.5rem 2.5rem 1rem;
   z-index: 20;
 }
 
@@ -184,7 +184,7 @@
     box-shadow: inset 0 1px 0 var(--Border);
   }
   .home-space section.home-05 .column {
-    padding: 2rem 0.75rem;
+    padding: 3.5rem 0.75rem 1rem;
   }
   .home-space section.home-05 .column::before {
     background-color: transparent;
