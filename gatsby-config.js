@@ -4,7 +4,6 @@ module.exports = {
     description: `CuriosityWen‘s 2021 latest personal website`,
     author: `Wen`,
   },
-  flags: { DEV_SSR: false },
   plugins: [
     `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`,
