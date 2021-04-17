@@ -43,14 +43,15 @@ const PageFooter = () => {
       <div className="footer-nav">
         {isLoggedIn
           ? <>
-          <a href="/" onClick={() => auth.signOut()}>
-            Sign out
-          </a>
           {navbar.person.map(list => (
             <a key={list.key} href={list.link} className="action">
               {list.name}
             </a>
-          ))}</>
+          ))}
+          <a href="/" onClick={() => auth.signOut()}>
+            Sign out
+          </a>
+          </>
           : <a href="/login/">
             Log in
           </a>}
