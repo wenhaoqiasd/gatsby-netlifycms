@@ -39,7 +39,7 @@ const LoginPage = () => {
           <section className="login-box login-style">
             {isLoading && <p>Loading..</p>}
             {isLoggedIn
-              ? <div>
+              ? <div style={{padding: "1.5rem"}}>
                 {profile
                   && <h3>Hi! {profile.displayName}.</h3>
                 }
