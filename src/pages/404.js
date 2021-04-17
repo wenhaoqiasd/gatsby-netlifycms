@@ -1,8 +1,7 @@
 import React from "react"
-
 import Layout from "../components/layout"
 import Seo from "../components/seo"
-
+import Footer from "../components/footer"
 import Grid from "../components/grid.js"
 
 const NotFound = {
@@ -29,6 +28,7 @@ const NotFoundPage = () => (
           <Grid GridType="mobile-type-t type-321" />
         </section>
       </div>
+      <Footer/>
     </main>
   </Layout>
 )

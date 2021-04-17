@@ -2,20 +2,12 @@ import React from "react"
 import { navigate } from "gatsby"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
+import Footer from "../components/footer"
 import Grid from "../components/grid.js"
+
 import { Player } from '@lottiefiles/react-lottie-player'
 // Firebase
 import { auth, useAuth, Form, FormState } from "gatsby-theme-firebase"
-
-// import Grid from "../components/grid.js"
-
-// const NotFound = {
-//   display: "flex",
-//   flexDirection: "column",
-//   justifyContent: "center",
-//   alignItems: "center",
-//   textAlign: "center",
-// }
 
 const LoginPage = () => {
   const { isLoading, isLoggedIn, profile } = useAuth()
@@ -53,6 +45,7 @@ const LoginPage = () => {
               </FormState.Provider>}
           </section>
         </div>
+        <Footer />
       </main>
     </Layout>
   )

@@ -1,9 +1,7 @@
 import React from "react"
 import { useStaticQuery, graphql, Link } from "gatsby"
-
 import "./footer.css"
 import navbar from "./nav.json"
-
 import { auth, useAuth } from "gatsby-theme-firebase"
 
 const PageFooter = () => {

@@ -199,7 +199,8 @@
 
 .login-style {
   --theme-ui-colors-primary: var(--Style)!important;
-  background-color: var(--Glass-BG-P);
+  background-color: var(--Glass-BG-S);
+  box-shadow: inset 0 -1px 0 var(--Border);
 }
 
 .login-style button {
