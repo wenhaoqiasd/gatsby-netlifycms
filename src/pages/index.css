@@ -316,6 +316,7 @@
   color: black;
   outline: none;
   border: none;
+  cursor: pointer;
 }
 
 .signout-btn:hover {
