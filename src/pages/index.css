@@ -199,7 +199,7 @@
 
 .login-style {
   --theme-ui-colors-primary: var(--Style)!important;
-  background-color: var(--Glass-BG-S);
+  background-color: var(--Glass-BG-P);
 }
 
 .login-style button {
