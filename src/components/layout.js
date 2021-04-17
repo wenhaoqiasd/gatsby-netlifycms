@@ -5,12 +5,16 @@ import { useStaticQuery, graphql, Link } from "gatsby"
 import SplitText from "../components/splittext"
 import PageUp from "../components/page-up"
 
+import { auth, useAuth } from "gatsby-theme-firebase"
+
 import navbar from "./nav.json"
 
 import "./layout.css"
 import "./header.css"
 
 const Layout = ({ children }) => {
+
+  const { isLoggedIn, profile } = useAuth()
   // 查询
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
@@ -57,7 +61,7 @@ const Layout = ({ children }) => {
           className="menu-btn"
           role="button"
           tabIndex={-1}
-          onKeyPress={() => {}}
+          onKeyPress={() => { }}
         >
         </div>
         {/* 菜单 */}
@@ -73,11 +77,20 @@ const Layout = ({ children }) => {
           </span>
           {/* 尾部信息 */}
           <span className="menu-footer">
-            {navbar.person.map(list => (
-              <a key={list.key} href={list.link} title={list.title} className="action">
-                {list.name}
-              </a>
-            ))}
+            {isLoggedIn
+              ? <>
+                  {navbar.person.map(list => (
+                    <a key={list.key} href={list.link} title={list.title} className="action">
+                      {list.name}
+                    </a>
+                  ))}
+                  <a href="/" onClick={() => auth.signOut()}>
+                    Sign out, {profile.displayName}.
+                  </a>
+                </>
+              : <a href="/login/">
+                Log in to see contact.
+              </a>}
             <p className="action">{data.site.buildTime}</p>
           </span>
         </div>

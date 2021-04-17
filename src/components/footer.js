@@ -4,7 +4,11 @@ import { useStaticQuery, graphql, Link } from "gatsby"
 import "./footer.css"
 import navbar from "./nav.json"
 
+import { auth, useAuth } from "gatsby-theme-firebase"
+
 const PageFooter = () => {
+
+  const { isLoggedIn } = useAuth()
 
   const data = useStaticQuery(graphql`
     query siteTitle {
@@ -37,11 +41,19 @@ const PageFooter = () => {
         ))}
       </div>
       <div className="footer-nav">
-        {navbar.person.map(list => (
-          <a key={list.key} href={list.link} className="action">
-            {list.name}
+        {isLoggedIn
+          ? <>
+          <a href="/" onClick={() => auth.signOut()}>
+            Sign out
           </a>
-        ))}
+          {navbar.person.map(list => (
+            <a key={list.key} href={list.link} className="action">
+              {list.name}
+            </a>
+          ))}</>
+          : <a href="/login/">
+            Log in
+          </a>}
       </div>
       <p className="footer-text action">
         © {new Date().getFullYear()}{" "}

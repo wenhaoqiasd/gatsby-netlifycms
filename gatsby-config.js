@@ -107,5 +107,20 @@ module.exports = {
         ]
       }
     },
+    {
+      resolve: "gatsby-theme-firebase",
+      options: {
+        credentials: {
+          apiKey: "AIzaSyCMJwF_7x_N69ybjWq2aQ9NT8mvg_KlXtw",
+          authDomain: "curiositywen-321dd.firebaseapp.com",
+          projectId: "curiositywen-321dd",
+          storageBucket: "curiositywen-321dd.appspot.com",
+          messagingSenderId: "29895834057",
+          appId: "1:29895834057:web:0d2d851ffc12afdf319018"
+        },
+        loginPath: "/login/",
+        loginRedirectPath: "/",
+      },
+    }
   ],
 };

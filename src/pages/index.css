@@ -81,7 +81,6 @@
 
 .home-space section.home-05 .column {
   position: relative;
-  /* background-color: var(--BG-S); */
   padding: 3.5rem 2.5rem 1rem;
   z-index: 20;
 }
@@ -106,7 +105,6 @@
   transform: scaleX(1);
   transform-origin: left center;
 }
-
 
 .home-space section.home-05 h1 {
   line-height: 1;
@@ -133,7 +131,7 @@
   overflow: hidden;
 }
 
-.home-space section.home-05 .lottie-space path {
+.lottie-space path {
   fill: var(--Style);
 }
 
@@ -167,7 +165,6 @@
   }
   .home-space section.home-02 {
     grid-area: a;
-    /* min-height: 100vw; */
     min-height: calc(100vw + 2.75rem);
   }
   .home-space section.home-03 .ring {
@@ -198,8 +195,139 @@
   }
 }
 
-.test-card {
-  width: 500px;
-  height: 500px;
-  background-color: gray;
+/* login */
+
+.login-style {
+  --theme-ui-colors-primary: var(--Style)!important;
+  background-color: var(--Glass-BG-S);
+}
+
+.login-style button {
+  font-family: inherit;
+}
+
+.login-style form button {
+  color: black;
+  transition: var(--ease-3);
+  border-radius: 0
+}
+
+.login-style form button:hover {
+  box-shadow: 0 0 0 2px var(--BG-P),0 0 0 4px var(--Style);
+}
+
+.login-style form hr+button {
+  color: var(--Text-2);
+  background-color: transparent;
+}
+
+.login-style div:nth-child(1) {
+  max-width: 24rem;
+  min-width: 16rem;
+}
+
+.login-style div div:nth-child(1) {
+  display: none;
+}
+
+.login-style div div:nth-child(2) {
+  padding: 0 1.5rem;
+}
+
+.login-style div:nth-child(2) button {
+  --theme-ui-colors-primary: var(--Text-1)!important;
+  --theme-ui-colors-border: var(--Text-3);
+  outline: none;
+  border: none;
+  background-color: var(--Border);
+  border-radius: 0
+}
+
+.login-style div, .content-main form {
+  background-color: transparent;
+  box-shadow: 0 0 0 0 transparent;
+}
+
+.login-style p {
+  color: var(--Text-2);
+}
+
+.login-style input {
+  font-family: inherit;
+  background-color: var(--Border);
+  backdrop-filter: var(--Glass);
+  box-shadow: 0 0 0 1px transparent;
+  transition: var(--ease-3);
+  height: 3rem;
+  outline: none;
+  border: none;
+  color: var(--Text-1)!important;
+  border-radius: 0;
+}
+
+.login-style input:focus {
+  box-shadow: 0 0 0 2px var(--Style);
+}
+
+.login-style input::-webkit-input-placeholder {
+  color: var(--Text-3);
+}
+
+.login-style hr {
+  height: 1px;
+  background-color: var(--Border);
+  border: none;
+}
+
+.login-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0!important;
+}
+
+.login-box .lottie-space {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.signout-btn {
+  width: 100%;
+  height: 3rem;
+  border-radius: 0;
+  margin-top: 2rem;
+  background-color: var(--Style);
+  font-weight: 700;
+  font-size: 1rem;
+  transition: var(--ease-3);
+  color: black;
+  outline: none;
+  border: none;
+}
+
+.signout-btn:hover {
+  box-shadow: 0 0 0 2px var(--BG-P),0 0 0 4px var(--Style);
+}
+
+@media screen and (max-width: 48rem) {
+  .login-box:nth-child(1) {
+    grid-area: a;
+  }
+  .login-box:nth-child(2) {
+    grid-area: a;
+  }
+  .login-box .lottie-space #lottie {
+    transform: translateY(30vh);
+  }
 }
