@@ -229,10 +229,11 @@
 
 .login-style div div:nth-child(1) {
   display: none;
+  padding: 0 1.75rem;
 }
 
 .login-style div div:nth-child(2) {
-  padding: 0 1.5rem;
+  padding: 0 1.75rem;
 }
 
 .login-style div:nth-child(2) button {
@@ -246,9 +247,13 @@
   border-radius: 0
 }
 
-.login-style div, .content-main form {
+.login-style div, .login-style form {
   background-color: transparent;
   box-shadow: 0 0 0 0 transparent;
+}
+
+.login-style form {
+  padding: 1.75rem;
 }
 
 .login-style p {
