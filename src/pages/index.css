@@ -110,6 +110,46 @@
   line-height: 1;
   margin: 0;
   font-size: 4vw;
+  transform-origin: 0 100%;
+}
+
+.home-space section.home-05 .column:hover h1 {
+  animation: light 3s ease 0.5s infinite backwards;
+}
+
+@keyframes light {
+  0% {
+    color: inherit;
+    opacity: 1;
+    transform: scale(1);
+  }
+  28% {
+    color: inherit;
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  29% {
+    color: inherit;
+    opacity: 1;
+    transform: scale(1.2);
+  }
+  30% {
+    color: rgb(255,0,255);
+    opacity: 1;
+    transform: scale(1.2);
+  }
+  40% {
+    color: rgb(0,255,255);
+    opacity: 1;
+  }
+  50% {
+    color: inherit;
+  }
+  100% {
+    color: inherit;
+    opacity: 1;
+    transform: scale(1);
+  }
 }
 
 .home-space section.home-05 p {
@@ -195,12 +235,38 @@
   }
 }
 
-/* login */
+/* login + 404 */
+
+.login-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0!important;
+}
+
+.login-box .lottie-space {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.login-r {
+  background-color: var(--Glass-BG-P);
+  box-shadow: inset 0 -1px 0 var(--Border);
+}
 
 .login-style {
   --theme-ui-colors-primary: var(--Style)!important;
-  background-color: var(--Glass-BG-P);
-  box-shadow: inset 0 -1px 0 var(--Border);
 }
 
 .login-style button {
@@ -233,7 +299,7 @@
 }
 
 .login-style div div:nth-child(2) {
-  padding: 0 1.75rem;
+  padding: 4.5rem 1.75rem 1.75rem;
 }
 
 .login-style div:nth-child(2) button {
@@ -253,7 +319,7 @@
 }
 
 .login-style form {
-  padding: 1.75rem;
+  padding: 1.75rem 1.75rem 4.5rem;
 }
 
 .login-style p {
@@ -285,29 +351,6 @@
   height: 1px;
   background-color: var(--Border);
   border: none;
-}
-
-.login-box {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 0!important;
-}
-
-.login-box .lottie-space {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 0;
-  overflow: hidden;
 }
 
 .signout-btn {

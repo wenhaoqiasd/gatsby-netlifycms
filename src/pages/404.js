@@ -4,12 +4,15 @@ import Seo from "../components/seo"
 import Footer from "../components/footer"
 import Grid from "../components/grid.js"
 
+import { Player } from '@lottiefiles/react-lottie-player'
+
 const NotFound = {
   display: "flex",
   flexDirection: "column",
   justifyContent: "center",
-  alignItems: "center",
-  textAlign: "center",
+  maxWidth: "24rem",
+  minWidth: "16rem",
+  padding: "4.5rem 1.75rem"
 }
 
 const NotFoundPage = () => (
@@ -17,15 +20,23 @@ const NotFoundPage = () => (
     <Seo title="404: Not found" />
     <main className="zoom-out">
       <div className="home-space">
-        <section style={NotFound}>
-          <h1 className="big-type">404</h1>
-          <p>Not found page.</p>
+        <section className="login-box">
+          <div className="lottie-space">
+            <Player
+              autoplay
+              loop
+              src="../../base/loop.json"
+              style={{ height: '90vmin', width: '90vmin' }}
+            >
+            </Player>
+          </div>
           <Grid GridType="mobile-type-t type-321" />
         </section>
-        <section style={NotFound}>
-          <h1 className="big-type big-stroke">Oops!</h1>
-          <p>You just hit a route that doesn&#39;t exist... the sadness.</p>
-          <Grid GridType="mobile-type-t type-321" />
+        <section className="login-box login-r">
+          <div style={NotFound}>
+            <h1 className="big-type big-stroke">Oops!</h1>
+            <p>Not found page. You just hit a route that doesn&#39;t exist... the sadness.</p>
+          </div>
         </section>
       </div>
       <Footer/>

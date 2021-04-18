@@ -9,6 +9,10 @@ import { Player } from '@lottiefiles/react-lottie-player'
 // Firebase
 import { auth, useAuth, Form, FormState } from "gatsby-theme-firebase"
 
+const Login = {
+  padding: "4.5rem 1.75rem 4.5rem",
+}
+
 const LoginPage = () => {
   const { isLoading, isLoggedIn, profile } = useAuth()
   return (
@@ -28,10 +32,10 @@ const LoginPage = () => {
             </div>
             <Grid GridType="mobile-type-t type-321" />
           </section>
-          <section className="login-box login-style">
+          <section className="login-box login-style login-r">
             {isLoading && <p>Loading..</p>}
             {isLoggedIn
-              ? <div style={{padding: "1.75rem"}}>
+              ? <div style={Login}>
                 {profile
                   && <h3>Hi! {profile.displayName}.</h3>
                 }
