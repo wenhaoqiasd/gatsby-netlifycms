@@ -19,8 +19,8 @@
   <a href="https://airtable.com">
     <img src="https://img.shields.io/badge/-Airtable-18BFFF?style=flat&logo=airtable&logoColor=white&logoWidth=10" />
   </a>
-  <a href="https://airtable.com">
-    <img src="https://img.shields.io/badge/-Firebase-FFCA28?style=flat&logo=Firebase&logoColor=white&logoWidth=10" />
+  <a href="https://firebase.google.cn">
+    <img src="https://img.shields.io/badge/-Firebase-yellow?style=flat&logo=Firebase&logoColor=white&logoWidth=10" />
   </a>
 </div>
 
