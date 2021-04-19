@@ -90,7 +90,7 @@ const Layout = ({ children }) => {
                   </a>
                 </>
               : <a href="/login/">
-                Log in to see contact.
+                Log in to see my contact.
               </a>}
             <p className="action">{data.site.buildTime}</p>
           </span>

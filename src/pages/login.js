@@ -41,7 +41,7 @@ const LoginPage = () => {
                 }
                 {profile.uid === "16lxmjRKQNePuVHdLBY3zmd5QPM2"
                   ? <p>This is <a href="/admin/">AdminScreen</a> of NetlifyCMS. And this is <a href="/about/">AboutScreen</a> and <a href="/imagebox/">ImageBox</a>.</p>
-                  : <p>You can check my contact information now, More features are in the works...</p>
+                  : <p>You can see my contact information now, More features are in the works...</p>
                 }
                 <button className="signout-btn" onClick={() => auth.signOut()}>
                   Sign Out
