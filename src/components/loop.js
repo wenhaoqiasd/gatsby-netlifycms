@@ -1,10 +1,31 @@
-import React from "react"
+import React, { useState, useEffect, useCallback } from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql, Link } from "gatsby"
 
 import navbar from "./nav.json"
 
 const Loop = ({ footerLink }) => {
+
+  const [progress, setProgress] = useState(1000)
+  const handleScroll = useCallback(() => {
+    var totalH =
+      document.body.scrollHeight || document.documentElement.scrollHeight
+    var clientH = window.innerHeight || document.documentElement.clientHeight
+    var validH = totalH - clientH
+    var scrollH =
+      document.body.scrollTop || document.documentElement.scrollTop
+    var result = ((scrollH / validH) * 100 * 3.6).toFixed(0)
+    setProgress(result)
+  }, []);
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll)
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll)
+    }
+  }, [
+    handleScroll
+  ])
 
   const data = useStaticQuery(graphql`
     query siteTitleLoop {
@@ -36,15 +57,6 @@ const Loop = ({ footerLink }) => {
           transform: rotate(-32deg);
           fill: var(--Text-3);
           text-transform: uppercase;
-          animation: rota 12s linear infinite;
-        }
-        @keyframes rota {
-          0% {
-            transform: rotate(360deg);
-          }
-          100% {
-            transform: rotate(0deg);
-          }
         }
         .circular path {
           fill: none;
@@ -72,12 +84,12 @@ const Loop = ({ footerLink }) => {
         }
       `}
       </style>
-      <svg viewBox="0 0 170 170" className="circular-big">
+      <svg viewBox="0 0 170 170" className="circular-big" style={{ transform: "rotate(" + progress + "deg)" }}>
         <path d="M 0,85 a 85,85 0 1,1 0,1 z" id="c-1" />
         <path d="M 0,85 a 85,85 0 1,1 0,1 z" id="c-2" />
         <text>
           <textPath xlinkHref="#c-1">
-          {data.site.siteMetadata?.title || `Title`}{" "}{data.site.siteMetadata?.author} © {new Date().getFullYear()}
+            {data.site.siteMetadata?.title || `Title`}{" "}{data.site.siteMetadata?.author} © {new Date().getFullYear()}
           </textPath>
           <textPath startOffset="265" xlinkHref="#c-2">
             All Rights Reserved
