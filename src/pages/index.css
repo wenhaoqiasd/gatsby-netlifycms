@@ -302,6 +302,11 @@
   padding: 4.5rem 1.75rem 1.75rem;
 }
 
+.login-style div div:nth-child(3) {
+  padding: 0 1.75rem;
+  color: var(--Text-2);
+}
+
 .login-style div:nth-child(2) button {
   --theme-ui-colors-primary: var(--Text-1)!important;
   --theme-ui-colors-border: var(--Text-3);
