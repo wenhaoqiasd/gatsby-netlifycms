@@ -2,11 +2,11 @@ import React from "react"
 import { useStaticQuery, graphql, Link } from "gatsby"
 import "./footer.css"
 import navbar from "./nav.json"
-import { auth, useAuth } from "gatsby-theme-firebase"
+import { useAuth } from "gatsby-theme-firebase"
 
 const PageFooter = () => {
 
-  const { isLoggedIn } = useAuth()
+  const { profile, isLoggedIn } = useAuth()
 
   const data = useStaticQuery(graphql`
     query siteTitle {
@@ -46,8 +46,8 @@ const PageFooter = () => {
               {list.name}
             </a>
           ))}
-          <a href="/" onClick={() => auth.signOut()}>
-            Sign out
+          <a href="/login/">
+            {profile.displayName}
           </a>
           </>
           : <a href="/login/">

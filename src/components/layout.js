@@ -5,7 +5,7 @@ import { useStaticQuery, graphql, Link } from "gatsby"
 import SplitText from "../components/splittext"
 import PageUp from "../components/page-up"
 
-import { auth, useAuth } from "gatsby-theme-firebase"
+import { useAuth } from "gatsby-theme-firebase"
 
 import navbar from "./nav.json"
 
@@ -85,8 +85,8 @@ const Layout = ({ children }) => {
                       {list.name}
                     </a>
                   ))}
-                  <a href="/" onClick={() => auth.signOut()}>
-                    Sign out, {profile.displayName}.
+                  <a href="/login/">
+                    {profile.displayName}
                   </a>
                 </>
               : <a href="/login/">
