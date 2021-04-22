@@ -113,6 +113,7 @@ module.exports = {
         credentials: {
           apiKey: "AIzaSyCMJwF_7x_N69ybjWq2aQ9NT8mvg_KlXtw",
           authDomain: "curiositywen-321dd.firebaseapp.com",
+          databaseURL: "https://curiositywen-321dd-default-rtdb.firebaseio.com",
           projectId: "curiositywen-321dd",
           storageBucket: "curiositywen-321dd.appspot.com",
           messagingSenderId: "29895834057",
