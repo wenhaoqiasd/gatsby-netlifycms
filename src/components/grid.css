@@ -9,11 +9,14 @@
   z-index: -1;
   pointer-events: none;
   user-select: none;
+  min-height: 100vh;
+  height: 100%;
 }
 
 .grid-box :nth-child(1), .grid-box :nth-child(2), .grid-box :nth-child(3), .grid-box :nth-child(4), .grid-box :nth-child(5), .grid-box :nth-child(6) {
   box-shadow: inset 0 -1px 0 var(--Border);
-  height: 100vh;
+  min-height: 100vh;
+  height: 100%;
 }
 
 .type-321.grid-box :nth-child(3), .type-321.grid-box :nth-child(5), .type-321.grid-box :nth-child(6) {

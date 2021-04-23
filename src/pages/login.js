@@ -3,11 +3,11 @@ import { navigate } from "gatsby"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 import Footer from "../components/footer"
-import Grid from "../components/grid.js"
+import Grid from "../components/grid"
 
 import { Player } from '@lottiefiles/react-lottie-player'
 // Firebase
-import { auth, useAuth, Form, FormState } from "gatsby-theme-firebase"
+import { auth, useAuth, Form, FormState, firestore, useFirestoreQuery } from "gatsby-theme-firebase"
 
 const Login = {
   padding: "4.5rem 1.75rem 4.5rem",
@@ -15,6 +15,13 @@ const Login = {
 
 const LoginPage = () => {
   const { isLoading, isLoggedIn, profile } = useAuth()
+
+  const [list] = useFirestoreQuery(
+    firestore.collection("list")
+  )
+
+  const myList = list.filter(n => profile?.uid === n.uid)
+
   return (
     <Layout>
       <Seo title="Login" />
@@ -41,7 +48,25 @@ const LoginPage = () => {
                 }
                 {profile.uid === "16lxmjRKQNePuVHdLBY3zmd5QPM2"
                   ? <p>This is <a href="/admin/">AdminScreen</a> of NetlifyCMS. And this is <a href="/about/">AboutScreen</a> and <a href="/imagebox/">ImageBox</a>.</p>
-                  : <p>You can see my contact information now, More features are in the works...</p>
+                  : <p>You can see my contact information now, Favorites feature is in development.</p>
+                }
+                {myList.length > 0
+                  ? myList.map(card => (
+                    <textarea rows="6" className="user-note" placeholder="Stickies" key={card.uid} value={card.text} onChange={(e) => {
+                      const value = e.target.value
+                      const dataRef = firestore.collection("list").doc(profile.uid);
+                      dataRef.update({ text: value })
+                    }} />
+                  ))
+                  : (
+                    <button className="signout-btn" onClick={(e) => {
+                      const dataRef = firestore.collection("list").doc(profile.uid);
+                      dataRef.set({
+                        text: "",
+                        uid: profile.uid
+                      })
+                    }}>Add Stickies</button>
+                  )
                 }
                 <button className="signout-btn" onClick={() => auth.signOut()}>
                   Sign Out

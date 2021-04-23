@@ -377,6 +377,20 @@
   box-shadow: 0 0 0 3px var(--BG-P),0 0 0 5px var(--Style);
 }
 
+.user-note {
+  width: 100%;
+  margin-top: 1.5rem;
+  font-size: inherit;
+  font-family: inherit;
+  border: none;
+  outline: none;
+  background-color: var(--Border);
+  backdrop-filter: var(--Glass);
+  color: var(--Text-1);
+  padding: 0.5rem;
+  resize: none;
+}
+
 @media screen and (max-width: 48rem) {
   .login-box:nth-child(1) {
     grid-area: a;
