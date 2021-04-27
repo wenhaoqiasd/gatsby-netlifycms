@@ -36,6 +36,7 @@ const IndexPage = () => {
           <section className="home-01">
             <Draggable handle=".handle">
               <h1 className="big-type handle">
+                {"→"}
                 <RandomReveal
                   isPlaying
                   duration={2}

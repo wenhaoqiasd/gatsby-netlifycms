@@ -40,7 +40,7 @@ const LoginPage = () => {
             <Grid GridType="mobile-type-t type-321" />
           </section>
           <section className="login-box login-style login-r">
-            {isLoading && <p>Loading..</p>}
+            
             {isLoggedIn
               ? <div style={Login}>
                 {profile
@@ -75,6 +75,7 @@ const LoginPage = () => {
               : <FormState.Provider>
                 <Form onLoginSuccess={() => { navigate("/login/"); }} onResetSuccess={() => { alert("Email sent!"); }} />
               </FormState.Provider>}
+              {isLoading && <p>Loading..</p>}
           </section>
         </div>
         <Footer />
