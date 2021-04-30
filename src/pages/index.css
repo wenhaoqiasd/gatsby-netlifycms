@@ -380,15 +380,14 @@
 .user-note {
   width: 100%;
   margin-top: 1.5rem;
-  font-size: inherit;
+  font-size: 1.25rem;
+  font-weight: 600;
   font-family: inherit;
   border: none;
   outline: none;
-  background-color: var(--Border);
-  backdrop-filter: var(--Glass);
   color: var(--Text-1);
-  padding: 0.5rem;
   resize: none;
+  padding: 0.5rem 0;
 }
 
 .fav-cell {
@@ -405,8 +404,8 @@
 
 .fav-cell img {
   display: block;
-  width: 4rem;
-  height: 4rem;
+  width: 5rem;
+  height: 5rem;
 }
 
 .fav-cell span {
@@ -415,11 +414,7 @@
 }
 
 .fav-cell h4, .fav-cell p {
-  width: 240px;
   margin: 0.25rem;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
 }
 
 @media screen and (max-width: 48rem) {

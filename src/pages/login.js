@@ -62,8 +62,8 @@ const LoginPage = () => {
                         <Link className="fav-cell" key={fav.name} to={fav.link}>
                           <img src={fav.cover} alt={fav.name} />
                           <span>
-                            <p style={{ color: "var(--Text-1)", fontWeight: "500" }}>{fav.name}</p>
-                            <p className="action">{fav.date}</p>
+                            <p style={{ color: "var(--Text-1)", fontWeight: "600", fontSize: "14px" }}>{fav.name}</p>
+                            <p style={{ color: "var(--Text-2)", fontSize: "12px" }}>{fav.date}</p>
                           </span>
                         </Link>
                       )) : null}
