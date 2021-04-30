@@ -146,31 +146,73 @@ table th, table td {
   resize: none;
 }
 
+.favorite {
+  margin-top: 1rem;
+  width: 16rem;
+  height: 3rem;
+  overflow: hidden;
+  position: relative;
+  box-shadow: inset 0 0 0 1px var(--Text-3);
+  background-color: transparent;
+  transition: var(--ease-3);
+}
+
+.favorite:hover {
+  background-color: var(--Border);
+}
+
+.favorite button {
+  font-family: inherit;
+  width: 100%;
+  height: 3rem;
+  background-color: transparent;
+  border: 0;
+  outline: none;
+  color: var(--Text-1);
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.favorite div {
+  position: absolute;
+  width: 100%;
+  height: 6rem;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  transition: var(--cubic-66);
+}
+
+.favorite.fav-active div {
+  top: -3rem;
+}
+
 @media screen and (max-width: 48rem) {
   .page-title {
-    font-size: 2.5rem !important;
+	font-size: 2.5rem !important;
   }
   .page h1 {
-    font-size: 2rem;
-    margin-top: 2rem;
+	font-size: 2rem;
+	margin-top: 2rem;
   }
   .page h2 {
-    font-size: 1.5rem;
-    margin-top: 1.5rem;
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
   }
   .page h3 {
-    font-size: 1.25rem;
-    margin-top: 1.25rem;
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
   }
   .page h4 {
-    font-size: 1rem;
-    margin-top: 1rem;
+	font-size: 1rem;
+	margin-top: 1rem;
   }
   ul, ol, pre, blockquote, table {
-    margin-top: 0.8rem;
+	margin-top: 0.8rem;
   }
   .font-view {
-    display: none;
+	display: none;
   }
 }
 
@@ -280,21 +322,21 @@ pre[class*="language-"]::selection, pre[class*="language-"] ::selection, code[cl
 
 @media (prefers-color-scheme: dark) {
   .token.property, .token.tag, .token.boolean, .token.number, .token.constant, .token.symbol, .token.deleted {
-    color: #979cff;
+	color: #979cff;
   }
   .token.selector, .token.attr-name, .token.string, .token.char, .token.builtin, .token.inserted {
-    color: #64d16d;
+	color: #64d16d;
   }
   .token.operator, .token.entity, .token.url, .language-css .token.string, .style .token.string {
-    color: rgba(255, 169, 65, 0.56);
+	color: rgba(255, 169, 65, 0.56);
   }
   .token.atrule, .token.attr-value, .token.keyword {
-    color: #43b4ff;
+	color: #43b4ff;
   }
   .token.function, .token.class-name {
-    color: #ff6a6a;
+	color: #ff6a6a;
   }
   .token.regex, .token.important, .token.variable {
-    color: #ffa941;
+	color: #ffa941;
   }
 }

@@ -1,5 +1,5 @@
 import React from "react"
-import { navigate } from "gatsby"
+import { navigate, Link } from "gatsby"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 import Footer from "../components/footer"
@@ -40,7 +40,7 @@ const LoginPage = () => {
             <Grid GridType="mobile-type-t type-321" />
           </section>
           <section className="login-box login-style login-r">
-            
+
             {isLoggedIn
               ? <div style={Login}>
                 {profile
@@ -48,34 +48,46 @@ const LoginPage = () => {
                 }
                 {profile.uid === "16lxmjRKQNePuVHdLBY3zmd5QPM2"
                   ? <p>This is <a href="/admin/">AdminScreen</a> of NetlifyCMS. And this is <a href="/about/">AboutScreen</a> and <a href="/imagebox/">ImageBox</a>.</p>
-                  : <p>You can see my contact information now, Favorites feature is in development.</p>
+                  : <p>Now you can add my articles to your favorites.</p>
                 }
                 {myList.length > 0
                   ? myList.map(card => (
-                    <textarea rows="6" className="user-note" placeholder="Stickies" key={card.uid} value={card.text} onChange={(e) => {
-                      const value = e.target.value
-                      const dataRef = firestore.collection("list").doc(profile.uid);
-                      dataRef.update({ text: value })
-                    }} />
+                    <span key={card.uid}>
+                      <textarea rows="1" className="user-note" placeholder="Favorites" value={card.text} onChange={(e) => {
+                        const value = e.target.value
+                        const dataRef = firestore.collection("list").doc(profile.uid);
+                        dataRef.update({ text: value })
+                      }} />
+                      {card ? card.fav.map(fav => (
+                        <Link className="fav-cell" key={fav.name} to={fav.link}>
+                          <img src={fav.cover} alt={fav.name} />
+                          <span>
+                            <p style={{ color: "var(--Text-1)", fontWeight: "500" }}>{fav.name}</p>
+                            <p className="action">{fav.date}</p>
+                          </span>
+                        </Link>
+                      )) : null}
+                    </span>
                   ))
                   : (
                     <button className="signout-btn" onClick={(e) => {
                       const dataRef = firestore.collection("list").doc(profile.uid);
                       dataRef.set({
-                        text: "",
+                        fav: [],
+                        text: "Favorites",
                         uid: profile.uid
-                      })
-                    }}>Add Stickies</button>
+                      }, { merge: true })
+                    }}>Create Favorites</button>
                   )
                 }
                 <button className="signout-btn" onClick={() => auth.signOut()}>
                   Sign Out
-                </button>
+						</button>
               </div>
               : <FormState.Provider>
                 <Form onLoginSuccess={() => { navigate("/login/"); }} onResetSuccess={() => { alert("Email sent!"); }} />
               </FormState.Provider>}
-              {isLoading && <p>Loading..</p>}
+            {isLoading && <p>Loading..</p>}
           </section>
         </div>
         <Footer />

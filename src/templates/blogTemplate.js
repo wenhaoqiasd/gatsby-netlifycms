@@ -6,11 +6,24 @@ import Seo from "../components/seo"
 import Share from "../components/share"
 import Footer from "../components/footer"
 
+// Firebase
+import { useAuth, firestore, firebase, useFirestoreQuery } from "gatsby-theme-firebase"
+
 import "./blogTemplate.css"
 
 export default function Template({ data }) {
   const { markdownRemark } = data;
   const { frontmatter, html } = markdownRemark;
+
+  const { isLoading, isLoggedIn, profile } = useAuth()
+
+  const [list] = useFirestoreQuery(
+    firestore.collection("list")
+  )
+
+  const myList = list.filter(n => profile?.uid === n.uid)
+
+
   return (
     <Layout>
       <Seo title={frontmatter.title} />
@@ -21,9 +34,53 @@ export default function Template({ data }) {
               <img src={frontmatter.cover} alt={frontmatter.title} />
               <h1 className="page-title">{frontmatter.title}</h1>
               <p className="page-date">{frontmatter.date}</p>
+
+              {isLoggedIn
+                ? <>
+                  {myList.length > 0
+                    ? <div className={`favorite${myList ? myList.map(card => (
+                      card ? card.fav.map(fav => (
+                        fav.name === frontmatter.title ? " fav-active" : null
+                      )) : null
+                    ).join('')) : null}`
+                    }>
+                      <div>
+
+                        <button onClick={(e) => {
+                          const dataRef = firestore.collection("list").doc(profile.uid)
+                          dataRef.update({
+                            fav: firebase.firestore.FieldValue.arrayUnion({
+                              "name": frontmatter.title,
+                              "link": frontmatter.path,
+                              "cover": frontmatter.cover,
+                              "date": frontmatter.date
+                            })
+                          })
+                        }}>+ Add to favorites</button>
+                        <button onClick={(e) => {
+                          const dataRef = firestore.collection("list").doc(profile.uid)
+                          dataRef.update({
+                            fav: firebase.firestore.FieldValue.arrayRemove({
+                              "name": frontmatter.title,
+                              "link": frontmatter.path,
+                              "cover": frontmatter.cover,
+                              "date": frontmatter.date
+                            })
+                          })
+                        }}>Remove to favorites</button>
+                      </div>
+                    </div>
+                    : null
+                  }
+                </>
+                :
+                null
+
+              }{isLoading && <p>Loading..</p>}
+
               <Share Path={frontmatter.path} Title={frontmatter.title} />
             </>
-            : null }
+            : null}
         </div>
         <div className="page">
           <div className="blog-post-content"
@@ -31,23 +88,23 @@ export default function Template({ data }) {
         </div>
         <Footer />
       </div>
-    </Layout>
+    </Layout >
   );
 }
 
 export const pageQuery = graphql`
   query($slug: String!) {
-    markdownRemark(frontmatter: { slug: { eq: $slug } }) {
-      html
-      frontmatter {
-        path
-        class
-        slug
-        title
-        date(formatString: "MMMM DD, YYYY")
-        cover
-        color
-      }
-    }
+	markdownRemark(frontmatter: { slug: { eq: $slug } }) {
+	  html
+	  frontmatter {
+		path
+		class
+		slug
+		title
+		date(formatString: "MMMM DD, YYYY")
+		cover
+		color
+	  }
+	}
   }
 `;

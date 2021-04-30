@@ -134,12 +134,12 @@
     transform: scale(1.2);
   }
   30% {
-    color: rgb(255,0,255);
+    color: rgb(255, 0, 255);
     opacity: 1;
     transform: scale(1.2);
   }
   40% {
-    color: rgb(0,255,255);
+    color: rgb(0, 255, 255);
     opacity: 1;
   }
   50% {
@@ -280,7 +280,7 @@
 }
 
 .login-style form button:hover {
-  box-shadow: 0 0 0 3px var(--BG-P),0 0 0 5px var(--Style);
+  box-shadow: 0 0 0 3px var(--BG-P), 0 0 0 5px var(--Style);
 }
 
 .login-style form hr+button {
@@ -374,7 +374,7 @@
 }
 
 .signout-btn:hover {
-  box-shadow: 0 0 0 3px var(--BG-P),0 0 0 5px var(--Style);
+  box-shadow: 0 0 0 3px var(--BG-P), 0 0 0 5px var(--Style);
 }
 
 .user-note {
@@ -389,6 +389,37 @@
   color: var(--Text-1);
   padding: 0.5rem;
   resize: none;
+}
+
+.fav-cell {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  background-color: transparent;
+  transition: var(--ease-3);
+}
+
+.fav-cell:hover {
+  background-color: var(--Border);
+}
+
+.fav-cell img {
+  display: block;
+  width: 4rem;
+  height: 4rem;
+}
+
+.fav-cell span {
+  display: block;
+  padding: 0 0 0 0.5rem;
+}
+
+.fav-cell h4, .fav-cell p {
+  width: 240px;
+  margin: 0.25rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 @media screen and (max-width: 48rem) {
