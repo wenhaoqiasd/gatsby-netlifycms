@@ -388,6 +388,7 @@
   color: var(--Text-1);
   resize: none;
   padding: 0.5rem 0;
+  background-color: transparent;
 }
 
 .fav-cell {
