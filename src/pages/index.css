@@ -406,6 +406,7 @@
   display: block;
   width: 5rem;
   height: 5rem;
+  box-shadow: 0 0 0 1px var(--Border);
 }
 
 .fav-cell span {
