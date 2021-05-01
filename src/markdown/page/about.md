@@ -2,11 +2,9 @@
 path: /about
 class: others
 slug: about
+color: var(--BG-S)
 title: About
 ---
-# About
-
-- - -
 
 ![](/assets/me.png)
 

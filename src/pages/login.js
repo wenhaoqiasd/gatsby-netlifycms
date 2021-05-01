@@ -14,9 +14,9 @@ const Login = {
 }
 
 const LoginPage = () => {
-  const { isLoading, isLoggedIn, profile } = useAuth()
+  const { isLoggedIn, profile } = useAuth()
 
-  const [list] = useFirestoreQuery(
+  const [list, isLoading] = useFirestoreQuery(
     firestore.collection("list")
   )
 
@@ -47,9 +47,10 @@ const LoginPage = () => {
                   && <h3>Hi! {profile.displayName}.</h3>
                 }
                 {profile.uid === "16lxmjRKQNePuVHdLBY3zmd5QPM2"
-                  ? <p>This is <a href="/admin/">AdminScreen</a> of NetlifyCMS. And this is <a href="/about/">AboutScreen</a> and <a href="/imagebox/">ImageBox</a>.</p>
+                  ? <p>This is <a href="/admin/">AdminScreen</a> of NetlifyCMS. And this is <a href="/imagebox/">ImageBox</a>.</p>
                   : <p>Now you can add my articles to your favorites.</p>
                 }
+                {isLoading && <p>Loading....</p>}
                 {myList.length > 0
                   ? myList.map(card => (
                     <span key={card.uid}>
@@ -87,7 +88,6 @@ const LoginPage = () => {
               : <FormState.Provider>
                 <Form onLoginSuccess={() => { navigate("/login/"); }} onResetSuccess={() => { alert("Email sent!"); }} />
               </FormState.Provider>}
-            {isLoading && <p>Loading..</p>}
           </section>
         </div>
         <Footer />

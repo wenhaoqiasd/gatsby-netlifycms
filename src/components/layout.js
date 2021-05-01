@@ -77,7 +77,7 @@ const Layout = ({ children }) => {
           </span>
           {/* 尾部信息 */}
           <span className="menu-footer">
-            {isLoading && <p>Loading..</p>}
+            {isLoading && <p>Loading...</p>}
             {isLoggedIn
               ? <>
                   {navbar.person.map(list => (

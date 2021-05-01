@@ -35,6 +35,7 @@ export default function Template({ data }) {
               <h1 className="page-title">{frontmatter.title}</h1>
               <p className="page-date">{frontmatter.date}</p>
 
+              {isLoading && <p>Loading...</p>}
               {isLoggedIn
                 ? <>
                   {myList.length > 0
@@ -75,12 +76,14 @@ export default function Template({ data }) {
                 </>
                 :
                 null
-
-              }{isLoading && <p>Loading..</p>}
+              }
 
               <Share Path={frontmatter.path} Title={frontmatter.title} />
             </>
-            : null}
+            : <>
+              <h1 className="page-title">{frontmatter.title}</h1>
+            </>
+            }
         </div>
         <div className="page">
           <div className="blog-post-content"
