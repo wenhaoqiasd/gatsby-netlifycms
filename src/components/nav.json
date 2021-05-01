@@ -13,9 +13,9 @@
       "key": "page-2"
     },
     {
-      "name": "Works",
-      "link": "https://thoughts.teambition.com/sharespace/5dcc2f9ff32abe001545f2c5/docs/5dcc2f94f32abe001545f2c1",
-      "title": "Work",
+      "name": "About",
+      "link": "/about/",
+      "title": "About",
       "key": "page-3"
     }
   ],
