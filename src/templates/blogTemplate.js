@@ -20,7 +20,6 @@ export default function Template({ data }) {
   const [list] = useFirestoreQuery(
     firestore.collection("list")
   )
-
   const myList = list.filter(n => profile?.uid === n.uid)
 
 
@@ -46,7 +45,6 @@ export default function Template({ data }) {
                     ).join('')) : null}`
                     }>
                       <div>
-
                         <button onClick={(e) => {
                           const dataRef = firestore.collection("list").doc(profile.uid)
                           dataRef.update({
@@ -83,7 +81,7 @@ export default function Template({ data }) {
             : <>
               <h1 className="page-title">{frontmatter.title}</h1>
             </>
-            }
+          }
         </div>
         <div className="page">
           <div className="blog-post-content"

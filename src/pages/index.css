@@ -401,6 +401,7 @@
 
 .fav-cell:hover {
   background-color: var(--Border);
+  box-shadow: 0 0 0 1px var(--Border);
 }
 
 .fav-cell img {
