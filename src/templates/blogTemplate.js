@@ -27,7 +27,7 @@ export default function Template({ data }) {
     <Layout>
       <Seo title={frontmatter.title} />
       <div className="zoom-in">
-        <div className="page-head" style={{ backgroundColor: frontmatter.color }}>
+        <div className="page-head" style={{backgroundImage: "linear-gradient(180deg, " + frontmatter.color + " 0%, var(--BG-P) 100%)"}}>
           {frontmatter.class !== "others" ?
             <>
               <img src={frontmatter.cover} alt={frontmatter.title} />
@@ -91,6 +91,7 @@ export default function Template({ data }) {
             </>
           }
         </div>
+        <div className="blog-shadow" />
         <div className="page">
           <div className="blog-post-content"
             dangerouslySetInnerHTML={{ __html: html }} />

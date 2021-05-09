@@ -1,3 +1,12 @@
+.blog-shadow {
+  height: 4.5rem;
+  position: sticky;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+  background-image: linear-gradient(180deg, var(--Glass-BG-S) 0%, var(--BG-OP) 100%);
+}
+
 a.anchor {
   fill: var(--Text-3);
   padding-left: 0.5rem!important;
