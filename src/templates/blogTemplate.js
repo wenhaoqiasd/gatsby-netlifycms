@@ -52,21 +52,29 @@ export default function Template({ data }) {
                               "name": frontmatter.title,
                               "link": frontmatter.path,
                               "cover": frontmatter.cover,
-                              "date": frontmatter.date
+                              "date": new Date().toLocaleString()
                             })
                           })
                         }}>+ Add to favorites</button>
-                        <button onClick={(e) => {
-                          const dataRef = firestore.collection("list").doc(profile.uid)
-                          dataRef.update({
-                            fav: firebase.firestore.FieldValue.arrayRemove({
-                              "name": frontmatter.title,
-                              "link": frontmatter.path,
-                              "cover": frontmatter.cover,
-                              "date": frontmatter.date
-                            })
-                          })
-                        }}>Remove to favorites</button>
+
+                        {myList ? myList.map(card => (
+                          card ? card.fav.map(fav => (
+                            fav.name === frontmatter.title
+                              ? <button onClick={(e) => {
+                                const dataRef = firestore.collection("list").doc(profile.uid)
+                                dataRef.update({
+                                  fav: firebase.firestore.FieldValue.arrayRemove({
+                                    "name": frontmatter.title,
+                                    "link": frontmatter.path,
+                                    "cover": frontmatter.cover,
+                                    "date": fav.date
+                                  })
+                                })
+                              }} title={fav.date}>Remove to favorites</button>
+                              : null
+                          )) : null
+                        )) : null}
+
                       </div>
                     </div>
                     : null

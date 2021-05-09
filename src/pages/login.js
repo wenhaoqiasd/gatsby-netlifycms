@@ -50,7 +50,7 @@ const LoginPage = () => {
                   ? <p>This is <a href="/admin/">AdminScreen</a> of NetlifyCMS. And this is <a href="/imagebox/">ImageBox</a>.</p>
                   : <p>Now you can add my articles to your favorites.</p>
                 }
-                {isLoading && <p>Loading....</p>}
+                {isLoading && <p>Loading...</p>}
                 {myList.length > 0
                   ? myList.map(card => (
                     <span key={card.uid}>
@@ -59,7 +59,7 @@ const LoginPage = () => {
                         const dataRef = firestore.collection("list").doc(profile.uid);
                         dataRef.update({ text: value })
                       }} />
-                      {card ? card.fav.map(fav => (
+                      {card.fav.map(fav => (
                         <Link className="fav-cell" key={fav.name} to={fav.link}>
                           <img src={fav.cover} alt={fav.name} />
                           <span>
@@ -67,7 +67,7 @@ const LoginPage = () => {
                             <p style={{ color: "var(--Text-2)", fontSize: "12px" }}>{fav.date}</p>
                           </span>
                         </Link>
-                      )) : null}
+                      ))}
                     </span>
                   ))
                   : (
