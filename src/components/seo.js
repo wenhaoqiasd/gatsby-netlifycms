@@ -31,12 +31,12 @@ function SEO({ description, lang, meta, title }) {
       meta={[
         {
           name: `theme-color`,
-          content: `#00E08A`,
+          content: `#000000`,
           media: `(prefers-color-scheme: dark)`,
         },
         {
           name: `theme-color`,
-          content: `#ffffff`,
+          content: `#00E08A`,
           media: `(prefers-color-scheme: light)`,
         },
         {
