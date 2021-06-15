@@ -30,6 +30,16 @@ function SEO({ description, lang, meta, title }) {
       titleTemplate={defaultTitle ? `%s | ${defaultTitle}` : null}
       meta={[
         {
+          name: `theme-color`,
+          content: `#00E08A`,
+          media: `(prefers-color-scheme: dark)`,
+        },
+        {
+          name: `theme-color`,
+          content: `#ffffff`,
+          media: `(prefers-color-scheme: light)`,
+        },
+        {
           name: `description`,
           content: metaDescription,
         },

@@ -54,6 +54,10 @@
   box-sizing: border-box;
 }
 
+:root {
+  color-scheme: light dark;
+}
+
 html {
   --BG-P: rgb(250, 248, 246);
   --BG-OP: rgba(250, 248, 246, 0);
