@@ -69,11 +69,17 @@ html {
   --Glass: saturate(200%) blur(1.25rem);
   --Glass-BG-P: #fff;
   --Glass-BG-S: var(--BG-P);
-  --Style: #17ffa6;
+  --Style: color(display-p3 0.090196 1 0.650980);
   --ease-3: 0.3s ease-out;
   --cubic-66: 0.66s cubic-bezier(0.66, 0, 0.01, 1);
   --cubic-menu: 0.4s cubic-bezier(0.445, 0.05, 0.55, 0.95);
   scroll-behavior: smooth;
+}
+
+@supports not (color: color(display-p3 1 1 1)) {
+  html {
+    --Style: #17ffa6;
+  }
 }
 
 ::-webkit-scrollbar {
@@ -98,7 +104,12 @@ html {
     --Border: rgba(255, 255, 255,0.05);
     --Glass-BG-P: rgb(32, 30, 30);
     --Glass-BG-S: var(--BG-P);
-    --Style: #00E08A;
+    --Style: color(display-p3 0 0.878431 0.541176);
+  }
+  @supports not (color: color(display-p3 1 1 1)) {
+    html {
+      --Style: #00E08A;
+    }
   }
   @supports (backdrop-filter: none) {
     html {
