@@ -39,7 +39,7 @@ const PageUp = () => {
             bottom: 1.5rem;
             width: 2rem;
             height: 2rem;
-            z-index: 40;
+            z-index: 46;
             transition: var(--ease-3);
             transform: rotateZ(-90deg) scale(0.5);
             pointer-events: none;
