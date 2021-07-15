@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useCallback } from "react"
+import ScrollToTop from "react-scroll-up"
 
 const PageUp = () => {
   const [progress, setProgress] = useState(1000)
@@ -64,14 +65,21 @@ const PageUp = () => {
               stroke: transparent;
             }
           }
+          .touch-box {
+            width: 32px;
+            height: 32px;
+          }
         `}
       </style>
-      <a href="#up" className="page-up">
+      <div className="page-up">
+        <ScrollToTop showUnder={80} style={{ right: 0, bottom: 0 }} >
+          <div className="touch-box"></div>
+        </ScrollToTop>
         <svg width="32px" height="32px">
           <circle r="12" cy="16" cx="16" strokeWidth="2" strokeLinejoin="round" strokeLinecap="round" fill="none" />
           <circle r="12" cy="16" cx="16" strokeWidth="2" strokeLinejoin="round" strokeLinecap="round" fill="none" strokeDashoffset={progress} strokeDasharray="1000" />
         </svg>
-      </a>
+      </div>
     </>
   )
 }

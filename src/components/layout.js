@@ -96,7 +96,6 @@ const Layout = ({ children }) => {
           </span>
         </div>
       </header>
-      <div id="up"></div>
       <main className={`content-main${open === true ? " open-menu" : ""}`} id="content-main">
         {children}
         <PageUp />
