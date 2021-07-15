@@ -7,6 +7,18 @@
 /* 字体调用 */
 
 @font-face {
+  font-family: "inter";
+  src: url("../fonts/inter/Inter-Regular.otf");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "inter";
+  src: url("../fonts/inter/Inter-Medium.otf");
+  font-weight: 500;
+}
+
+@font-face {
   font-family: "Termina";
   src: url("../fonts/Termina-Bold.otf");
   font-weight: 700;
@@ -32,7 +44,7 @@
 
 @font-face {
   font-family: "Loop";
-  src: url("../fonts/AlibabaTeambitionLoop01-SemiBold.otf");
+  src: url("../fonts/loop/AlibabaTeambitionLoop01-SemiBold.otf");
   font-weight: 600;
 }
 
@@ -134,6 +146,7 @@ body {
   line-height: 1.5;
   font-weight: 400;
   animation: fadein 1s ease 1s backwards;
+  caret-color: var(--Text-1);
 }
 
 @keyframes fadein {

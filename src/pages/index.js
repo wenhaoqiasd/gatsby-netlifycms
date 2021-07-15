@@ -24,8 +24,6 @@ import "./index.css"
 const IndexPage = () => {
 
   const pageName = "Home"
-  const myTitle = navbar.myTitle
-  const myDescription = navbar.myDescription
 
   return (
     <Layout>
@@ -72,8 +70,10 @@ const IndexPage = () => {
           </section>
 
           <section className="home-04">
-            <h2>{myTitle}</h2>
-            <h4>{myDescription}</h4>
+            <h2>Say hi!</h2>
+            <h4>
+              I'm Curiosity Wen, product designer of Alibaba <span className="hover-img"><img src="/assets/a.svg" alt="" />aDrive team.</span>&nbsp;Used to work in ecommerce, recruitmentindustry, engaged in digital product design. And also work in other fields such as Motion Graphic, Illustration_
+            </h4>
             <Grid GridType="mobile-type-t type-321" />
           </section>
         </div>

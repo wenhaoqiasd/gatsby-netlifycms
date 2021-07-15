@@ -64,6 +64,7 @@
 }
 
 .home-space section.home-04 {
+  position: relative;
   display: flex;
   flex-wrap: wrap;
   align-content: center;
@@ -430,4 +431,27 @@
   .login-box .lottie-space #lottie {
     transform: translateY(30vh);
   }
+}
+
+/* hover卡片 */
+
+.hover-img {
+  text-decoration: underline;
+}
+
+.hover-img img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  pointer-events: none;
+  opacity: 0;
+  transition: var(--ease-3);
+  z-index: -1;
+  top: 0;
+  left: 0;
+}
+
+.hover-img:hover img {
+  opacity: 1;
 }
