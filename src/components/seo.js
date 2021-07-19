@@ -36,7 +36,7 @@ function SEO({ description, lang, meta, title }) {
         },
         {
           name: `theme-color`,
-          content: `#FFFFFF`,
+          content: `#EBE9E7`,
           media: `(prefers-color-scheme: light)`,
         },
         {
