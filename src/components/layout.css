@@ -10,13 +10,13 @@
 
 @font-face {
   font-family: "inter";
-  src: url("../fonts/inter/Inter-Regular.otf");
+  src: url("../fonts/inter/Inter-Regular.woff2");
   font-weight: 400;
 }
 
 @font-face {
   font-family: "inter";
-  src: url("../fonts/inter/Inter-Medium.otf");
+  src: url("../fonts/inter/Inter-Medium.woff2");
   font-weight: 500;
 }
 
