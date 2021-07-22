@@ -86,7 +86,7 @@ module.exports = {
         name: `Curiosity`,
         short_name: `Curiosity`,
         start_url: `/`,
-        display: `standalone`,
+        display: `fullscreen`,
         icon: `src/images/dr.png`,
       },
     },
