@@ -33,8 +33,7 @@ const IndexPage = () => {
         <div className="home-space">
           <section className="home-01">
             <Draggable handle=".handle">
-              <h1 className="big-type handle">
-                {"→"}
+              <h1 className="big-vf big-box handle">
                 <RandomReveal
                   isPlaying
                   duration={2}
@@ -45,10 +44,8 @@ const IndexPage = () => {
                 />
                 {","}
                 <br />
-                <span className="big-stroke">
-                  DEVELOP
-                  <br />{"&"} CREATE.
-                </span>
+                DEVELOP
+                <br />{"&"} CREATE.
               </h1>
             </Draggable>
             <Grid GridType="type-321" />

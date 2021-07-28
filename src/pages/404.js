@@ -47,7 +47,7 @@ const NotFoundPage = () => {
           </section>
           <section className="login-box login-r">
             <div style={NotFound}>
-              <h1 className="big-type big-stroke">Oops!</h1>
+              <h1 className="big-vf" style={{textAlign:"left"}}>404</h1>
               <p>Not found page. You just hit a route that doesn&#39;t exist... the sadness.</p>
               <p style={{color: "var(--Text-2)"}}>{date.toString()}</p>
             </div>

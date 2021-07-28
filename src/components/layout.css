@@ -9,6 +9,11 @@
 /* 字体调用 */
 
 @font-face {
+  font-family: "M";
+  src: url("../fonts/WidescreenVF-WghtWdthMixd.ttf");
+}
+
+@font-face {
   font-family: "inter";
   src: url("../fonts/inter/Inter-Regular.woff2");
   font-weight: 400;
@@ -240,25 +245,43 @@ div {
 
 /* 自定义通用 */
 
-.big-type {
-  font-family: "Termina";
-  font-size: 5vw;
-  line-height: 1;
-  font-weight: 700;
-}
-
-.big-stroke {
-  -webkit-text-stroke: 1px var(--Text-1);
-  color: transparent;
-}
-
 .action {
   font-size: 0.875rem;
 }
 
+.big-vf {
+  font-family: "M";
+  animation: fontmotion 8s linear 2s alternate infinite backwards;
+  font-feature-settings: "kern", "liga", "calt", "ss02";
+  line-height: 1;
+  font-size: 4.8vw;
+  font-weight: 900;
+  letter-spacing: 0;
+  text-align: center;
+}
+
+@keyframes fontmotion {
+  0% {
+    font-variation-settings: "wght" 900, "MIXD" 100, "wdth" 140;
+  }
+  25% {
+    font-variation-settings: "wght" 900, "MIXD" 180, "wdth" 140;
+  }
+  50% {
+    font-variation-settings: "wght" 900, "MIXD" 180, "wdth" 180;
+  }
+  75% {
+    font-variation-settings: "wght" 900, "MIXD" 180, "wdth" 140;
+  }
+  100% {
+    font-variation-settings: "wght" 900, "MIXD" 100, "wdth" 140;
+  }
+}
+
 @media screen and (max-width: 48rem) {
-  .big-type {
-    font-size: 12vw;
+  .big-vf {
+    font-size: 8.8vw;
+    text-align: left;
   }
 }
 
