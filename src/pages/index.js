@@ -34,18 +34,22 @@ const IndexPage = () => {
           <section className="home-01">
             <Draggable handle=".handle">
               <h1 className="big-vf big-box handle">
-                <RandomReveal
-                  isPlaying
-                  duration={2}
-                  revealDuration={2}
-                  characters="DESIGN"
-                  characterSet="DEVELOPCREATE"
-                  onComplete={() => [true, 12000]}
-                />
+                <span className="big-motion">
+                  <RandomReveal
+                    isPlaying
+                    duration={2}
+                    revealDuration={2}
+                    characters="DESIGN"
+                    characterSet="DEVELOPCREATE"
+                    onComplete={() => [true, 12000]}
+                  />
+                </span>
                 {","}
                 <br />
-                DEVELOP
-                <br />{"&"} CREATE.
+                <span className="big-ss01 big-motion">DEVELOP</span>
+                <br />
+                {"& "}
+                <span className="big-motion">CREATE.</span>
               </h1>
             </Draggable>
             <Grid GridType="type-321" />
