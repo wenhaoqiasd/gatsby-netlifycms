@@ -262,7 +262,7 @@ div {
   line-height: 1;
   font-size: 5vw;
   letter-spacing: 0;
-  font-variation-settings: "wght" 900, "MIXD" 100, "wdth" 128;
+  font-variation-settings: "wght" 900, "MIXD" 100, "wdth" 118;
 }
 
 .big-motion {
@@ -275,19 +275,19 @@ div {
 
 @keyframes fontmotion {
   0% {
-    font-variation-settings: "wght" 900, "MIXD" 100, "wdth" 128;
+    font-variation-settings: "wght" 900, "MIXD" 100, "wdth" 118;
     letter-spacing: 0;
   }
-  25% {
-    font-variation-settings: "wght" 900, "MIXD" 100, "wdth" 128;
+  40% {
+    font-variation-settings: "wght" 900, "MIXD" 100, "wdth" 118;
     letter-spacing: 0;
   }
-  75% {
-    font-variation-settings: "wght" 900, "MIXD" 158, "wdth" 100;
+  60% {
+    font-variation-settings: "wght" 900, "MIXD" 140, "wdth" 100;
     letter-spacing: -0.01em;
   }
   100% {
-    font-variation-settings: "wght" 900, "MIXD" 158, "wdth" 100;
+    font-variation-settings: "wght" 900, "MIXD" 140, "wdth" 100;
     letter-spacing: -0.01em;
   }
 }
