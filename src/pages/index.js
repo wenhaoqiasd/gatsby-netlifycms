@@ -33,23 +33,24 @@ const IndexPage = () => {
         <div className="home-space">
           <section className="home-01">
             <Draggable handle=".handle">
-              <h1 className="big-vf big-box handle">
-                <span className="big-motion">
+              <h1 className="big-vf big-box handle desktop">
+                <span className="big-motion-1">
                   <RandomReveal
                     isPlaying
                     duration={2}
                     revealDuration={2}
                     characters="DESIGN"
                     characterSet="DEVELOPCREATE"
-                    onComplete={() => [true, 12000]}
+                    onComplete={() => [false, 12000]}
                   />
                 </span>
-                {","}
+                <span className="desktop-symbol">{","}</span>
                 <br />
-                <span className="big-ss01 big-motion">DEVELOP</span>
+                <span className="big-motion-2">DEVELOP</span>
                 <br />
-                {"& "}
-                <span className="big-motion">CREATE.</span>
+                <span className="desktop-symbol">{"& "}</span>
+                <span className="big-motion-3">CREATE</span>
+                <span className="desktop-symbol">{"."}</span>
               </h1>
             </Draggable>
             <Grid GridType="type-321" />
