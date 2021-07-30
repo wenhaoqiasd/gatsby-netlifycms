@@ -1,4 +1,4 @@
-import React from "react"
+import React, {useEffect, useState} from "react"
 
 // 组件
 import Image from "../components/image"
@@ -21,38 +21,66 @@ import navbar from "../components/nav.json"
 // 样式
 import "./index.css"
 
+const isBrowser = () => typeof window !== "undefined"
+
+async function loadFont() {
+  if (!isBrowser()) return
+
+  const fontUrl = `url(${window.location.href.split("#")[0]}fonts/WidescreenVF-WghtWdthMixd.ttf)`
+  const font = new FontFace("WidescreenVF", fontUrl);
+  await font.load()
+
+  document.fonts.add(font)
+  // document.body.classList.add('fonts-loaded')
+}
+
+loadFont()
+
+
+
 const IndexPage = () => {
+  const [fontLoaded, setFontLoaded] = useState(false)
 
   const pageName = "Home"
+
+  useEffect(() => {
+    loadFont().then(() => {
+      setFontLoaded(true)
+    })
+  }, [])
+
+  const cls = ['big-vf big-box handle desktop', fontLoaded && 'font-style'].filter(Boolean).join(' ')
 
   return (
     <Layout>
       <Seo title={pageName} />
       <main className="zoom-out">
-
         <div className="home-space">
           <section className="home-01">
-            <Draggable handle=".handle">
-              <h1 className="big-vf big-box handle desktop">
-                <span className="big-motion-1">
-                  <RandomReveal
-                    isPlaying
-                    duration={2}
-                    revealDuration={2}
-                    characters="DESIGN"
-                    characterSet="DEVELOPCREATE"
-                    onComplete={() => [false, 12000]}
-                  />
-                </span>
-                <span className="desktop-symbol">{","}</span>
-                <br />
-                <span className="big-motion-2">DEVELOP</span>
-                <br />
-                <span className="desktop-symbol">{"& "}</span>
-                <span className="big-motion-3">CREATE</span>
-                <span className="desktop-symbol">{"."}</span>
-              </h1>
-            </Draggable>
+              {fontLoaded
+                ? <Draggable handle=".handle">
+                    <h1 className={cls}>
+                      <span className="big-motion-1">
+                        <RandomReveal
+                          isPlaying
+                          duration={2}
+                          revealDuration={2}
+                          characters="DESIGN"
+                          characterSet="DEVELOPCREATE"
+                          onComplete={() => [false, 12000]}
+                        />
+                      </span>
+                      <span className="desktop-symbol">{","}</span>
+                      <br />
+                      <span className="big-motion-2">DEVELOP</span>
+                      <br />
+                      <span className="desktop-symbol">{"& "}</span>
+                      <span className="big-motion-3">CREATE</span>
+                      <span className="desktop-symbol">{"."}</span>
+                    </h1>
+                  </Draggable>
+                : null
+              }
             <Grid GridType="type-321" />
           </section>
 

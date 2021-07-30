@@ -9,11 +9,6 @@
 /* 字体调用 */
 
 @font-face {
-  font-family: "M";
-  src: url("../fonts/WidescreenVF-WghtWdthMixd.ttf");
-}
-
-@font-face {
   font-family: "inter";
   src: url("../fonts/inter/Inter-Regular.woff2");
   font-weight: 400;
@@ -257,7 +252,7 @@ div {
 .big-vf {
   -webkit-font-smoothing: antialiased!important;
   -webkit-text-size-adjust: 100%!important;
-  font-family: "M", "Termina", sans-serif;
+  /* font-family: "M", "Termina", sans-serif; */
   line-height: 1;
   font-size: 5vw;
   letter-spacing: 0;

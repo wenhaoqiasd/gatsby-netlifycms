@@ -1,5 +1,9 @@
 /* 布局框 */
 
+.font-style {
+  font-family: 'WidescreenVF';
+}
+
 .home-space {
   position: relative;
   display: grid;
