@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from "react"
+import React, { useEffect, useState } from "react"
 
 // 组件
 import Image from "../components/image"
@@ -57,30 +57,30 @@ const IndexPage = () => {
       <main className="zoom-out">
         <div className="home-space">
           <section className="home-01">
-              {fontLoaded
-                ? <Draggable handle=".handle">
-                    <h1 className={cls}>
-                      <span className="big-motion-1">
-                        <RandomReveal
-                          isPlaying
-                          duration={2}
-                          revealDuration={2}
-                          characters="DESIGN"
-                          characterSet="DEVELOPCREATE"
-                          onComplete={() => [false, 12000]}
-                        />
-                      </span>
-                      <span className="desktop-symbol">{","}</span>
-                      <br />
-                      <span className="big-motion-2">DEVELOP</span>
-                      <br />
-                      <span className="desktop-symbol">{"& "}</span>
-                      <span className="big-motion-3">CREATE</span>
-                      <span className="desktop-symbol">{"."}</span>
-                    </h1>
-                  </Draggable>
-                : null
-              }
+            {fontLoaded
+              ? <Draggable handle=".handle">
+                <h1 className={cls}>
+                  <span className="big-motion-1">
+                    <RandomReveal
+                      isPlaying
+                      duration={2}
+                      revealDuration={2}
+                      characters="DESIGN"
+                      characterSet="DEVELOPCREATE"
+                      onComplete={() => [false, 12000]}
+                    />
+                  </span>
+                  <span className="desktop-symbol">{","}</span>
+                  <br />
+                  <span className="big-motion-2">DEVELOP</span>
+                  <br />
+                  <span className="desktop-symbol">{"& "}</span>
+                  <span className="big-motion-3">CREATE</span>
+                  <span className="desktop-symbol">{"."}</span>
+                </h1>
+              </Draggable>
+              : null
+            }
             <Grid GridType="type-321" />
           </section>
 
