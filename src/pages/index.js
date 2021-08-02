@@ -97,11 +97,13 @@ const IndexPage = () => {
           <section className="home-04">
             <h4>My name is Curiosity Wen, I’m Chinese he/him living in Shanghai, China. Design is the medium through which I express myself.</h4>
             <h4>
-              I’m currently the product designer for <span className="hover-img"><img src="/assets/a.svg" alt="" />aDrive</span> at Alibaba.&nbsp;
-              I’ve and also work on building design system. Before that, I worked on Teambition Thoughts, 100offer,&nbsp;
-              and AMILY. I love building tools that people depend on for their work.
+              I’m currently the product designer for&nbsp;
+              <a href="https://www.aliyundrive.com" target="_blank" rel="noopener noreferrer" className="hover-img"><img src="/assets/a.svg" alt="" />aDrive</a>&nbsp;at Alibaba.
+              I’ve and also work on building design system. Before that, I worked on&nbsp;
+              <a href="https://thoughts.teambition.com/site" target="_blank" rel="noopener noreferrer" className="hover-img"><img src="/assets/t.svg" alt="" />Teambition Thoughts</a>,
+              100offer, and AMILY. I love building tools that people depend on for their work.
             </h4>
-            <a href="https://www.figma.com/community/plugin/986289377230504703/DarkSide" target="_blank" rel="noopener noreferrer" className="block-link"><h4>Figma plug-in DarkSide →</h4></a>
+            <a href="https://www.figma.com/community/plugin/986289377230504703/DarkSide" target="_blank" rel="noopener noreferrer" className="block-link hover-img"><img src="/assets/d.svg" alt="" /><h4>Figma plug-in DarkSide →</h4></a>
             <Grid GridType="mobile-type-t type-321" />
           </section>
         </div>

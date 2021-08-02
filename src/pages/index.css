@@ -62,19 +62,15 @@
 @keyframes fontmotion {
   0% {
     font-variation-settings: "wght" 900, "MIXD" 108, "wdth" 108;
-    /* color: var(--Text-1); */
   }
   70% {
     font-variation-settings: "wght" 900, "MIXD" 108, "wdth" 108;
-    /* color: var(--Text-1); */
   }
   80% {
     font-variation-settings: "wght" 900, "MIXD" 150, "wdth" 108;
-    /* color: var(--Style); */
   }
   100% {
     font-variation-settings: "wght" 900, "MIXD" 150, "wdth" 108;
-    /* color: var(--Style); */
   }
 }
 
@@ -82,8 +78,9 @@
   display: block!important;
   background-color: var(--Border);
   padding: 0.5rem 0.75rem;
-  transition: var(--ease-3);
+  transition: var(--ease-1);
   margin: 1rem 1rem 0.5rem 0;
+  text-decoration: none!important;
 }
 .block-link h4 {
   font-size: 1rem;
@@ -91,8 +88,8 @@
 }
 
 .block-link:hover {
-  background-color: var(--Style);
-  color: #000;
+  background-color: var(--Text-1);
+  color: var(--BG-P);
 }
 
 @media screen and (max-width: 48rem) {
@@ -503,6 +500,9 @@
 /* hover卡片 */
 
 .hover-img {
+  font-size: inherit;
+  font-weight: inherit;
+  line-height: inherit;
   text-decoration: underline;
 }
 
@@ -513,7 +513,7 @@
   object-fit: contain;
   pointer-events: none;
   opacity: 0;
-  transition: var(--ease-3);
+  transition: var(--ease-1);
   z-index: -1;
   top: 0;
   left: 0;
