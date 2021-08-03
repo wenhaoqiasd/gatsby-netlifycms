@@ -12,52 +12,61 @@
   font-family: "inter";
   src: url("../fonts/inter/Inter-Regular.woff2");
   font-weight: 400;
+  font-display: block;
 }
 
 @font-face {
   font-family: "inter";
   src: url("../fonts/inter/Inter-Medium.woff2");
   font-weight: 500;
+  font-display: block;
 }
 
 @font-face {
   font-family: "Termina";
   src: url("../fonts/Termina-Bold.otf");
   font-weight: 700;
+  font-display: block;
 }
 
 @font-face {
   font-family: "Termina";
   src: url("../fonts/Termina-Demi.otf");
   font-weight: 600;
+  font-display: block;
 }
 
 @font-face {
   font-family: "Termina";
   src: url("../fonts/Termina-Medium.otf");
   font-weight: 500;
+  font-display: block;
 }
 
 @font-face {
   font-family: "Termina";
   src: url("../fonts/Termina-Regular.otf");
   font-weight: 400;
+  font-display: block;
 }
 
 @font-face {
   font-family: "Loop";
   src: url("../fonts/loop/AlibabaTeambitionLoop01-SemiBold.otf");
   font-weight: 600;
+  font-display: block;
 }
 
 @font-face {
   font-family: "jet";
   src: url("../fonts/JetBrainsMono-Medium.ttf");
+  font-display: block;
 }
 
 @font-face {
   font-family: "uuicon";
   src: url("../fonts/uuicon.ttf");
+  font-display: block;
 }
 
 /* 全局属性 */

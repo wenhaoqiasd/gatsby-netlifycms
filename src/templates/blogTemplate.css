@@ -81,11 +81,13 @@ a.anchor {
 }
 
 .page a {
+  font-family: "inter", "PingFang", sans-serif;
   text-decoration: underline;
   text-decoration-color: var(--Text-2);
 }
 
 ul, ol, blockquote, pre, table {
+  font-family: "inter", "PingFang", sans-serif;
   line-height: 1.5;
   margin-top: 1rem;
 }
@@ -99,6 +101,7 @@ hr {
 }
 
 blockquote {
+  font-family: "inter", "PingFang", sans-serif;
   box-shadow: inset 4px 0 0 0 var(--Text-3);
 }
 
