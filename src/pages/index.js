@@ -29,9 +29,10 @@ async function loadFont() {
   const font = new FontFace("WidescreenVF", fontUrl);
   await font.load()
   document.fonts.add(font)
-  // document.body.classList.add('fonts-loaded')
 }
 loadFont()
+
+
 
 const IndexPage = () => {
 

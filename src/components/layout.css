@@ -150,7 +150,7 @@ html {
 body {
   -webkit-font-smoothing: antialiased;
   -webkit-text-size-adjust: 100%;
-  font-family: "Termina", "PingFang", sans-serif;
+  font-family: "Termina", PingFangSC-Regular, sans-serif;
   background-color: var(--BG-P);
   color: var(--Text-1);
   font-size: 16px;

@@ -27,7 +27,7 @@ export default function Template({ data }) {
     <Layout>
       <Seo title={frontmatter.title} />
       <div className="zoom-in">
-        <div className="page-head" style={{backgroundImage: "linear-gradient(180deg, " + frontmatter.color + " 0%, var(--BG-P) 100%)"}}>
+        <div className="page-head" style={{ backgroundImage: "linear-gradient(180deg, " + frontmatter.color + " 0%, var(--BG-P) 100%)" }}>
           {frontmatter.class !== "others" ?
             <>
               <img src={frontmatter.cover} alt={frontmatter.title} />
@@ -60,7 +60,7 @@ export default function Template({ data }) {
                         {myList ? myList.map(card => (
                           card ? card.fav.map(fav => (
                             fav.name === frontmatter.title
-                              ? <button onClick={(e) => {
+                              ? <button key={frontmatter.path} onClick={(e) => {
                                 const dataRef = firestore.collection("list").doc(profile.uid)
                                 dataRef.update({
                                   fav: firebase.firestore.FieldValue.arrayRemove({
@@ -91,7 +91,7 @@ export default function Template({ data }) {
             </>
           }
         </div>
-        <div className="blog-shadow" />
+        {frontmatter.class !== "others" ? <div className="blog-shadow" /> : null}
         <div className="page">
           <div className="blog-post-content"
             dangerouslySetInnerHTML={{ __html: html }} />

@@ -33,7 +33,7 @@ html {
 body {
   -webkit-font-smoothing: antialiased;
   -webkit-text-size-adjust: 100%;
-  font-family: "PingFang", sans-serif;
+  font-family: PingFangSC-Regular, sans-serif;
   background-color: var(--BG-P);
   color: var(--Text-1);
   font-size: 16px;

@@ -44,50 +44,46 @@ a.anchor {
 }
 
 .page h1 {
-  font-family: "inter", "PingFang", sans-serif;
+  font-family: "inter", PingFangSC-Semibold, sans-serif;
   font-size: 2.5rem;
-  /* margin-top: 2.5rem; */
   margin-top: 0;
   padding-top: 2.5rem;
 }
 
 .page h2 {
-  font-family: "inter", "PingFang", sans-serif;
+  font-family: "inter", PingFangSC-Semibold, sans-serif;
   font-size: 2em;
-  /* margin-top: 2rem; */
   margin-top: 0;
   padding-top: 2rem;
 }
 
 .page h3 {
-  font-family: "inter", "PingFang", sans-serif;
+  font-family: "inter", PingFangSC-Semibold, sans-serif;
   font-size: 1.5rem;
-  /* margin-top: 1.5rem; */
   margin-top: 0;
   padding-top: 1.5rem;
 }
 
 .page h4 {
-  font-family: "inter", "PingFang", sans-serif;
+  font-family: "inter", PingFangSC-Semibold, sans-serif;
   font-size: 1.25rem;
-  /* margin-top: 1rem; */
   margin-top: 0;
   padding-top: 1.25rem;
 }
 
 .page p {
-  font-family: "inter", "PingFang", sans-serif;
+  font-family: "inter", PingFangSC-Regular, sans-serif;
   line-height: 1.8;
 }
 
 .page a {
-  font-family: "inter", "PingFang", sans-serif;
+  font-family: "inter", PingFangSC-Regular, sans-serif;
   text-decoration: underline;
   text-decoration-color: var(--Text-2);
 }
 
 ul, ol, blockquote, pre, table {
-  font-family: "inter", "PingFang", sans-serif;
+  font-family: "inter", PingFangSC-Regular, sans-serif;
   line-height: 1.5;
   margin-top: 1rem;
 }
@@ -101,7 +97,7 @@ hr {
 }
 
 blockquote {
-  font-family: "inter", "PingFang", sans-serif;
+  font-family: "inter", PingFangSC-Regular, sans-serif;
   box-shadow: inset 4px 0 0 0 var(--Text-3);
 }
 

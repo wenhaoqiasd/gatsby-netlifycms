@@ -11,8 +11,8 @@ title: About
 #### My name is Curiosity Wen, I’m Chinese he/him living in Shanghai, China. Design is the medium through which I express myself.
 #### I’m currently the product designer for aDrive at Alibaba. I’ve and also work on building design system. Before that, I worked on Teambition Thoughts, 100offer, and AMILY. I love building tools that people depend on for their work.
 
-<a href="ha.html" target="_blank" rel="noopener noreferrer" class="block-link">
-  Read resume →
+<a href="/resume.html" target="_blank" rel="noopener noreferrer" class="block-link">
+  Read resume (Simplified Chinese) →
 </a>
 
 #### In my spare time, I like to develop some software, Making typefaces and painting.
