@@ -21,25 +21,24 @@ import navbar from "../components/nav.json"
 // 样式
 import "./index.css"
 
-const isBrowser = () => typeof window !== "undefined"
-
-async function loadFont() {
-  if (!isBrowser()) return
-  const fontUrl = `url(${window.location.href.split("#")[0]}fonts/WidescreenVF-WghtWdthMixd.ttf)`
-  const font = new FontFace("WidescreenVF", fontUrl);
-  await font.load()
-  document.fonts.add(font)
-}
-loadFont()
-
-
-
 const IndexPage = () => {
 
   const [fontLoaded, setFontLoaded] = useState(false)
   const pageName = "Home"
 
   useEffect(() => {
+
+    const isBrowser = () => typeof window !== "undefined"
+
+    async function loadFont() {
+      if (!isBrowser()) return
+      const fontUrl = `url(${window.location.href.split("#")[0]}fonts/WidescreenVF-WghtWdthMixd.ttf)`
+      const font = new FontFace("WidescreenVF", fontUrl);
+      await font.load()
+      document.fonts.add(font)
+    }
+    loadFont()
+
     loadFont().then(() => {
       setFontLoaded(true)
     })
