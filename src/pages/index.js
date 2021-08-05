@@ -32,8 +32,6 @@ const IndexPage = () => {
 
     async function loadFont() {
       if (!isBrowser()) return
-
-      
       const fontUrl = `url(${window.location.href.split("#")[0]}fonts/WidescreenVF-WghtWdthMixd.ttf)`
       const font = new FontFace("WidescreenVF", fontUrl, {display:"block"});
       await font.load()
