@@ -1,0 +1,16 @@
+.parallaxbox {
+  width: 100%;
+  min-height: 100vh;
+}
+
+.test {
+  width: 100%;
+  height: 400px;
+}
+
+.parallaxbox h1 {
+  position: sticky;
+  top: 0;
+  padding: 4.5rem;
+  margin: 0;
+}
