@@ -66,8 +66,8 @@ const ParallaxPage = () => {
       <Seo title="ParallaxPage" />
       <ParallaxBox>
         <Section
-          X={0}
-          Y={0}
+          X={-100}
+          Y={-50}
           TranslateX={true}
           TranslateY={true}
           DirectionX={true}
@@ -83,8 +83,8 @@ const ParallaxPage = () => {
       </ParallaxBox>
       <ParallaxBox className="Popo">
         <Section
-          X={0}
-          Y={0}
+          X={-100}
+          Y={-50}
           TranslateX={true}
           TranslateY={true}
           DirectionX={true}
@@ -100,8 +100,8 @@ const ParallaxPage = () => {
       </ParallaxBox>
       <ParallaxBox>
         <Section
-          X={0}
-          Y={0}
+          X={-100}
+          Y={-50}
           TranslateX={true}
           TranslateY={true}
           DirectionX={true}
