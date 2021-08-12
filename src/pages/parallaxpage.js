@@ -13,7 +13,7 @@ const ParallaxPage = () => {
   return (
     <Layout>
       <Seo title="ParallaxPage" />
-      <ParallaxBox>
+      <ParallaxBox className="textbox">
         <Section
           TranslateX={true}
           TranslateY={false}
@@ -21,6 +21,7 @@ const ParallaxPage = () => {
           DirectionY={false}
           Scale={true}
           DirectionScale={false}
+          SpeedX={10}
           SpeedScale={100}
           MaxScale={130}
           MinScale={70}
@@ -30,7 +31,7 @@ const ParallaxPage = () => {
           </div>
         </Section>
       </ParallaxBox>
-      <ParallaxBox className="Popo">
+      <ParallaxBox className="textbox Popo">
         <Section
           TranslateX={true}
           TranslateY={false}

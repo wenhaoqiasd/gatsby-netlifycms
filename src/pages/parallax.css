@@ -18,3 +18,9 @@
 .Popo {
   background-color: var(--BG-S);
 }
+
+.textbox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
