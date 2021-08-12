@@ -24,8 +24,8 @@ const Section = ({
   MaxScale,
   MinScale,
 
-  Fade,
-  DirectionFade,
+  Opacity,
+  DirectionOpacity,
   children,
   className
 }) => {
@@ -35,28 +35,36 @@ const Section = ({
   // X 范围
   const minmaxX = para.value > MinX ? (para.value < MaxX ? para.value : MaxX) : MinX
   // X 方向
-  const numX = DirectionX ? (minmaxX - 100) * SpeedX + X : (- minmaxX + 100) * SpeedX + X
+  const numX = DirectionX ? (minmaxX - 100) * SpeedX + X : (100 - minmaxX) * SpeedX + X
 
   // Y 范围
   const minmaxY = para.value > MinY ? (para.value < MaxY ? para.value : MaxY) : MinY
   // Y 方向
-  const numY = DirectionY ? (minmaxY - 100) * SpeedY + Y : (- minmaxY + 100) * SpeedY + Y
+  const numY = DirectionY ? (minmaxY - 100) * SpeedY + Y : (100 - minmaxY) * SpeedY + Y
 
   // Scale 范围
   const minmaxScale = para.value / 100 > MinScale / 100 ? (para.value / 100 < MaxScale / 100 ? para.value / 100 : MaxScale / 100) : MinScale / 100
   // Scale 方向
-  const numScale = DirectionScale ? (minmaxScale - 1) * (SpeedScale / 100) + 1 : (- minmaxScale + 1) * (SpeedScale / 100) + 1
+  const numScale = DirectionScale ? (minmaxScale - 1) * (SpeedScale / 100) + 1 : (1 - minmaxScale) * (SpeedScale / 100) + 1
 
   // 变换样式
   const styles = `matrix(${Scale ? numScale : 1},0,0,${Scale ? numScale : 1},${TranslateX ? numX : 0},${TranslateY ? numY : 0})`
 
-  // Fade
-  const direction_f = (DirectionFade ? (para.value / 100 - 1) : (2 - para.value / 100))
-  const fade = (Fade ? direction_f : '')
+  // Opacity
+  // const direction_f = (DirectionOpacity ? (para.value / 100 - 1) : (2 - para.value / 100))
+  // const opacity = (Opacity ? direction_f : 1)
+  // 延迟小于 1
+  // const opacityin = para.value / 100 - 50 / 100
+  // const opacityin = 1 - para.value / 100
+  
+  const opacityin = Math.abs(Math.abs((para.value - 50) * 2) - 100) / 100
+  // console.log(opacityin)
+  const opacity = opacityin > 0 ? (opacityin < 1 ? opacityin : 1) : 0
+
   const cName = className
 
   return (
-    <div style={{ transform: styles, opacity: fade, transformOrigin: Origin, display: 'inline-block' }} className={cName} >
+    <div style={{ transform: styles, opacity: opacity, transformOrigin: Origin, display: 'inline-block' }} className={cName} >
       {children}
     </div>
   )
@@ -95,10 +103,10 @@ Section.propTypes = {
   MaxScale: PropTypes.number,
   MinScale: PropTypes.number,
 
-  // Fade
-  Fade: PropTypes.bool,
+  // Opacity
+  Opacity: PropTypes.bool,
   children: PropTypes.node.isRequired,
-  DirectionFade: PropTypes.bool,
+  DirectionOpacity: PropTypes.bool,
   className: PropTypes.string,
 }
 Section.defaultProps = {
@@ -124,8 +132,8 @@ Section.defaultProps = {
   MaxScale: Infinity,
   MinScale: -Infinity,
 
-  Fade: false,
-  DirectionFade: false,
+  Opacity: false,
+  DirectionOpacity: false,
   className: '',
 }
 

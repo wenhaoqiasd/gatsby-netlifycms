@@ -4,7 +4,6 @@ import Seo from "../components/seo"
 
 import ParallaxBox from '../components/parallaxbox'
 import Section from '../components/parallaxItem'
-// import { MyContext } from '../context/mycontext'
 
 import "./parallax.css"
 
@@ -23,8 +22,9 @@ const ParallaxPage = () => {
           DirectionScale={false}
           SpeedX={10}
           SpeedScale={100}
-          MaxScale={130}
+          MaxScale={100}
           MinScale={70}
+          Opacity={true}
         >
           <div style={{ width: 300, height: 300, backgroundColor: 'red' }}>
             Card
@@ -33,14 +33,15 @@ const ParallaxPage = () => {
       </ParallaxBox>
       <ParallaxBox className="textbox Popo">
         <Section
-          TranslateX={true}
+          TranslateX={false}
           TranslateY={false}
           DirectionX={true}
           DirectionY={false}
           Scale={true}
           DirectionScale={true}
           SpeedScale={100}
-          MinScale={70}
+          MinScale={100}
+          Opacity={true}
         >
           <div style={{ width: 300, height: 300, backgroundColor: 'red' }}>
             Card
