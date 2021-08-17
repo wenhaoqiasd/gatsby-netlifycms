@@ -54,15 +54,11 @@ const IndexPage = () => {
             {fontLoaded
               ? <Draggable handle=".handle">
                 <h1 className={cls}>
-                  <span className="desktop-symbol">{"→"}</span>
-                  DESIGN
-                  <span className="desktop-symbol">{","}</span>
+                  <span><span className="desktop-symbol">{"→"}</span>DESIGN<span className="desktop-symbol">{","}</span></span>
                   <br />
-                  DEVELOP
+                  <span>DEVELOP</span>
                   <br />
-                  <span className="desktop-symbol">{"& "}</span>
-                  CREATE
-                  <span className="desktop-symbol">{"."}</span>
+                  <span><span className="desktop-symbol">{"& "}</span>CREATE<span className="desktop-symbol">{"."}</span></span>
                 </h1>
               </Draggable>
               : null

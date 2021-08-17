@@ -1,11 +1,5 @@
 /* 布局框 */
 
-.font-style {
-  /* font-family: 'WidescreenVF'; */
-  font-family: 'WhirlyBirdieGX';
-  animation: fontmotion 3s cubic-bezier(0.66, 0, 0.01, 1) 3s backwards;
-}
-
 .home-space {
   position: relative;
   display: grid;
@@ -44,37 +38,10 @@
   cursor: grabbing;
 }
 
-.desktop {
-  text-align: left;
+.font-style {
+  font-family: 'WhirlyBirdieGX';
+  animation: fontmotion 1s cubic-bezier(0.66, 0, 0.01, 1) 3s backwards;
 }
-.desktop .desktop-symbol {
-  display: inline;
-}
-
-/* .big-motion-1 {
-  animation: fontmotion 6s cubic-bezier(0.66, 0, 0.01, 1) alternate infinite backwards;
-}
-.big-motion-2 {
-  animation: fontmotion 6s cubic-bezier(0.66, 0, 0.01, 1) 3s alternate infinite backwards;
-}
-.big-motion-3 {
-  animation: fontmotion 6s cubic-bezier(0.66, 0, 0.01, 1) 6s alternate infinite backwards;
-}
-
-@keyframes fontmotion {
-  0% {
-    font-variation-settings: "wght" 900, "MIXD" 108, "wdth" 108;
-  }
-  70% {
-    font-variation-settings: "wght" 900, "MIXD" 108, "wdth" 108;
-  }
-  80% {
-    font-variation-settings: "wght" 900, "MIXD" 150, "wdth" 108;
-  }
-  100% {
-    font-variation-settings: "wght" 900, "MIXD" 150, "wdth" 108;
-  }
-} */
 
 @keyframes fontmotion {
   0% {
@@ -83,6 +50,31 @@
   100% {
     font-variation-settings: 'wght' 100, 'wdth' 135, 'ital' 0;
   }
+}
+
+/* .font-style span {
+  display: inline-block;
+  overflow: hidden;
+  animation: in-text 1s cubic-bezier(0.66, 0, 0.01, 1) 5s backwards;
+} */
+
+/* @keyframes in-text {
+  0% {
+    color: aqua;
+    transform: translateY(-100px);
+  }
+  100% {
+    color: black;
+    transform: translateY(0px);
+  }
+} */
+
+.desktop {
+  text-align: left;
+}
+
+.desktop .desktop-symbol {
+  display: inline;
 }
 
 .block-link {
