@@ -1,7 +1,9 @@
 /* 布局框 */
 
 .font-style {
-  font-family: 'WidescreenVF';
+  /* font-family: 'WidescreenVF'; */
+  font-family: 'WhirlyBirdieGX';
+  animation: fontmotion 3s cubic-bezier(0.66, 0, 0.01, 1) 3s backwards;
 }
 
 .home-space {
@@ -49,7 +51,7 @@
   display: inline;
 }
 
-.big-motion-1 {
+/* .big-motion-1 {
   animation: fontmotion 6s cubic-bezier(0.66, 0, 0.01, 1) alternate infinite backwards;
 }
 .big-motion-2 {
@@ -71,6 +73,15 @@
   }
   100% {
     font-variation-settings: "wght" 900, "MIXD" 150, "wdth" 108;
+  }
+} */
+
+@keyframes fontmotion {
+  0% {
+    font-variation-settings: 'wght' 0, 'wdth' 135, 'ital' 0;
+  }
+  100% {
+    font-variation-settings: 'wght' 100, 'wdth' 135, 'ital' 0;
   }
 }
 

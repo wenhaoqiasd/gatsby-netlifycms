@@ -12571,13 +12571,6 @@ react-polyglot@^0.7.0:
     hoist-non-react-statics "^3.3.0"
     prop-types "^15.5.8"
 
-react-random-reveal@^1.0.1:
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/react-random-reveal/-/react-random-reveal-1.0.1.tgz#d926103f3d504cd0b1b9685978a00c1caf779009"
-  integrity sha512-NvyvpCr6K7zi/jFGowhyw9ybcy2leSbFiFtc+3R69/KTd/dhsIevJmYoq5QiG2hdbxcBfM7PqHYGT/+DWRPWNg==
-  dependencies:
-    use-elapsed-time "^1.1.5"
-
 react-redux@^4.0.0:
   version "4.4.10"
   resolved "https://registry.yarnpkg.com/react-redux/-/react-redux-4.4.10.tgz#ad57bd1db00c2d0aa7db992b360ce63dd0b80ec5"
@@ -15440,11 +15433,6 @@ use-composed-ref@^1.0.0:
   integrity sha512-my1lNHGWsSDAhhVAT4MKs6IjBUtG6ZG11uUqexPH9PptiIZDQOzaF4f5tEbJ2+7qvNbtXNBbU3SfmN+fXlWDhg==
   dependencies:
     ts-essentials "^2.0.3"
-
-use-elapsed-time@^1.1.5:
-  version "1.2.1"
-  resolved "https://registry.yarnpkg.com/use-elapsed-time/-/use-elapsed-time-1.2.1.tgz#5c313ea78be9750a4d7173c7bfe900ee011af730"
-  integrity sha512-dbZ3XXOPMu8KPgr+4Vwhl4XU0m84s4KSIMq+M3mmKWnZrau28YyEi0QCsf/69QznXo1535FlWL8TILWe08IrhQ==
 
 use-isomorphic-layout-effect@^1.0.0:
   version "1.1.1"

@@ -268,9 +268,13 @@ div {
   line-height: 1;
   font-size: 5vw;
   letter-spacing: 0;
-  font-feature-settings: "kern", "liga", "calt", "ss02";
-  font-variation-settings: "wght" 900, "MIXD" 108, "wdth" 108;
+  /* 老字体 */
+  /* font-feature-settings: "kern", "liga", "calt", "ss02"; */
+  /* font-variation-settings: "wght" 900, "MIXD" 108, "wdth" 108; */
+  /* 新字体 */
+  font-variation-settings: 'wght' 100, 'wdth' 135, 'ital' 0;
   letter-spacing: -0.02em;
+  transform: translateZ(1px)
 }
 
 .big-ss01 {
@@ -279,7 +283,7 @@ div {
 
 @media screen and (max-width: 48rem) {
   .big-vf {
-    font-size: 12vw;
+    font-size: 10vw;
   }
 }
 

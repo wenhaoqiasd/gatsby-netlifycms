@@ -11,7 +11,6 @@ import Loop from "../components/loop"
 
 // 插件
 import Draggable from "react-draggable"
-import { RandomReveal } from "react-random-reveal"
 import RellaxWrapper from "react-rellax-wrapper"
 import { Player } from '@lottiefiles/react-lottie-player'
 
@@ -32,8 +31,8 @@ const IndexPage = () => {
 
     async function loadFont() {
       if (!isBrowser()) return
-      const fontUrl = `url(${window.location.href.split("#")[0]}fonts/WidescreenVF-WghtWdthMixd.ttf)`
-      const font = new FontFace("WidescreenVF", fontUrl, {display:"block"});
+      const fontUrl = `url(${window.location.href.split("#")[0]}fonts/WhirlyBirdieGX.ttf)`
+      const font = new FontFace("WhirlyBirdieGX", fontUrl, { display: "block" });
       await font.load()
       document.fonts.add(font)
     }
@@ -44,7 +43,7 @@ const IndexPage = () => {
     })
   }, [])
 
-  const cls = ['big-vf big-box handle desktop', fontLoaded && 'font-style'].filter(Boolean).join(' ')
+  const cls = ['big-vf handle desktop', fontLoaded && 'font-style'].filter(Boolean).join(' ')
 
   return (
     <Layout>
@@ -55,22 +54,14 @@ const IndexPage = () => {
             {fontLoaded
               ? <Draggable handle=".handle">
                 <h1 className={cls}>
-                  <span className="big-motion-1">
-                    <RandomReveal
-                      isPlaying
-                      duration={4}
-                      revealDuration={4}
-                      characters="DESIGN"
-                      characterSet="DEVELOPCREATE"
-                      onComplete={() => [false, 12000]}
-                    />
-                  </span>
+                  <span className="desktop-symbol">{"→"}</span>
+                  DESIGN
                   <span className="desktop-symbol">{","}</span>
                   <br />
-                  <span className="big-motion-2">DEVELOP</span>
+                  DEVELOP
                   <br />
                   <span className="desktop-symbol">{"& "}</span>
-                  <span className="big-motion-3">CREATE</span>
+                  CREATE
                   <span className="desktop-symbol">{"."}</span>
                 </h1>
               </Draggable>
