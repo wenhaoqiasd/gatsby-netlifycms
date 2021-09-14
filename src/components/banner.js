@@ -87,6 +87,7 @@ const Banner = () => {
               tiltMaxAngleX={10}
               tiltMaxAngleY={10}
             >
+            <div className="plastic"></div>
             <img
               // src={item.data.Cover[0].url}
               src={item.data.Cover[0].thumbnails.large.url}
