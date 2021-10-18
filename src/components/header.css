@@ -195,14 +195,14 @@
 .nav-title :first-child [aria-hidden="true"] {
   transform-origin: center center 1.25rem;
   display: inline-block;
-  transition: var(--cubic-menu);
+  transition: .4s cubic-bezier(.445,.05,.55,.95);
   transform: rotate3d(0, 0, 0, 0);
 }
 
 .nav-title :nth-child(2) [aria-hidden="true"] {
   transform-origin: center center 1.25rem;
   display: inline-block;
-  transition: var(--cubic-menu);
+  transition: .4s cubic-bezier(.445,.05,.55,.95);
   transform: rotate3d(1, -0.5, 0, 90deg);
 }
 
